@@ -1,0 +1,45 @@
+@include large-break {
+    body.single-work {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .header {
+            order: 1;
+        }
+
+        .banner {
+            width: 50%;
+            align-self: flex-start;
+            height: 90vh;
+            order: 3;
+        }
+
+        .banner--overlap {
+            &::after {
+                display: none;
+            }
+        }
+
+        .page-content {
+            margin: 0;
+            width: 50%;
+            height: 90vh;
+            overflow: scroll;
+            align-self: flex-end;
+            order: 2;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .portfolio__h1 {
+                margin: 0;
+                padding: 1.5em 0
+            }
+        }
+
+        .footer {
+            order: 4;
+        }
+    }
+}
