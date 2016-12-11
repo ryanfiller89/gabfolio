@@ -1,4 +1,5 @@
 .socials {
+    @include grid;
     justify-content: flex-end;
     margin-top: 0;
     margin-bottom: 0;

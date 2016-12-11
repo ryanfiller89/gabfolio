@@ -1,48 +1,45 @@
 .header {
     border-bottom: .5em solid $primary-color;
     background: $white;
-    
+
     .header--pre {
         background: $black;
     }
 
     .header--main {
+        @include grid;
+        justify-content: space-between;
+        .header__logo {
+            display: flex;
+            align-items: center;
+            margin: 1em;
 
-        .grid {
-            justify-content: space-between;
+            .header__logo__image {
+                height: 100px;
+                width: auto;
+                path, polygon {
+                    fill: $black;
+                }
 
-            .header__logo {
-                display: flex;
-                align-items: center;
-                margin: 1em;
-
-                .header__logo__image {
-                    height: 100px;
-                    width: auto;
+                &:hover {
                     path, polygon {
-                        fill: $black;
-                    }
-
-                    &:hover {
-                        path, polygon {
-                            fill: $secondary-color;
-                        }
+                        fill: $secondary-color;
                     }
                 }
             }
+        }
 
-            .nav {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
 
-                    .nav__link a {
-                        text-decoration: none;
-                        margin-left: .75em;
-                    }
-            }
+                .nav__link a {
+                    text-decoration: none;
+                    margin-left: .75em;
+                }
         }
     }
 
