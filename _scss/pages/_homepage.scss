@@ -1,15 +1,12 @@
-.home {
-    .page-content {
-        padding: 0;
-    }
-}
-
-.homepage {
+.page-content.homepage {
     height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
+    @include grid;
+    justify-content: center;
+    @include image-overlay;
 
     &::after {
         content: '';
@@ -20,18 +17,14 @@
         z-index: 1;
     }
 
-    &.grid {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .homepage__logo {
+    svg {
         z-index: 2;
         display: block;
         width: 25vw;
         height: auto;
         filter: drop-shadow( 0 0 10px $dark-gray );
         transition: 1s;
+        // filter: blur(10px);
 
         path, polygon {
             fill: $white;
@@ -40,11 +33,6 @@
         polygon:hover {
             fill: $secondary-color;
         }
-
-            // &:hover {
-            //     width: 30vw;
-            //     filter: blur(10px);
-            // }
 
         @include tablet-break {
             width: 50vw;
