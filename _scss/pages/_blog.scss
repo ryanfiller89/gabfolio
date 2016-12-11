@@ -32,6 +32,27 @@
                 position: relative;
                 z-index: 5;
                 margin-bottom: ($spacing/4);
+
+                span {
+                    &:nth-child(2) {
+                        &::before {
+                            content: '|';
+                            margin: 0 .5em;
+                        }
+                    }
+                }
+
+                .excerpt__tag {
+                    &::after {
+                        content: ', ';
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
             }
 
             .excerpt__title {
