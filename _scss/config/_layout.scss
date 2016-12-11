@@ -41,5 +41,6 @@ $spacing: 3vw;
 }
 
 @mixin grid--container() {
+    @include grid;
     @include container;
 }

@@ -4,29 +4,28 @@
     .footer--pre {
         background: $gray;
 
-        .grid {
+        @include grid--container;
+        padding: 0;
+
+        .nav {
+            list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
 
-            .nav {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                width: 100%;
+            .nav__link {
+                flex: 1;
 
-                .nav__link {
-                    flex: 1;
+                a {
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    padding-top: .5em;
+                    padding-bottom: .5em;
 
-                    a {
-                        text-align: center;
-                        display: block;
-                        width: 100%;
-                        padding-top: .5em;
-                        padding-bottom: .5em;
-
-                        &:hover {
-                            background: $dark-gray;
-                        }
+                    &:hover {
+                        background: $dark-gray;
                     }
                 }
             }
@@ -34,6 +33,7 @@
     }
 
     .footer--main {
+        @include grid--container;
         text-align: center;
         color: $white;
         padding-top: 2*$spacing;
@@ -45,9 +45,11 @@
         color: $white;
         padding-top: .5em;
         padding-bottom: .5em;
+        width: 100%;
 
         .footer__legal {
-            width: 100%;
+            @include grid--container;
+            justify-content: center;
             text-align: center;
         }
     }

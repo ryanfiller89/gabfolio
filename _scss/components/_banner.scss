@@ -8,14 +8,13 @@ $banner-padding: 4em;
 
     box-shadow: $shadow-inset;
 
-    .grid {
-        justify-content: center;
+    @include grid--container;
+    justify-content: center;
 
-        .banner__header {
-            margin: 0;
-            z-index: 3;
-            text-shadow: $shadow;
-        }
+    .banner__header {
+        margin: 0;
+        z-index: 3;
+        text-shadow: $shadow;
     }
 }
 
