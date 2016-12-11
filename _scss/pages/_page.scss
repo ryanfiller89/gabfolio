@@ -1,0 +1,61 @@
+body {
+    background-color: $white;
+}
+
+.page-content {
+    flex-direction: column;
+    position: relative;
+    background: $white;
+    padding-top: (2*$spacing);
+    padding-bottom: (6*$spacing);
+
+    article {
+        width: 100%;
+        z-index: 3;
+        padding: $spacing;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            margin-bottom: $spacing/2;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: $spacing;
+
+            a {
+                color: $black;
+                text-decoration: none;
+                border-bottom: 1px $secondary-color dotted;
+
+                &:hover {
+                    color: $primary-color;
+                    border-bottom: 1px $primary-color dotted;
+                }
+            }
+
+            .alignnone {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .alignleft {
+                float: left;
+                margin: 0 $spacing $spacing (-1.6*$spacing);
+            }
+
+            .alignright {
+                float: right;
+                margin: 0 (-1.6*$spacing) $spacing $spacing;
+            }
+
+            .aligncenter {
+                display: block;
+                width: calc(4.8em + 100%);
+                height: auto;
+                margin: 0 (-1.6*$spacing) $spacing (-1.6*$spacing);
+            }
+        }
+    }
+
+}

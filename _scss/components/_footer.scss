@@ -1,0 +1,56 @@
+.footer {
+        background: $primary-color;
+
+    .footer--pre {
+        background: $gray;
+
+        @include grid;
+        padding: 0;
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
+
+            .nav__link {
+                flex: 1;
+
+                a {
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    padding-top: .5em;
+                    padding-bottom: .5em;
+
+                    &:hover {
+                        background: $dark-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer--main {
+        @include grid--container;
+        text-align: center;
+        color: $white;
+        padding-top: 2*$spacing;
+        padding-bottom: 2*$spacing;
+    }
+
+    .footer--post {
+        background: $dark-gray;
+        color: $white;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        width: 100%;
+
+        .footer__legal {
+            @include grid--container;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 92.4 60" style="enable-background:new 0 0 92.4 60;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:#231F20;}
+</style>
+<g>
+    <polygon class="st0" points="11.6,0 23.1,20 0,20 	"/>
+    <polygon class="st0" points="34.7,0 46.2,20 23.1,20 	"/>
+    <polygon class="st0" points="57.7,0 69.3,20 46.2,20 	"/>
+    <polygon class="st0" points="69.3,20 57.7,0 80.8,0 	"/>
+    <polygon class="st0" points="23.1,20 11.6,0 34.7,0 	"/>
+    <polygon class="st0" points="46.2,20 57.7,40 34.6,40 	"/>
+    <polygon class="st0" points="69.3,20 80.8,40 57.7,40 	"/>
+    <polygon class="st0" points="11.6,40 0,20 23.1,20 	"/>
+    <polygon class="st0" points="57.7,40 46.2,20 69.3,20 	"/>
+    <polygon class="st0" points="80.8,0 92.4,20 69.3,20 	"/>
+    <polygon class="st0" points="46.2,60 34.6,40 57.7,40 	"/>
+</g>
+</svg>

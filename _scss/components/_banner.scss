@@ -1,0 +1,143 @@
+$banner-padding: 4em;
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    padding-top: $banner-padding;
+    padding-bottom: $banner-padding;
+
+    box-shadow: $shadow-inset;
+
+    @include grid--container;
+    justify-content: center;
+
+    .banner__header {
+        margin: 0;
+        z-index: 3;
+        text-shadow: $shadow;
+    }
+}
+
+.banner--overlap {
+    position: relative;
+    padding-bottom: calc(#{$banner-padding} + 5em);
+    margin-bottom: -3.5em;
+
+    & + .page-content {
+        background: $white;
+        z-index: 4;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background: $white;
+        width: $container-width;
+        height: 7em;
+        position: absolute;
+        right: 0; bottom: -3.5em; left: 0;
+        margin: 0 auto;
+        z-index: 2;
+        box-shadow: $shadow;
+
+        @include tablet-break {
+            width: 100vw;
+        }
+    }
+}
+
+.banner--swiper {
+    padding: 0;
+    height: 90vh;
+
+    @include large-break {
+        height: 100vh;
+    }
+
+    .swiper-wrapper {
+        height: 100%;
+        display: block;
+
+        .swiper-slide {
+            height: 100%;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .swiper-button-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -.64em;
+
+        @include large-break {
+            top: -2.5em;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 10vw;
+            text-align: center;
+            padding: .5em 0;
+            font-size: 1.5em;
+            line-height: 1em;
+
+            span {
+                position: relative;
+                top: -.025em;
+
+                @include large-break {
+                    color: $gray;
+                }
+            }
+
+            &:hover {
+                @include float;
+            }
+        }
+
+        .swiper-button-prev {
+            transform: rotate(180deg);
+        }
+    }
+
+    .swiper-pagination {
+        width: 100%;
+        max-width: $container-width;
+        position: relative;
+        z-index: 10;
+        top: (-1.5*$spacing);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include large-break {
+            top: 0;
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            cursor: pointer;
+            background-color: $secondary-color;
+            height: .3em;
+            width: .3em;
+            padding: .3em;
+            margin: 0 .5em;
+            border-radius: 100%;
+
+            &-active {
+                background-color: $primary-color;
+            }
+
+            &:hover {
+                @include float;
+            }
+        }
+    }
+}

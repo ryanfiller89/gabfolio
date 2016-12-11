@@ -1,0 +1,10 @@
+$transition: .2s;
+
+* {
+    transition: $transition;
+}
+
+@mixin float {
+    position: relative;
+    top: -1px;
+}
