@@ -19,11 +19,6 @@ $banner-padding: 4em;
     }
 }
 
-.banner--overlay {
-    position: relative;
-    @include image-overlay;
-}
-
 .banner--overlap {
     position: relative;
     padding-bottom: calc(#{$banner-padding} + 5em);

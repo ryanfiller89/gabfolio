@@ -37,6 +37,7 @@ $shadow-inset:      inset 0px 25px 25px -15px rgba(0, 255, 0, .15),
                     inset -50px 0px 25px -15px rgba(255, 255, 0, .10);
 
 @mixin image-overlay {
+    position: relative;
     &::before {
         content: '';
         display: block;
