@@ -43,11 +43,3 @@ $spacing: 3vw;
 @mixin grid--container() {
     @include container;
 }
-
-.grid {
-    @include grid;
-}
-
-.grid--container {
-    @include container;
-}
