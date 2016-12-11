@@ -1,6 +1,9 @@
 .header {
-    border-bottom: .5em solid $primary-color;
     background: $white;
+
+    &:last-of-type {
+        border-bottom: .5em solid $primary-color;
+    }
 
     .header--pre {
         background: $black;
@@ -9,6 +12,7 @@
     .header--main {
         @include grid;
         justify-content: space-between;
+        
         .header__logo {
             display: flex;
             align-items: center;
@@ -36,9 +40,17 @@
             justify-content: flex-end;
             align-items: center;
 
-                .nav__link a {
-                    text-decoration: none;
-                    margin-left: .75em;
+                .nav__link {
+                    a {
+                        text-decoration: none;
+                        margin-left: .75em;
+                    }
+                    &.active a {
+                        color: $secondary-color;
+                    }
+                    &:hover a {
+                        color: $primary-color;
+                    }
                 }
         }
     }

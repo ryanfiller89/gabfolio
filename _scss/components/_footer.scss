@@ -4,7 +4,7 @@
     .footer--pre {
         background: $gray;
 
-        @include grid--container;
+        @include grid;
         padding: 0;
 
         .nav {
