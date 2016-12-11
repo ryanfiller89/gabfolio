@@ -22,9 +22,9 @@
     color: $primary-color;
     text-decoration: none;
 
-    &:hover {
-        color: $secondary-color;
-    }
+    // &:hover {
+    //     color: $secondary-color;
+    // }
 }
 
 @mixin strikethrough {
@@ -155,7 +155,7 @@ h4 {
     }
 }
 
-.page-content a {
+.page-content p a {
     @include text-link;
     border-bottom: 2px solid $secondary-color;
     transition: 3*$transition;
@@ -178,16 +178,14 @@ h4 {
         }
     }
 
-    .excerpt__date {
+    .excerpt__meta {
         @include body-font;
         font-size: .8em;
-        color: $white;
         font-weight: bold;
-    }
 
-    .excerpt__tag {
-        @include body-font;
-        color: $light-gray;
+        span {
+            color: $white;
+        }
     }
 
     .excerpt__link {
@@ -197,6 +195,23 @@ h4 {
 
         &::after {
             content: ' ▸▸';
+        }
+    }
+
+    &:hover, &:active {
+
+        .excerpt__title {
+            color: $white;
+        }
+
+        .excerpt__body {
+            p {
+                color: $primary-color;
+            }
+        }
+
+        .excerpt__link {
+            color: $secondary-color;
         }
     }
 }

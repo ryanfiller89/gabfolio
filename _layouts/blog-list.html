@@ -4,8 +4,32 @@
 
 {% include components/banner.html %}
 
-<main class="page-content">
-    {{ site.posts }}
+<main class="page-content blog">
+    {% for post in site.posts %}
+        <article class="excerpt__block-link">
+            <a href="{{post.link}}" class="excerpt">
+                <div class="excerpt__header" style="background-image:url({{ post.image }});">
+                    <section class="excerpt__meta">
+                        <span class="excerpt__date">{{ post.date | date: "%b %d, %Y" }}</span>
+                        {% if post.categories%}
+                            <span>  |  </span>
+                        {% endif %}
+        				{% for category in post.categories %}
+        						<span class="excerpt__tag"><b>#</b>{{ category }}</span>
+                        {% endfor %}
+
+        			</section>
+        			<h2 class="excerpt__title">{{ post.title }}</h2>
+        		</div>
+                <main class="excerpt__body">
+        			<p class="excerpt__text">
+        			    {{ post.excerpt }}
+        			</p>
+        			<span class="excerpt__link">Read More</span>
+        		</main>
+            </a>
+        </article>
+    {% endfor %}
 </main>
 
 {% include components/footer.html %}

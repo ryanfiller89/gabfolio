@@ -1,118 +1,95 @@
-.blog, .archive {
-    .page-content.grid {
-        flex-direction: row;
-        align-content: flex-start;
-        flex-wrap: wrap;
-        padding-bottom: ($spacing*2);
+.page-content.blog {
+    @include grid;
+    // display: block;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: $spacing/2;
 
-        .excerpt {
-            width: 50%;
-            padding: $spacing;
-            margin-bottom: $spacing;
-
-            @include tablet-break {
-                width: 100%;
-            }
-
-            .excerpt__block-link {
-                text-decoration: none;
-                color: inherit;
-                display: block;
-
-                .excerpt__header {
-                    padding: (5*$spacing) $spacing ($spacing/2) $spacing;
-                    margin-bottom: $spacing;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    position: relative;
-
-                    &::before {
-                        content: '';
-                        display: block;
-                        background: $primary-color;
-                        opacity: .5;
-                        position: absolute;
-                        top: 0; right: 0; bottom: 0; left: 0;
-                        z-index: 1;
-                    }
-
-                    .excerpt__date {
-                        text-shadow: $shadow;
-                        position: relative;
-                        z-index: 5;
-                        margin-bottom: ($spacing/4);
-                    }
-
-                    .excerpt__title {
-                        position: relative;
-                        z-index: 5;
-                        margin-bottom: 0;
-                        text-shadow: $shadow;
-                    }
-                }
-
-                .excerpt__body {
-                    padding: 0 $spacing  $spacing $spacing;
-
-                    .excerpt__meta {
-                        margin-bottom: $spacing;
-                    }
-
-                    p.excerpt__text {
-                        margin-bottom: ($spacing/2);
-                    }
-
-                    .excerpt__link {
-                        text-decoration: none;
-
-                        @include tablet-break {
-                            text-align: center;
-                        }
-                    }
-                }
-
-                &:hover, &:active {
-                    position: relative;
-                    top: -1.25px;
-                    box-shadow: $shadow;
-
-                    .excerpt__title, .excerpt__link {
-                        color: $secondary-color;
-                    }
-
-                    .excerpt__header {
-                        .excerpt__title {
-                            color: $white;
-                        }
-
-                        &::before {
-                            background: $secondary-color;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.single {
-    .meta {
-        margin-bottom: (2*$spacing);
-        text-align: center;
-
-        .meta__date {
-            @include strikethrough;
-            margin-bottom: $spacing;
-        }
-
-        .tag {
-            padding: 0 .25em;
-        }
+    .excerpt__block-link {
+        width: 50%;
+        padding: $spacing/2;
+        float: left;
     }
 
-    .back__blog {
+    .excerpt {
         display: block;
-        text-align: center;
+
+        @include tablet-break {
+            width: 100%;
+        }
+
+        .excerpt__header {
+            padding: (5*$spacing) $spacing ($spacing/2) $spacing;
+            margin-bottom: $spacing;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            @include image-overlay;
+
+            .excerpt__meta {
+                text-shadow: $shadow;
+                position: relative;
+                z-index: 5;
+                margin-bottom: ($spacing/4);
+            }
+
+            .excerpt__title {
+                position: relative;
+                z-index: 5;
+                margin-bottom: 0;
+                text-shadow: $shadow;
+            }
+        }
+
+        .excerpt__body {
+            padding: 0 $spacing  $spacing $spacing;
+
+            .excerpt__text {
+                margin-bottom: ($spacing/2);
+            }
+
+            .excerpt__link {
+                text-decoration: none;
+
+                @include tablet-break {
+                    text-align: center;
+                }
+            }
+        }
+
+        &:hover, &:active {
+            position: relative;
+            top: -1.25px;
+            box-shadow: $shadow;
+
+            .excerpt__header {
+
+                &::before {
+                    background-color: $secondary-color;
+                }
+            }
+        }
     }
 }
+
+// .single {
+//     .meta {
+//         margin-bottom: (2*$spacing);
+//         text-align: center;
+//
+//         .meta__date {
+//             @include strikethrough;
+//             margin-bottom: $spacing;
+//         }
+//
+//         .tag {
+//             padding: 0 .25em;
+//         }
+//     }
+//
+//     .back__blog {
+//         display: block;
+//         text-align: center;
+//     }
+// }
