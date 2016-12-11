@@ -1,14 +1,14 @@
-$banner-padding: 4em;
-
 .banner {
+    width: 100%;
     background-size: cover;
     background-position: center;
-    padding-top: $banner-padding;
-    padding-bottom: $banner-padding;
+    padding-top: 2*$spacing;
+    padding-bottom: 2*$spacing;
 
+    @include image-overlay;
     box-shadow: $shadow-inset;
 
-    @include grid--container;
+    @include grid;
     justify-content: center;
 
     .banner__header {
@@ -20,7 +20,7 @@ $banner-padding: 4em;
 
 .banner--overlap {
     position: relative;
-    padding-bottom: calc(#{$banner-padding} + 5em);
+    padding-bottom: calc(#{2*$spacing} + 5em);
     margin-bottom: -3.5em;
 
     & + .page-content {
