@@ -16,105 +16,94 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
     $gradient: $gradient, $darken $currentPercentage, $darken $nextPercentage;
 }
 
-body.error404 {
+.page-content.error404 {
     font-family: 'VT323', monospace;
     color: white;
 
-    .header {
-        border-bottom: 0;
+    background-image: url("https://media.giphy.com/media/NGALQBUgvmVTa/giphy.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include image-overlay;
+
+    .message--404 {
+        text-shadow: $shadow;
+        width: 100%;
+        text-align: center;
+        font-size: 3em;
+        position: relative;
+        z-index: 10;
+        @include grid--container;
+
+        &__code {
+            display: block;
+            font-size: 1.5em;
+        }
     }
 
-    .page-content {
-        padding: 0;
+    .menu--404 {
+        align-self: flex-end;
+        padding: $spacing/2;
+        padding-top: $spacing;
+        margin: $spacing;
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 10;
         display: flex;
+        flex-wrap: wrap;
 
-        .body--404 {
-            background-image: url("https://media.giphy.com/media/NGALQBUgvmVTa/giphy.gif");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            @include image-overlay;
-            // box-shadow: $shadow-inset;
-            flex: 1;
+        &__link {
+            flex-basis: 50%;
+            list-style: none;
+            box-sizing: border-box;
+            padding: 0 $spacing $spacing 0;
+            position: relative;
+            z-index: 10;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            align-items: flex-start;
 
-            .message--404 {
-                text-shadow: $shadow;
-                width: 100%;
-                text-align: center;
-                font-size: 3em;
+            a {
                 position: relative;
                 z-index: 10;
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                text-shadow: -3px 3px black;
+                font-size: 2.5em;
+                padding-left: 2*$spacing;
 
-                &__code {
-                    display: block;
-                    font-size: 1.5em;
+                &:hover {
+                    display: flex;
+                    align-items: center;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        background-image: url("../images/404/ff_pointer.png");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        image-rendering: pixelated;
+                        height: 1.25*$spacing;
+                        width: 1.25*$spacing;
+                        position: absolute;
+                        left: $spacing/2;
+                    }
                 }
             }
+        }
 
-            .menu--404 {
-                align-self: flex-end;
-                padding: $spacing/2;
-                padding-top: $spacing;
-                margin: $spacing;
-                display: block;
-                width: 100%;
-                position: relative;
-                z-index: 10;
-                display: flex;
-                flex-wrap: wrap;
+        @include tablet-break {
+            display: block;
 
-                &__link {
-                    flex-basis: 50%;
-                    list-style: none;
-                    box-sizing: border-box;
-                    padding: 0 $spacing $spacing 0;
-                    position: relative;
-                    z-index: 10;
-                    display: flex;
-                    align-items: flex-start;
-
-                    a {
-                        position: relative;
-                        z-index: 10;
-                        cursor: pointer;
-                        text-decoration: none;
-                        color: white;
-                        text-shadow: -3px 3px black;
-                        font-size: 2.5em;
-                        padding-left: 2*$spacing;
-
-                        &:hover {
-                            display: flex;
-                            align-items: center;
-
-                            &::before {
-                                content: '';
-                                display: block;
-                                background-image: url("images/404/ff_pointer.png");
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                image-rendering: pixelated;
-                                height: 1.25*$spacing;
-                                width: 1.25*$spacing;
-                                position: absolute;
-                                left: $spacing/2;
-                            }
-                        }
-                    }
-                }
-
-                @include tablet-break {
-                    display: block;
-
-                    &__link {
-                        padding: 0 2*$spacing 2*$spacing 0;
-                    }
-                }
+            &__link {
+                padding: 0 2*$spacing 2*$spacing 0;
             }
         }
     }
