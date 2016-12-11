@@ -58,6 +58,10 @@ p {
     line-height: 2em;
 }
 
+a {
+    @include text-link;
+}
+
 .portfolio__h1 {
     @include header-font;
     font-size: 4em;
@@ -148,6 +152,17 @@ h4 {
         @include tablet-break {
             display: none;
         }
+    }
+}
+
+.page-content a {
+    @include text-link;
+    border-bottom: 2px solid $secondary-color;
+    transition: 3*$transition;
+
+    &:hover {
+        color: $white;
+        background-color: $secondary-color;
     }
 }
 

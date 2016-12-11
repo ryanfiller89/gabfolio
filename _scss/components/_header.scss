@@ -12,7 +12,7 @@
     .header--main {
         @include grid;
         justify-content: space-between;
-        
+
         .header__logo {
             display: flex;
             align-items: center;
