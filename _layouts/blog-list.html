@@ -4,7 +4,7 @@
 
 {% include components/banner.html %}
 
-<main class="page-content blog">
+<main class="page-content blog-list">
     {% for post in site.posts %}
         <article class="excerpt__block-link">
             <a href="{{ post.url }}" class="excerpt">
@@ -12,7 +12,7 @@
                     <section class="excerpt__meta">
                         <span class="excerpt__date">{{ post.date | date: "%b %d, %Y" }}</span>
         				{% for category in post.categories %}
-        						<span class="excerpt__tag"><b>#</b>{{ category }}</span>
+        						<span class="excerpt__tag">#{{ category }}</span>
                         {% endfor %}
         			</section>
         			<h2 class="excerpt__title">{{ post.title }}</h2>

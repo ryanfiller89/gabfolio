@@ -1,4 +1,4 @@
-.page-content.blog {
+.page-content.blog-list {
     @include grid;
     // display: block;
     flex-direction: row;
@@ -10,6 +10,7 @@
         width: 50%;
         padding: $spacing/2;
         float: left;
+        cursor: pointer;
     }
 
     .excerpt {
@@ -94,23 +95,33 @@
     }
 }
 
-// .single {
-//     .meta {
-//         margin-bottom: (2*$spacing);
-//         text-align: center;
-//
-//         .meta__date {
-//             @include strikethrough;
-//             margin-bottom: $spacing;
-//         }
-//
-//         .tag {
-//             padding: 0 .25em;
-//         }
-//     }
-//
-//     .back__blog {
-//         display: block;
-//         text-align: center;
-//     }
-// }
+.page-content.blog-post {
+    .post__meta {
+        margin-bottom: (2*$spacing);
+        text-align: center;
+
+        .post__date {
+            @include strikethrough;
+            margin-bottom: $spacing;
+        }
+
+        .post__tag {
+            padding: 0 .25em;
+            &::after {
+                content: ',';
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .back__blog {
+        margin-top: 2*$spacing;
+        display: block;
+        text-align: center;
+    }
+}
