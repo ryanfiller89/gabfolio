@@ -127,6 +127,7 @@ h4 {
         @include header-font;
         font-weight: 300;
         text-transform: uppercase;
+        text-align: center;
         font-size: 6em;
         letter-spacing: .025em;
         color: $white;
