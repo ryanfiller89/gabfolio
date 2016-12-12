@@ -11,7 +11,7 @@ body {
     }
 
     .page-content {
-        flex: 1;
+        // flex: 1;
     }
 
     .footer {
@@ -38,6 +38,7 @@ $spacing: 3vw;
     display: flex;
     padding-left: $spacing;
     padding-right: $spacing;
+    max-width: 100%;
 }
 
 @mixin grid--container() {
