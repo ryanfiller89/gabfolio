@@ -127,6 +127,7 @@ h4 {
         @include header-font;
         font-weight: 300;
         text-transform: uppercase;
+        text-align: center;
         font-size: 6em;
         letter-spacing: .025em;
         color: $white;
@@ -155,7 +156,7 @@ h4 {
     }
 }
 
-.page-content a {
+.page-content p a {
     @include text-link;
     border-bottom: 2px solid $secondary-color;
     transition: 3*$transition;
@@ -178,16 +179,14 @@ h4 {
         }
     }
 
-    .excerpt__date {
+    .excerpt__meta {
         @include body-font;
         font-size: .8em;
-        color: $white;
         font-weight: bold;
-    }
 
-    .excerpt__tag {
-        @include body-font;
-        color: $light-gray;
+        span {
+            color: $white;
+        }
     }
 
     .excerpt__link {
@@ -199,24 +198,47 @@ h4 {
             content: ' ▸▸';
         }
     }
+
+    &:hover, &:active {
+
+        .excerpt__title {
+            color: $white;
+        }
+
+        .excerpt__body {
+            p {
+                color: $primary-color;
+            }
+        }
+
+        .excerpt__link {
+            color: $secondary-color;
+        }
+    }
 }
 
-.single {
-    .meta {
+.blog-post {
+    .post__meta {
         color: $light-gray;
+        .post__date {
+            font-size: 1em;
+        }
+        .post__tag {
+            font-size: 1.25em;
+        }
     }
 
     .back__blog {
         @include text-link;
         @include nav-font;
-        font-size: 1.5em;
+        font-size: 1.25em;
         margin: 0 auto;
 
         &::before{
             content: ' ▸▸';
             display: inline-block;
             position: relative;
-            top: .025em;
+            top: .125em;
             transform: rotate(180deg);
         }
     }

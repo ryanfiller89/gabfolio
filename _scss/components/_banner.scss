@@ -8,41 +8,42 @@
     @include image-overlay;
     box-shadow: $shadow-inset;
 
-    @include grid;
-    justify-content: center;
-
     .banner__header {
         margin: 0;
-        z-index: 3;
+        position: relative;
+        z-index: 5;
         text-shadow: $shadow;
+        @include grid--container;
+        justify-content: center;
     }
 }
 
-.banner--overlap {
-    position: relative;
-    padding-bottom: calc(#{2*$spacing} + 5em);
-    margin-bottom: -3.5em;
+.overlap {
+    .banner {
+        padding-bottom: 6*$spacing;
 
-    & + .page-content {
-        background: $white;
-        z-index: 4;
+        &::after {
+            content: '';
+            display: block;
+            background: $white;
+            width: $container-width;
+            height: 12em;
+            position: absolute;
+            right: 0; bottom: -3.5em; left: 0;
+            margin: 0 auto;
+            z-index: 2;
+            box-shadow: $shadow;
+
+            @include tablet-break {
+                width: 100vw;
+            }
+        }
     }
 
-    &::after {
-        content: '';
-        display: block;
+    &+ .blog-post {
         background: $white;
-        width: $container-width;
-        height: 7em;
-        position: absolute;
-        right: 0; bottom: -3.5em; left: 0;
-        margin: 0 auto;
-        z-index: 2;
-        box-shadow: $shadow;
-
-        @include tablet-break {
-            width: 100vw;
-        }
+        z-index: 4;
+        margin-top: -4*$spacing;
     }
 }
 
