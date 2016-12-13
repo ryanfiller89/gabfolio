@@ -1,5 +1,5 @@
 ---
-layout: grid
+layout: page
 title:  "test"
 category: pfolio-test
 image: /images/site-assets/placeholder-thumb.jpg

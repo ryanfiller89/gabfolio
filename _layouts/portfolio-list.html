@@ -5,30 +5,25 @@
 {% include components/banner.html %}
 
 <main class="page-content portfolio-list">
-    {{ page.content }}
-    <br />
+    <!-- <p>{{ page.content }}</p> -->
 
-    {% for post in site.portfolio %}
-        <article class="excerpt__block-link">
-            <a href="{{ post.url }}" class="excerpt">
-                <div class="excerpt__header" style="background-image:url({{ post.image }});">
-                    <section class="excerpt__meta">
-                        <span class="excerpt__date">{{ post.date | date: "%b %d, %Y" }}</span>
-        				{% for category in post.categories %}
-        						<span class="excerpt__tag">#{{ category }}</span>
-                        {% endfor %}
-        			</section>
-        			<h2 class="excerpt__title">{{ post.title }}</h2>
-        		</div>
-                <main class="excerpt__body">
-        			<p class="excerpt__text">
-        			    {{ post.excerpt }}
-        			</p>
-        			<span class="excerpt__link">Read More</span>
-        		</main>
-            </a>
-        </article>
-    {% endfor %}
+    <div class="portfolio-grid">
+        {% for work in site.portfolio %}
+            <article class="project__block-link">
+                <a href="{{ work.url }}" class="portfolio-grid-block" style="background-image:url({{ work.image }});">
+                	<div class="portfolio-grid-block__info" >
+                		<h2 class="excerpt__title">{{work.title}}</h2>
+                        <section class="excerpt__meta">
+                            {% for category in work.categories %}
+                                    <span class="excerpt__tag">#{{ category }}</span>
+                            {% endfor %}
+                		</section>
+                        <span class="excerpt__link">Read More</span>
+                	</div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
 </main>
 
 {% include components/footer.html %}
