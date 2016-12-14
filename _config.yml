@@ -37,8 +37,19 @@ collections:
 sass:
     sass_dir: /assets/_scss
 
+jekyll-archives:
+  enabled: true
+  layout: 'portfolio-list'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/blog/:name/'
+    category: '/portfolio/:name/'
+
 gems:
   - jekyll-feed
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
