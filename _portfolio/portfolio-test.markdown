@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 title:  test
-category: category
+categories: design
 image: /images/site-assets/placeholder-thumb.jpg
 ---
 
