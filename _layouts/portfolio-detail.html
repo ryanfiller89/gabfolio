@@ -1,0 +1,36 @@
+{% include head.html %}
+
+{% include components/header.html %}
+
+	<section class="banner banner--overlap banner--swiper js-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <section class="swiper-slide" style="background-image: url('https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif')">
+                        </section>
+                        <section class="swiper-slide" style="background-image: url('https://media.giphy.com/media/kcnvITNDYaaas/giphy.gif')">
+                        </section>
+                        <section class="swiper-slide" style="background-image: url('https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif')">
+                        </section>
+                        <section class="swiper-slide" style="background-image: url('https://media.giphy.com/media/kcnvITNDYaaas/giphy.gif')">
+                        </section>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-container">
+                    <div class="swiper-button-prev"><span>▸▸</span></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                    <div class="swiper-button-next"><span>▸▸</span></div>
+                </div>
+	</section>
+
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        <h1 class="portfolio__h1">{{post.title}}</h1>
+		{{post.content}}
+	</article>
+
+{% include components/footer.html %}

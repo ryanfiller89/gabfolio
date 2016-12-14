@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: portfolio-detail
 title:  test
 categories: design
 image: /images/site-assets/placeholder-thumb.jpg
