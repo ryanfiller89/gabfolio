@@ -1,0 +1,19 @@
+{% include head.html %}
+
+{% include components/header.html %}
+
+{% include components/banner.html %}
+
+<main class="page-content portfolio-list">
+    <!-- <p>{{ page.content }}</p> -->
+
+    <div class="portfolio-grid">
+        {% for work in site.portfolio %}
+            {% if page.collection-cat == work.category %}
+                {% include components/grid-block.html %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</main>
+
+{% include components/footer.html %}

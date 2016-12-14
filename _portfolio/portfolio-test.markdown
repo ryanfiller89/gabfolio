@@ -1,7 +1,7 @@
 ---
 layout: portfolio-detail
 title:  test
-categories: design
+category: design
 image: /images/site-assets/placeholder-thumb.jpg
 ---
 
