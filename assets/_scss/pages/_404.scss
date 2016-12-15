@@ -85,7 +85,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                     &::before {
                         content: '';
                         display: block;
-                        background-image: url("../images/404/ff_pointer.png");
+                        background-image: url("../assets/images/404/ff_pointer.png");
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center center;
