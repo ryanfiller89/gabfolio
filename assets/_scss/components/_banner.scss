@@ -49,7 +49,9 @@
 
 .banner--swiper {
     padding: 0;
+    margin: 0;
     height: 90vh;
+    width: 100%;
 
     @include large-break {
         height: 100vh;
@@ -57,10 +59,11 @@
 
     .swiper-wrapper {
         height: 100%;
-        display: block;
+        width: 100%;
 
         .swiper-slide {
             height: 100%;
+            width:100%;
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
@@ -111,6 +114,7 @@
     .swiper-pagination {
         width: 100%;
         max-width: $container-width;
+        margin: 0 auto;
         position: relative;
         z-index: 10;
         top: (-1.5*$spacing);

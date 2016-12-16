@@ -1,4 +1,4 @@
-var mySwiper = new Swiper ('.js-swiper', {
+var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
