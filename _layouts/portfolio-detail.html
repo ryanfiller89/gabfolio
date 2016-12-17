@@ -1,31 +1,20 @@
 {% include head.html %}
 
+<div class="portfolio-page">
 {% include components/header.html %}
 
-<section class="banner--swiper swiper-container">
-	<!-- Additional required wrapper -->
-	<div class="swiper-wrapper">
-		<!-- Slides -->
-			{% for image in page.slides %}
-				<section class="swiper-slide" style="background-image: url('{{ image }}')">
-				</section>
-			{% endfor %}
-	</div>
-	<!-- If we need pagination -->
-	<div class="swiper-pagination">
-		<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-		<span class="swiper-pagination-bullet"></span>
-		<span class="swiper-pagination-bullet"></span>
-	</div>
-	<!-- If we need navigation buttons -->
-	<div class="swiper-button-container">
-		<div class="swiper-button-prev"><span>▸▸</span></div>
-		<div class="swiper-button-next"><span>▸▸</span></div>
-	</div>
-</section>
+{% include components/swiper.html %}
 
 <main class="page-content portfolio-detail">
+    <section class="post__meta">
+        <span class="post__date">{{ page.date | date: "%b %d, %Y" }}</span>
+        {% for category in page.categories %}
+                <span class="post__tag">#{{ category }}</span>
+        {% endfor %}
+    </section>
     {{ content }}
+    <a class="back__blog" href="/blog"> Back to {{ page.categories }}</a>
 </main>
 
 {% include components/footer.html %}
+</div>

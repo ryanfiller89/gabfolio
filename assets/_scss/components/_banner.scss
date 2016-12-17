@@ -27,20 +27,20 @@
             display: block;
             background: $white;
             width: $container-width;
-            height: 12em;
+            height: 5*$spacing;
             position: absolute;
-            right: 0; bottom: -3.5em; left: 0;
+            right: 0; bottom: -1*$spacing; left: 0;
             margin: 0 auto;
             z-index: 2;
             box-shadow: $shadow;
 
             @include tablet-break {
-                width: 100vw;
+                display: none;
             }
         }
     }
 
-    &+ .blog-post {
+    &+ .blog-post  {
         background: $white;
         z-index: 4;
         margin-top: -4*$spacing;
@@ -50,11 +50,41 @@
 .banner--swiper {
     padding: 0;
     margin: 0;
-    height: 90vh;
+    height: 95vh;
     width: 100%;
+    overflow: visible;
+
+    &+ .portfolio-detail  {
+        background: $white;
+        z-index: 4;
+        margin-top: -4*$spacing;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background: $white;
+        width: $container-width;
+        height: 5*$spacing;
+        position: absolute;
+        right: 0; bottom: -1*$spacing; left: 0;
+        margin: 0 auto;
+        z-index: 2;
+        box-shadow: $shadow;
+
+        @include tablet-break {
+            display: none;
+        }
+    }
 
     @include large-break {
         height: 100vh;
+
+        &+ .portfolio-detail  {
+            background: $white;
+            z-index: 4;
+            margin-top: -0;
+        }
     }
 
     .swiper-wrapper {
@@ -75,14 +105,16 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        position: relative;
-        top: -.64em;
+        position: absolute;
+        bottom: 0px;
+        z-index: 10;
 
         @include large-break {
             top: -2.5em;
         }
 
         .swiper-button-prev, .swiper-button-next {
+            cursor: pointer;
             display: block;
             justify-content: center;
             align-items: center;
@@ -91,14 +123,12 @@
             padding: .5em 0;
             font-size: 1.5em;
             line-height: 1em;
+            color: $white;
+            background: $black;
 
             span {
                 position: relative;
                 top: -.025em;
-
-                @include large-break {
-                    color: $gray;
-                }
             }
 
             &:hover {
@@ -117,7 +147,7 @@
         margin: 0 auto;
         position: relative;
         z-index: 10;
-        top: (-1.5*$spacing);
+        top: -5*$spacing;
         display: flex;
         justify-content: center;
         align-items: center;

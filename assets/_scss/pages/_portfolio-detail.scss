@@ -1,29 +1,63 @@
 @include large-break {
-    body.single-work {
+    .portfolio-page {
+        display: flex;
+        align-items: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         .header {
+            width: 100%;
             order: 1;
         }
 
-        .banner {
-            width: 50%;
-            align-self: flex-start;
-            height: 90vh;
-            order: 3;
-        }
+        .footer {
+            width: 100%;
+            order: 10;
 
-        .banner--overlap {
-            &::after {
-                display: none;
+            &:first-of-type {
+                box-shadow: 0 -30px 50px 15px $white;
+                position: relative;
+                z-index: 5;
             }
         }
 
-        .page-content {
+        .banner--swiper {
+            width: 50%;
+            order: 3;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+
+            &::after {
+                display: none;
+            }
+
+            .swiper-pagination {
+                top: -.75*$spacing;
+                z-index: 15;
+            }
+
+            .swiper-button-container {
+                height: $spacing;
+                position: absolute;
+                bottom: 0;
+                top: inherit;
+                height: 4.125vw;
+
+                .swiper-button-next, .swiper-button-prev {
+                    background-color: transparent;
+                    color: $black;
+                    text-shadow: $shadow;
+                }
+            }
+        }
+
+
+        .page-content.portfolio-detail {
             margin: 0;
             width: 50%;
-            height: 90vh;
+            height: 100vh;
             overflow: scroll;
             align-self: flex-end;
             order: 2;
@@ -36,10 +70,6 @@
                 margin: 0;
                 padding: 1.5em 0
             }
-        }
-
-        .footer {
-            order: 4;
         }
     }
 }
