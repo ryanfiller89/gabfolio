@@ -9,6 +9,7 @@
 @import "config/animations";
 @import "config/typography";
 @import "config/layout";
+@import "config/swiper";
 
 /* Components */
 @import "components/social";
@@ -20,7 +21,7 @@
 /* Pages */
 @import "pages/page";
 @import "pages/blog";
-// @import "pages/portfolio-grid";
-// @import "pages/portfolio-detail";
+@import "pages/portfolio-list";
+@import "pages/portfolio-detail";
 @import "pages/homepage";
 @import "pages/404";

@@ -3,7 +3,7 @@ layout: blog-post
 title:  "I hope this works 2"
 date:   2016-12-07 13:52:34 -0600
 categories: test
-image: /images/site-assets/placeholder-thumb.jpg
+image: /assets/images/site-assets/placeholder-thumb.jpg
 ---
 
 Short post. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

@@ -1,12 +1,11 @@
 {% include head.html %}
 
+<div class="portfolio-page">
 {% include components/header.html %}
 
-<div class="overlap">
-{% include components/banner.html %}
-</div>
+{% include components/swiper.html %}
 
-<main class="page-content blog-post">
+<main class="page-content portfolio-detail">
     <section class="post__meta">
         <span class="post__date">{{ page.date | date: "%b %d, %Y" }}</span>
         {% for category in page.categories %}
@@ -14,7 +13,8 @@
         {% endfor %}
     </section>
     {{ content }}
-    <a class="back__blog" href="/blog"> Back to all posts</a>
+    <a class="back__blog" href="/blog"> Back to {{ page.categories }}</a>
 </main>
 
 {% include components/footer.html %}
+</div>
