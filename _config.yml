@@ -50,6 +50,7 @@ jekyll-archives:
 gems:
   - jekyll-feed
   - jekyll-archives
+  - octopress-autoprefixer
 exclude:
   - Gemfile
   - Gemfile.lock
