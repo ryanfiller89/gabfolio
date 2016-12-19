@@ -52,7 +52,7 @@ body {
 
         img.center {
             display: block;
-            width: calc(100% + 6vw);
+            width: calc(100% + (2 * #{$spacing}));
             height: auto;
             margin: 0 -1*$spacing $spacing -1*$spacing;
         }
