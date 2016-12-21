@@ -29,6 +29,18 @@ markdown: kramdown
 
 permalink: /blog/:title/
 
+defaults:
+    -
+        scope:
+            type: "posts"
+        values:
+            parent: blog
+    -
+        scope:
+            type: "portfolio"
+        values:
+            parent: portfolio
+
 collections:
     portfolio:
         output: true
