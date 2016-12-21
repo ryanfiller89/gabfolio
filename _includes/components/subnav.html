@@ -1,0 +1,28 @@
+{% if page.layout == "portfolio-list" %}
+      {% assign subnav = true %}
+{% endif %}
+
+{% if page.layout == "portfolio-list-category" %}
+      {% assign subnav = true %}
+{% endif %}
+
+{% if page.layout == "portfolio-detail" %}
+      {% assign subnav = true %}
+{% endif %}
+
+{% if page.collection-category == page.category %}
+    {% assign active = true %}
+{% endif %}
+
+
+{% if subnav %}
+    <ul class="subnav" role="navigation">
+        {% for item in site.portfolio %}
+            <li class="subnav__link {% if page.category == item.category %}active{% endif %}">
+                <a href="/portfolio/{{ item.categories }}/">
+                    {{ item.categories }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
