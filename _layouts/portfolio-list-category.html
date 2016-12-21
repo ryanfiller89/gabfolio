@@ -9,7 +9,7 @@
 
     <div class="portfolio-grid">
         {% for work in site.portfolio %}
-            {% if page.collection-category == work.category %}
+            {% if page.category == work.category %}
                 {% include components/grid-block.html %}
             {% endif %}
         {% endfor %}
