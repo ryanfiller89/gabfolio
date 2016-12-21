@@ -1,0 +1,127 @@
+.page-content.blog-list {
+    @include grid;
+    // display: block;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: $spacing/2;
+
+    .excerpt__block-link {
+        width: 50%;
+        padding: $spacing/2;
+        float: left;
+        cursor: pointer;
+    }
+
+    .excerpt {
+        display: block;
+
+        @include tablet-break {
+            width: 100%;
+        }
+
+        .excerpt__header {
+            padding: (5*$spacing) $spacing ($spacing/2) $spacing;
+            margin-bottom: $spacing;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            @include image-overlay;
+
+            .excerpt__meta {
+                text-shadow: $shadow;
+                position: relative;
+                z-index: 5;
+                margin-bottom: ($spacing/4);
+
+                span {
+                    &:nth-child(2) {
+                        &::before {
+                            content: '|';
+                            margin: 0 .5em;
+                        }
+                    }
+                }
+
+                .excerpt__tag {
+                    &::after {
+                        content: ', ';
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .excerpt__title {
+                position: relative;
+                z-index: 5;
+                margin-bottom: 0;
+                text-shadow: $shadow;
+            }
+        }
+
+        .excerpt__body {
+            padding: 0 $spacing  $spacing $spacing;
+
+            .excerpt__text {
+                margin-bottom: ($spacing/2);
+            }
+
+            .excerpt__link {
+                text-decoration: none;
+
+                @include tablet-break {
+                    text-align: center;
+                }
+            }
+        }
+
+        &:hover, &:active {
+            position: relative;
+            top: -1.25px;
+            box-shadow: $shadow;
+
+            .excerpt__header {
+
+                &::before {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+.page-content.blog-post {
+    .post__meta {
+        margin-bottom: (2*$spacing);
+        text-align: center;
+
+        .post__date {
+            @include strikethrough;
+            margin-bottom: $spacing;
+        }
+
+        .post__tag {
+            padding: 0 .25em;
+            &::after {
+                content: ',';
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .back__blog {
+        margin-top: 2*$spacing;
+        display: block;
+        text-align: center;
+    }
+}

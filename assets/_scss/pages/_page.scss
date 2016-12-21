@@ -1,0 +1,69 @@
+body {
+    background-color: $white;
+}
+
+.page-content {
+    flex-direction: column;
+    position: relative;
+    background: $white;
+    padding-top: (2*$spacing);
+    padding-bottom: (4*$spacing);
+    @include grid--container;
+    display: block;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        margin-bottom: $spacing/2;
+    }
+
+    p {
+        margin: 0;
+        margin-bottom: $spacing;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            border-bottom: 1px $secondary-color dotted;
+
+            &:hover {
+                color: $primary-color;
+                border-bottom: 1px $primary-color dotted;
+            }
+        }
+
+        img.none {
+            display: block;
+            margin: 0 auto;
+            width: auto;
+            height: auto;
+        }
+
+        img.left {
+            float: left;
+            margin: 0 $spacing $spacing -1*$spacing;
+            width: 50%;
+        }
+
+        img.right {
+            float: right;
+            margin: 0 -1*$spacing $spacing $spacing;
+            width: 50%;
+        }
+
+        img.center {
+            display: block;
+            width: calc(100% + (2 * #{$spacing}));
+            height: auto;
+            margin: 0 -1*$spacing $spacing -1*$spacing;
+        }
+
+        img.left, img.right, img.center {
+            @include phone-break {
+                width: calc(100% + 6vw);
+                height: auto;
+                margin: 0 -1*$spacing $spacing -1*$spacing;
+            }
+        }
+    }
+
+}

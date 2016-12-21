@@ -1,0 +1,20 @@
+{% include head.html %}
+
+{% include components/header.html %}
+
+<div class="overlap">
+{% include components/banner.html %}
+</div>
+
+<main class="page-content blog-post">
+    <section class="post__meta">
+        <span class="post__date">{{ page.date | date: "%b %d, %Y" }}</span>
+        {% for category in page.categories %}
+                <span class="post__tag">#{{ category }}</span>
+        {% endfor %}
+    </section>
+    {{ content }}
+    <a class="back__blog" href="/blog"> Back to all posts</a>
+</main>
+
+{% include components/footer.html %}

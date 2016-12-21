@@ -1,0 +1,20 @@
+{% include head.html %}
+
+<div class="portfolio-page">
+{% include components/header.html %}
+
+{% include components/swiper.html %}
+
+<main class="page-content portfolio-detail">
+	<h1 class="portfolio__h1">{{ page.title }}</h1>
+    <section class="post__meta">
+        {% for category in page.categories %}
+                <span class="post__tag">#{{ category }}</span>
+        {% endfor %}
+    </section>
+    {{ content }}
+    <a class="back__blog" href="/blog"> Back to {{ page.categories }}</a>
+</main>
+
+{% include components/footer.html %}
+</div>

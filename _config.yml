@@ -27,10 +27,42 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+permalink: /blog/:title/
+
+defaults:
+    -
+        scope:
+            type: "posts"
+        values:
+            parent: blog
+    -
+        scope:
+            type: "portfolio"
+        values:
+            parent: portfolio
+
+collections:
+    portfolio:
+        output: true
+        permalink: /portfolio/:categories/:title/
+
 sass:
-    sass_dir: _scss
+    sass_dir: /assets/_scss
+
+jekyll-archives:
+  enabled: true
+  layout: 'portfolio-list'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/blog/:name/'
+    category: '/portfolio/:name/'
+
 gems:
   - jekyll-feed
+  - jekyll-archives
+  - octopress-autoprefixer
 exclude:
   - Gemfile
   - Gemfile.lock

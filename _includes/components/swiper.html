@@ -1,0 +1,21 @@
+<section class="banner--swiper swiper-container">
+	<!-- Additional required wrapper -->
+	<div class="swiper-wrapper">
+		<!-- Slides -->
+			{% for image in page.slides %}
+				<section class="swiper-slide" style="background-image: url('{{ image }}')">
+				</section>
+			{% endfor %}
+	</div>
+	<!-- If we need pagination -->
+	<div class="swiper-pagination">
+		<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+		<span class="swiper-pagination-bullet"></span>
+		<span class="swiper-pagination-bullet"></span>
+	</div>
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-container">
+		<div class="swiper-button-prev"><span>▸▸</span></div>
+		<div class="swiper-button-next"><span>▸▸</span></div>
+	</div>
+</section>
