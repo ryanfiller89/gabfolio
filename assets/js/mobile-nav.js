@@ -1,7 +1,7 @@
 let $ = window.$;
 let $naviconWrap = $('.navicon').closest('.navicon--wrap');
 let $mobileNavWrap = $('.site-wrap');
-let $trayWrap = $('.tray-wrap');
+let $trayWrap = $('.site');
 let overlay;
 let isOpen = false;
 let $sidebarSelectorWrap = $('.sidebar__selector-wrap');
