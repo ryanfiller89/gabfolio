@@ -47,7 +47,7 @@ $(() => {
 
     $mobileNavSelectorWrap.on('click', function(){
         $(this).toggleClass('active');
-        $(this).parent().siblings('ul').toggleClass('active');
+        $(this).siblings('ul').toggleClass('active');
     });
 
     $naviconWrap.on('click', toggleMenuOpen);

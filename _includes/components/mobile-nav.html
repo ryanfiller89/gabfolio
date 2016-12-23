@@ -1,0 +1,30 @@
+<div class="mobile-nav-wrap">
+    <ul class="mobile-nav" role="navigation">
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+                <li class="mobile-nav__row">
+                    <a href="{{ p.url }}">{{ p.title }}</a>
+
+                    {% if p.title == 'Portfolio' %}
+
+                        <div class="mobile-nav__selector-wrap">
+                            <div class="mobile-nav__selector"></div>
+                        </div>
+
+                        <ul class="mobile-subnav">
+                        {% for item in site.portfolio %}
+                            <li class="mobile-nav__row">
+                                <a href="/portfolio/{{ item.categories }}/">{{ item.categories }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+
+                    {% endif %}
+
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% include components/socials.html %}
+</div>
