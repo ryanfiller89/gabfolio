@@ -40,6 +40,10 @@
             justify-content: flex-end;
             align-items: center;
 
+            @include tablet-break {
+                display: none;
+            }
+
                 .nav__link {
                     a {
                         text-decoration: none;
