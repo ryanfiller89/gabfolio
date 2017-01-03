@@ -1,15 +1,26 @@
 {% include head.html %}
 
-{% include components/header.html %}
+{% include head.html %}
 
-{% include components/banner.html %}
+<div class="site-wrap">
+	<div class="mobile-tray">
+		{% include components/mobile-nav.html %}
+	</div>
+	<div class="site {{ page.title }}">
 
-<main class="page-content portfolio-list">
-    <div class="portfolio-grid">
-        {% for work in site.portfolio %}
-            {% include components/grid-block.html %}
-        {% endfor %}
+        {% include components/header.html %}
+
+        {% include components/banner.html %}
+
+        <main class="page-content portfolio-list">
+            <div class="portfolio-grid">
+                {% for work in site.portfolio %}
+                    {% include components/grid-block.html %}
+                {% endfor %}
+            </div>
+        </main>
+
+        {% include components/footer.html %}
+        
     </div>
-</main>
-
-{% include components/footer.html %}
+</div>
