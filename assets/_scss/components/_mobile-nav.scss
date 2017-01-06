@@ -1,5 +1,7 @@
+$navicon-size: 50px;
+
 .navicon--wrap {
-    width: 3*$spacing;
+    width: auto;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
@@ -12,8 +14,8 @@
     .navicon {
         display: block;
         background: $primary-color;
-        width: 3*$spacing;
-        height: 5px;
+        width: $navicon-size;
+        height: $navicon-size/10;
         position: relative;
         transition: 0s;
         z-index: 50;
@@ -80,7 +82,7 @@ body {
     position: relative;
     z-index: 500;
     &.open {
-        transform: translateX(calc(-100% + (5 * #{$spacing})));
+        transform: translateX(calc(-100% + ((2 * #{$spacing})) + #{$navicon-size}));
         .mobile-tray {
             display: block;
         }
@@ -108,7 +110,7 @@ body {
     top: 0;
     z-index: 90;
     height: 100%;
-    width: calc(100% - (5 * #{$spacing}));
+    width: calc(100% - ((2 * #{$spacing})) - #{$navicon-size});
 
     .mobile-nav {
         text-decoration: none;
@@ -119,7 +121,7 @@ body {
 
         .mobile-nav__row {
             width: 100%;
-            min-height: 10vh;
+            min-height: 1.5*$navicon-size;
             border-bottom: 2px solid transparentize($white, .75);
             position: relative;
             display: flex;
@@ -137,8 +139,8 @@ body {
             .mobile-nav__selector-wrap {
                 position: relative;
                 right: 0;
-                height: 10vh;
-                width: 10vh;
+                height: 1.5*$navicon-size;
+                width: 1.5*$navicon-size;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
@@ -181,7 +183,7 @@ body {
                 }
 
                 .mobile-nav__row {
-                    height: 10vh;
+                    height: 1.5*$navicon-size;
                     width: 100%;
                     display: flex;
                     align-items: center;
