@@ -6,6 +6,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
+    @include phone-break {
+        padding: 0;
+        height: 5px;
+    }
+
     li {
         list-style: none;
 

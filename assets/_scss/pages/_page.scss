@@ -54,20 +54,12 @@ body {
             float: left;
             margin: 0 $spacing $spacing -1*$spacing;
             width: 50%;
-
-            @include tablet-break {
-                margin-left: -2*$spacing;
-            }
         }
 
         img.right {
             float: right;
             margin: 0 -1*$spacing $spacing $spacing;
             width: 50%;
-
-            @include tablet-break {
-                margin-right: -2*$spacing;
-            }
         }
 
         img.center {
@@ -75,18 +67,13 @@ body {
             width: calc(100% + (2 * #{$spacing}));
             height: auto;
             margin: 0 -1*$spacing $spacing -1*$spacing;
-
-            @include tablet-break {
-                width: calc(100% + (4 * #{$spacing}));
-                margin: 0 -2*$spacing $spacing -2*$spacing;
-            }
         }
 
         img.left, img.right, img.center {
             @include phone-break {
-                width: calc(100% + (4 * #{$spacing}));
+                width: calc(100% + (2 * #{$spacing}));
                 height: auto;
-                margin: 0 -2*$spacing $spacing -2*$spacing;
+                margin: 0 -1*$spacing $spacing -1*$spacing;
             }
         }
     }

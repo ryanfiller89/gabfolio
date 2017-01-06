@@ -82,7 +82,7 @@ body {
     position: relative;
     z-index: 500;
     &.open {
-        transform: translateX(calc(-100% + ((4 * #{$spacing})) + #{$navicon-size}));
+        transform: translateX(calc(-100% + ((2 * #{$spacing})) + #{$navicon-size}));
         .mobile-tray {
             display: block;
         }
@@ -110,7 +110,7 @@ body {
     top: 0;
     z-index: 90;
     height: 100%;
-    width: calc(100% - ((4 * #{$spacing})) - #{$navicon-size});
+    width: calc(100% - ((2 * #{$spacing})) - #{$navicon-size});
 
     .mobile-nav {
         text-decoration: none;

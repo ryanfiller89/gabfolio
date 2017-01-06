@@ -39,11 +39,6 @@ $spacing: 3vw;
     padding-left: $spacing;
     padding-right: $spacing;
     max-width: 100%;
-
-    @include tablet-break {
-        padding-left: 2*$spacing;
-        padding-right: 2*$spacing;
-    }
 }
 
 @mixin grid--container() {
