@@ -3,9 +3,12 @@
 
     .footer--pre {
         background: $gray;
-
         @include grid;
-        padding: 0;
+
+        @include tablet-break {
+            padding-left: 0;
+            padding-right: 0;    
+        }
 
         .nav {
             list-style: none;

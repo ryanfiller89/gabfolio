@@ -73,12 +73,28 @@ h2 {
     @include header-font;
     color: $primary-color;
     font-size: 3.5em;
+
+    @include tablet-break {
+        font-size: 2.5em;
+    }
+
+    @include phone-break {
+        font-size: 2em;
+    }
 }
 
 h3 {
     @include header-font;
     color: $light-gray;
     font-size: 2.5em;
+
+    @include tablet-break {
+        font-size: 2em;
+    }
+
+    @include phone-break {
+        font-size: 1.5em;
+    }
 }
 
 h4 {
@@ -87,6 +103,14 @@ h4 {
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.5em;
+
+    @include tablet-break {
+        font-size: 1em;
+    }
+
+    @include phone-break {
+        font-size: 1em;
+    }
 }
 
 .header {
@@ -132,6 +156,14 @@ h4 {
         letter-spacing: .025em;
         color: $white;
         text-shadow: $shadow;
+
+        @include tablet-break {
+            font-size: 4em;
+        }
+
+        @include tablet-break {
+            font-size: 3em;
+        }
     }
 
     .swiper-button-prev, .swiper-button-next {
