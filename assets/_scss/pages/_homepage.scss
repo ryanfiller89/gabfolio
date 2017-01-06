@@ -1,41 +1,72 @@
-.page-content.homepage {
-    height: 80vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    @include grid;
-    justify-content: center;
-    @include image-overlay;
+.site.home {
 
-    &::after {
-        content: '';
-        background: $primary-color;
-        opacity: .25;
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: 1;
-    }
+    .header {
 
-    svg {
-        z-index: 2;
-        display: block;
-        width: 25vw;
-        height: auto;
-        filter: drop-shadow( 0 0 10px $dark-gray );
-        transition: 1s;
-        // filter: blur(10px);
-
-        path, polygon {
-            fill: $white;
-        }
-
-        polygon:hover {
-            fill: $secondary-color;
+        .header--main {
+            display: none;
         }
 
         @include tablet-break {
-            width: 50vw;
+            .header--main {
+
+                position: absolute;
+                width: 100%;
+
+                .navicon--wrap{
+                    .navicon, .navicon::before, .navicon::after {
+                        background: $secondary-color;
+                    }
+
+                    &.open .navicon {
+                        background: none;
+                    }
+                }
+            }
         }
     }
+
+    .page-content {
+        height: 80vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+        padding: 0;
+        @include grid;
+        justify-content: center;
+        @include image-overlay;
+
+        &::after {
+            content: '';
+            background: $primary-color;
+            opacity: .25;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: 1;
+        }
+
+        svg {
+            z-index: 2;
+            display: block;
+            width: 25vw;
+            height: auto;
+            filter: drop-shadow( 0 0 10px $dark-gray );
+            transition: 1s;
+            // filter: blur(1px);
+
+            polygon {
+                fill: $white;
+                cursor: pointer;
+
+                &:hover {
+                    fill: $secondary-color;
+                }
+            }
+
+            @include tablet-break {
+                width: 50vw;
+            }
+        }
+    }
+
 }
