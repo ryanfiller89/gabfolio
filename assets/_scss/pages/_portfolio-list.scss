@@ -104,10 +104,6 @@
                     &:hover {
                         color: $white;
                     }
-
-                    @include tablet-break {
-                        display: none !important;
-                    }
                 }
             }
         }
