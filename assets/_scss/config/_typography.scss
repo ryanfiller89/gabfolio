@@ -151,6 +151,17 @@ h4 {
         }
 }
 
+.subnav--mobile {
+    .subnav--mobile__title {
+        @include header-font;
+        font-size: 1.25em;
+    }
+
+    .subnav--mobile__list {
+        text-transform: uppercase;
+    }
+}
+
 .banner {
     h1.banner__header {
         @include header-font;

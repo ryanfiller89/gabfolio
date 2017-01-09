@@ -16,7 +16,7 @@
 
 
 {% if subnav %}
-    <ul class="subnav" role="navigation">
+    <ul class="subnav">
         {% for item in site.portfolio %}
             <li class="subnav__link {% if page.category == item.category %}active{% endif %}">
                 <a href="/portfolio/{{ item.categories }}/">
@@ -25,4 +25,25 @@
             </li>
         {% endfor %}
     </ul>
+{% endif %}
+
+{% if subnav %}
+<div class="subnav--mobile">
+    <div class="subnav--mobile__title">
+        <span>Categories</span>
+       <div class="subnav--mobile__dropdown--wrap">
+           <div class="subnav--mobile__dropdown">&#x25c0;</div>
+       </div>
+    </div>
+    <ul class="subnav--mobile__list">
+        {% for item in site.portfolio %}
+            <li class="subnav--mobile__link {% if page.category == item.category %}active{% endif %}">
+                <a href="/portfolio/{{ item.categories }}/">
+                    {{ item.categories }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% endif %}

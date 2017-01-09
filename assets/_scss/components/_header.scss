@@ -68,9 +68,5 @@
 
     .header--post {
         background: $gray;
-
-        @include tablet-break {
-            display: none;
-        }
     }
 }
