@@ -46,8 +46,15 @@
     .subnav--mobile {
         @include tablet-break {
             display: block;
+            width: 50%;
+            margin: $spacing 25% $spacing/2 25%;
         }
-        margin: $spacing $spacing/2 $spacing/2 $spacing/2;
+
+        @include phone-break {
+            width: calc(100% - #{$spacing});
+            margin: $spacing $spacing/2 $spacing/2 $spacing/2;
+        }
+
         background: $gray;
         color: $white;
 
