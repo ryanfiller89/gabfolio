@@ -8,6 +8,16 @@
     @include image-overlay;
     box-shadow: $shadow-inset;
 
+    @include tablet-break {
+        padding-top: 3*$spacing;
+        padding-bottom: 3*$spacing;
+    }
+
+    @include phone-break {
+        padding-top: 4*$spacing;
+        padding-bottom: 4*$spacing;
+    }
+
     .banner__header {
         margin: 0;
         position: relative;
