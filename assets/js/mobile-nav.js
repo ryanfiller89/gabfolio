@@ -7,7 +7,7 @@ let isOpen = false;
 let $sidebarSelectorWrap = $('.sidebar__selector-wrap');
 let $mobileNavSelectorWrap = $('.mobile-nav__selector-wrap');
 
-$(() => {
+$(function() {
     function toggleOpen() {
         isOpen = !isOpen;
     }
