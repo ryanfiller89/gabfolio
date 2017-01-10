@@ -39,7 +39,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
         margin: 0;
         padding: 0 $spacing;
         max-width: 100%;
-        background-image: url("https://media.giphy.com/media/NGALQBUgvmVTa/giphy.gif");
+        background-image: url("https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -113,9 +113,9 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                         align-items: center;
 
                         &::before {
-                            content: '';
+                            content: ' ';
                             display: block;
-                            background-image: url("../assets/images/404/ff_pointer.png");
+                            background-image: url("../images/404/ff_pointer.png");
                             background-size: cover;
                             background-repeat: no-repeat;
                             background-position: center center;
