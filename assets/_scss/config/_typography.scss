@@ -310,15 +310,23 @@ h4 {
     .nav__link a {
         @include nav-font;
         color: $white;
-        font-size: 2em;
-
-        @include tablet-break {
-            font-size: 1.5em;
-        }
+        font-size: 1.25em;
     }
 
     .footer__legal {
         @include header-font;
         font-size: .9em;
+    }
+}
+
+.site.home {
+    .footer {
+        .nav__link a {
+            font-size: 2em;
+
+            @include tablet-break {
+                font-size: 1.5em;
+            }
+        }
     }
 }
