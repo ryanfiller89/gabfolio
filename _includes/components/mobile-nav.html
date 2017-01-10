@@ -8,11 +8,11 @@
 
                     {% if p.title == 'Portfolio' %}
 
-                        <div class="mobile-nav__selector-wrap">
+                        <div class="mobile-nav__selector-wrap js-mobile-nav-selector">
                             <div class="mobile-nav__selector"></div>
                         </div>
 
-                        <ul class="mobile-subnav">
+                        <ul class="mobile-subnav js-mobile-subnav">
                         {% for item in site.portfolio %}
                             <li class="mobile-nav__row">
                                 <a href="/portfolio/{{ item.categories }}/">{{ item.categories }}</a>

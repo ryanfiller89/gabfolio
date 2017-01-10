@@ -145,7 +145,8 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                &.active {
+
+                &.open {
                     background: $gray;
                     .mobile-nav__selector {
                         transform: rotate(45deg);
@@ -178,7 +179,7 @@ body {
                 max-height: 0;
                 overflow: hidden;
 
-                &.active {
+                &.open {
                     max-height: 1000px;
                 }
 
