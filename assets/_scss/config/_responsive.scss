@@ -1,7 +1,7 @@
 $large: 1200px;
 $small: 950px;
 $tablet: 768px;
-$phone: 414px;
+$phone: 480px;
 
 @mixin large-break () {
 	@media only screen and (min-width: $large) {
