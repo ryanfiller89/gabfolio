@@ -56,6 +56,11 @@ body {
 p {
     font-size: 1.25em;
     line-height: 2em;
+
+    @include tablet-break {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
 }
 
 a {
@@ -73,12 +78,28 @@ h2 {
     @include header-font;
     color: $primary-color;
     font-size: 3.5em;
+
+    @include tablet-break {
+        font-size: 2.5em;
+    }
+
+    @include phone-break {
+        font-size: 2em;
+    }
 }
 
 h3 {
     @include header-font;
     color: $light-gray;
     font-size: 2.5em;
+
+    @include tablet-break {
+        font-size: 2em;
+    }
+
+    @include phone-break {
+        font-size: 1.5em;
+    }
 }
 
 h4 {
@@ -87,6 +108,14 @@ h4 {
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.5em;
+
+    @include tablet-break {
+        font-size: 1em;
+    }
+
+    @include phone-break {
+        font-size: 1em;
+    }
 }
 
 .header {
@@ -122,6 +151,17 @@ h4 {
         }
 }
 
+.subnav--mobile {
+    .subnav--mobile__title {
+        @include header-font;
+        font-size: 1.25em;
+    }
+
+    .subnav--mobile__list {
+        text-transform: uppercase;
+    }
+}
+
 .banner {
     h1.banner__header {
         @include header-font;
@@ -132,6 +172,14 @@ h4 {
         letter-spacing: .025em;
         color: $white;
         text-shadow: $shadow;
+
+        @include tablet-break {
+            font-size: 4em;
+        }
+
+        @include tablet-break {
+            font-size: 2.5em;
+        }
     }
 
     .swiper-button-prev, .swiper-button-next {
@@ -238,20 +286,23 @@ h4 {
     //     margin:0.15em 0.125em 0 0;
     //     line-height:0.75;
     // }
+}
 
-    .back__blog {
-        @include text-link;
-        @include nav-font;
-        font-size: 1.25em;
-        margin: 0 auto;
+.back__link {
+    @include text-link;
+    @include nav-font;
+    font-size: 1.25em;
+    margin: 0 auto;
+    margin-top: 2*$spacing;
+    display: block;
+    text-align: center;
 
-        &::before{
-            content: ' ▸▸';
-            display: inline-block;
-            position: relative;
-            top: .125em;
-            transform: rotate(180deg);
-        }
+    &::before{
+        content: ' ▸▸';
+        display: inline-block;
+        position: relative;
+        top: .125em;
+        transform: rotate(180deg);
     }
 }
 
@@ -260,6 +311,10 @@ h4 {
         @include nav-font;
         color: $white;
         font-size: 2em;
+
+        @include tablet-break {
+            font-size: 1.5em;
+        }
     }
 
     .footer__legal {

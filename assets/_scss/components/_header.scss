@@ -12,15 +12,22 @@
     .header--main {
         @include grid;
         justify-content: space-between;
+        padding-top: $spacing;
+        padding-bottom: $spacing;
 
         .header__logo {
             display: flex;
             align-items: center;
-            margin: 1em;
 
             svg {
                 height: 100px;
                 width: auto;
+
+                @include phone-break {
+                    height: auto;
+                    width: 35%;
+                }
+
                 path, polygon {
                     fill: $black;
                 }
@@ -39,6 +46,10 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+
+            @include tablet-break {
+                display: none;
+            }
 
                 .nav__link {
                     a {

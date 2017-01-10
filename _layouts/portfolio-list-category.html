@@ -1,19 +1,30 @@
 {% include head.html %}
 
-{% include components/header.html %}
+<div class="site-wrap">
+	<div class="mobile-tray">
+		{% include components/mobile-nav.html %}
+	</div>
+	<div class="site {{ page.layout }}">
 
-{% include components/banner.html %}
+        {% include components/header.html %}
 
-<main class="page-content portfolio-list">
-    <!-- <p>{{ page.content }}</p> -->
+        {% include components/banner.html %}
 
-    <div class="portfolio-grid">
-        {% for work in site.portfolio %}
-            {% if page.category == work.category %}
-                {% include components/grid-block.html %}
-            {% endif %}
-        {% endfor %}
+        <main class="page-content portfolio-list">
+            <!-- <p>{{ page.content }}</p> -->
+
+			{% include components/subnav.html %}
+
+            <div class="portfolio-grid">
+                {% for work in site.portfolio %}
+                    {% if page.category == work.category %}
+                        {% include components/grid-block.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </main>
+
+        {% include components/footer.html %}
+
     </div>
-</main>
-
-{% include components/footer.html %}
+</div>

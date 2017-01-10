@@ -23,11 +23,23 @@ body {
         a {
             color: $black;
             text-decoration: none;
-            border-bottom: 1px $secondary-color dotted;
+            border-bottom: 2px $secondary-color dotted;
 
             &:hover {
                 color: $primary-color;
-                border-bottom: 1px $primary-color dotted;
+                border-bottom: 2px $primary-color dotted;
+            }
+
+            @include tablet-break {
+                border-bottom: 0;
+                background: $secondary-color;
+                padding: 0 .25em;
+                color: $white;
+                &:hover {
+                    border-bottom: 0;
+                    background-color: $primary-color;
+                    color: $white;
+                }
             }
         }
 
@@ -59,7 +71,7 @@ body {
 
         img.left, img.right, img.center {
             @include phone-break {
-                width: calc(100% + 6vw);
+                width: calc(100% + (2 * #{$spacing}));
                 height: auto;
                 margin: 0 -1*$spacing $spacing -1*$spacing;
             }

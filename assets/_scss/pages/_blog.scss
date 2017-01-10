@@ -11,6 +11,11 @@
         padding: $spacing/2;
         float: left;
         cursor: pointer;
+
+        @include tablet-break {
+            width: 100%;
+            margin-bottom: 2*$spacing;
+        }
     }
 
     .excerpt {
@@ -27,6 +32,10 @@
             background-repeat: no-repeat;
             background-position: center center;
             @include image-overlay;
+
+            @include tablet-break {
+                padding-top: 10*$spacing;
+            }
 
             .excerpt__meta {
                 text-shadow: $shadow;
@@ -75,6 +84,7 @@
                 text-decoration: none;
 
                 @include tablet-break {
+                    display: block;
                     text-align: center;
                 }
             }
@@ -117,11 +127,5 @@
                 }
             }
         }
-    }
-
-    .back__blog {
-        margin-top: 2*$spacing;
-        display: block;
-        text-align: center;
     }
 }

@@ -3,9 +3,12 @@
 
     .footer--pre {
         background: $gray;
-
         @include grid;
-        padding: 0;
+
+        @include tablet-break {
+            padding-left: 0;
+            padding-right: 0;    
+        }
 
         .nav {
             list-style: none;
@@ -13,6 +16,15 @@
             margin: 0;
             display: flex;
             width: 100%;
+
+            @include tablet-break {
+                display: block;
+                background: $dark-gray;
+
+                .nav__link {
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
 
             .nav__link {
                 flex: 1;
