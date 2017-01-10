@@ -1,4 +1,42 @@
 iframe.contact-form {
     border: 0;
-    background: green;
+    height: 900px;
+}
+
+form.contact {
+    background-color: none;
+
+    .contact__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .contact__row--half {
+            display: block;
+            width: calc(50% - #{$spacing}/2);
+            margin-bottom: $spacing;
+        }
+
+        .contact__row--full {
+            display: block;
+            width: 100%;
+            margin-bottom: $spacing;
+        }
+    }
+
+    input, textarea, .contact__row__button  {
+        font-size: .75em;
+        @include body-font;
+        border: none;
+        padding: $spacing/2;
+    }
+
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    .button {
+        @include button--secondary;
+    }
 }
