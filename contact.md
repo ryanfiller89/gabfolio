@@ -1,11 +1,10 @@
 ---
-layout:
+layout: contact
 title: Contact
 permalink: /contact/
 ---
 
-<form action="https://formspree.io/ryanfiller89@gmail.com"
-      method="POST">
+<form action="https://formspree.io/ryanfiller89@gmail.com" method="POST" class="contact">
     <input type="text" name="name" value="name">
     <input type="email" name="_replyto" value="email">
     <input type="text" name="_subject" value="subject" />
