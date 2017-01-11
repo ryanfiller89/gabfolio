@@ -16,162 +16,184 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
     $gradient: $gradient, $darken $currentPercentage, $darken $nextPercentage;
 }
 
-.page-content.error404 {
-    font-family: 'VT323', monospace;
-    color: white;
-
-    margin: 0;
-    padding: 0 $spacing;
-    max-width: 100%;
-    background-image: url("https://media.giphy.com/media/NGALQBUgvmVTa/giphy.gif");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: 1;
+.site.error404 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    @include image-overlay;
+    height: 100vh;
 
-    .message--404 {
-        text-shadow: $shadow;
-        width: 100%;
-        text-align: center;
-        font-size: 3em;
-        position: relative;
-        z-index: 10;
+    .header {
+        .header--main, .header--post {
+            display: none;
+        }
+    }
+
+    .footer {
+        .footer--pre, .footer--main {
+            display: none;
+        }
+    }
+
+    .page-content {
+        font-family: 'VT323', monospace;
+        color: white;
+        margin: 0;
+        padding: 0 $spacing;
+        max-width: 100%;
+        background-image: url("https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 1;
         display: flex;
         flex-direction: column;
-        @include grid--container;
-        margin-top: 15vh;
+        justify-content: flex-end;
+        align-items: center;
+        @include image-overlay;
 
-        @include tablet-break {
-            margin-top: 0;
+        .message--404 {
+            text-shadow: $shadow;
+            width: 100%;
+            margin-bottom: 4*$spacing;
+            text-align: center;
+            font-size: 3em;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            @include grid--container;
+
+            @include phone-break {
+                font-size: 2em;
+            }
+
+            &__code {
+                font-size: 1.5em;
+                width: 100%;
+            }
         }
 
-        &__code {
-            font-size: 1.5em;
+        .menu--404 {
+            align-self: flex-end;
+            padding: $spacing/2;
+            padding-top: $spacing;
+            margin: $spacing 0;
+            display: block;
             width: 100%;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+
+            &__link {
+                flex-basis: 50%;
+                list-style: none;
+                box-sizing: border-box;
+                padding: 0 $spacing $spacing 0;
+                position: relative;
+                z-index: 10;
+                display: flex;
+                align-items: flex-start;
+
+                a {
+                    position: relative;
+                    z-index: 10;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: white;
+                    text-shadow: -3px 3px black;
+                    font-size: 2.5em;
+                    padding-left: 2*$spacing;
+
+                    @include phone-break {
+                        font-size: 1.5em;
+                    }
+
+                    &:hover {
+                        display: flex;
+                        align-items: center;
+
+                        &::before {
+                            content: ' ';
+                            display: block;
+                            background-image: url("../images/404/ff_pointer.png");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            image-rendering: pixelated;
+                            height: 1.25*$spacing;
+                            width: 1.25*$spacing;
+                            position: absolute;
+                            left: $spacing/2;
+                        }
+                    }
+                }
+            }
+
+            @include tablet-break {
+                display: block;
+            }
+
+            @include phone-break {
+                width: calc(100% - 3*#{$spacing});
+                margin: 0 1.5*$spacing 2.5*$spacing 1.5*$spacing;
+            }
         }
     }
 
     .menu--404 {
-        align-self: flex-end;
-        padding: $spacing/2;
-        padding-top: $spacing;
-        margin: $spacing 0;
-        display: block;
-        width: 100%;
-        position: relative;
-        z-index: 10;
-        display: flex;
-        flex-wrap: wrap;
+        background-image:
+            linear-gradient(
+                $gradient
+            );
+            box-shadow: inset 0px 0px 0px $border/2 $border-shadow;
 
-        &__link {
-            flex-basis: 50%;
-            list-style: none;
-            box-sizing: border-box;
-            padding: 0 $spacing $spacing 0;
-            position: relative;
-            z-index: 10;
-            display: flex;
-            align-items: flex-start;
-
-            a {
-                position: relative;
-                z-index: 10;
-                cursor: pointer;
-                text-decoration: none;
-                color: white;
-                text-shadow: -3px 3px black;
-                font-size: 2.5em;
-                padding-left: 2*$spacing;
-
-                &:hover {
-                    display: flex;
-                    align-items: center;
-
-                    &::before {
-                        content: '';
-                        display: block;
-                        background-image: url("../assets/images/404/ff_pointer.png");
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        image-rendering: pixelated;
-                        height: 1.25*$spacing;
-                        width: 1.25*$spacing;
-                        position: absolute;
-                        left: $spacing/2;
-                    }
-                }
-            }
-        }
-
-        @include tablet-break {
+        .corner {
             display: block;
+            height: $border;
+            width: $border;
+            position: absolute;
+            background-color: $border-color;
+            box-shadow: $border/2 $border/2 $border-shadow;
 
-            &__link {
-                padding: 0 2*$spacing 2*$spacing 0;
+            &:nth-of-type(1) {
+                top: 0;
+                left: 0;
+            }
+            &:nth-of-type(2) {
+                top: 0;
+                right: 0;
+                transform: rotate(90deg);
+            }
+            &:nth-of-type(3) {
+                bottom: 0;
+                right: 0;
+                transform: rotate(180deg);
+            }
+            &:nth-of-type(4) {
+                bottom: 0;
+                left: 0;
+                transform: rotate(270deg);
             }
         }
-    }
-}
 
-.menu--404 {
-    background-image:
-        linear-gradient(
-            $gradient
-        );
-        box-shadow: inset 0px 0px 0px $border/2 $border-shadow;
-
-    .corner {
-        display: block;
-        height: $border;
-        width: $border;
-        position: absolute;
-        background-color: $border-color;
-        box-shadow: $border/2 $border/2 $border-shadow;
-
-        &:nth-of-type(1) {
-            top: 0;
-            left: 0;
+        .vertical {
+            position: absolute;
+            top: $border;
+            bottom: $border;
+            left: -$border;
+            right: -$border;
+            border-left: $border solid $border-color;
+            border-right: $border solid $border-color;
         }
-        &:nth-of-type(2) {
-            top: 0;
-            right: 0;
-            transform: rotate(90deg);
-        }
-        &:nth-of-type(3) {
-            bottom: 0;
-            right: 0;
-            transform: rotate(180deg);
-        }
-        &:nth-of-type(4) {
-            bottom: 0;
-            left: 0;
-            transform: rotate(270deg);
-        }
-    }
 
-    .vertical {
-        position: absolute;
-        top: $border;
-        bottom: $border;
-        left: -$border;
-        right: -$border;
-        border-left: $border solid $border-color;
-        border-right: $border solid $border-color;
-    }
-
-    .horizontal {
-        position: absolute;
-        top: -$border;
-        bottom: -$border;
-        left: $border;
-        right: $border;
-        border-top: $border solid $border-color;
-        border-bottom: $border solid $border-color;
+        .horizontal {
+            position: absolute;
+            top: -$border;
+            bottom: -$border;
+            left: $border;
+            right: $border;
+            border-top: $border solid $border-color;
+            border-bottom: $border solid $border-color;
+        }
     }
 }

@@ -4,10 +4,11 @@
     .footer--pre {
         background: $gray;
         @include grid;
+        padding: 0;
 
         @include tablet-break {
             padding-left: 0;
-            padding-right: 0;    
+            padding-right: 0;
         }
 
         .nav {
@@ -45,9 +46,7 @@
     }
 
     .footer--main {
-        @include grid--container;
-        text-align: center;
-        color: $white;
+        @include grid;
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
     }

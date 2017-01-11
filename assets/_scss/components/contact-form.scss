@@ -1,0 +1,83 @@
+$formheight: 250px;
+
+iframe.contact-form {
+    border: 0;
+    height: $formheight;
+}
+
+form.contact {
+    background-color: none;
+    height: $formheight;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .contact__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .contact__row--half {
+            display: block;
+            width: calc(50% - #{$spacing}/2);
+            margin-bottom: $spacing;
+        }
+
+        .contact__row--full {
+            display: block;
+            width: 100%;
+            margin-bottom: $spacing;
+        }
+    }
+
+    .contact__row--flex {
+        flex: 1;
+        align-items: stretch;
+    }
+
+    input, textarea {
+        font-size: .75em;
+        @include body-font;
+        border: none;
+        padding: $spacing/2;
+        border: 2px solid $white;
+
+            &:focus {
+                // background-color: lighten($secondary-color, 20%);
+                outline: none;
+                border: 2px solid $secondary-color;
+            }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .button {
+        @include button--secondary;
+        border: 0;
+
+        &:focus {
+            border: 0;
+        }
+    }
+}
+
+.contact-success {
+    height: $formheight;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-success__message {
+        font-size: 1.25em;
+        margin: $spacing;
+    }
+
+    a {
+        cursor: pointer;
+        @include text-link;
+        color: $white;
+    }
+}
