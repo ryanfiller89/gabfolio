@@ -1,10 +1,16 @@
+$formheight: 250px;
+
 iframe.contact-form {
     border: 0;
-    height: 900px;
+    height: $formheight;
 }
 
 form.contact {
     background-color: none;
+    height: $formheight;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 
     .contact__row {
         width: 100%;
@@ -24,19 +30,35 @@ form.contact {
         }
     }
 
-    input, textarea, .contact__row__button  {
+    .contact__row--flex {
+        flex: 1;
+        align-items: stretch;
+    }
+
+    input, textarea {
         font-size: .75em;
         @include body-font;
         border: none;
         padding: $spacing/2;
+        border: 2px solid $white;
+
+            &:focus {
+                // background-color: lighten($secondary-color, 20%);
+                outline: none;
+                border: 2px solid $secondary-color;
+            }
     }
 
     textarea {
         resize: none;
-        height: 100px;
     }
 
     .button {
         @include button--secondary;
+        border: 0;
+
+        &:focus {
+            border: 0;
+        }
     }
 }
