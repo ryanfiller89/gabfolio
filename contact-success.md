@@ -4,12 +4,16 @@ title: Contact Sucess
 permalink: /contact-success/
 ---
 
-you friggin did it.
+<div class="contact-success">
+    <span class="contact-success__message">
+        Success submission!
+    </span>
 
-<a onclick="goBack()">Go back</a>
+    <a onclick="goBack()">Send Another</a>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</div>

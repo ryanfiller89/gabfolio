@@ -62,3 +62,22 @@ form.contact {
         }
     }
 }
+
+.contact-success {
+    height: $formheight;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-success__message {
+        font-size: 1.25em;
+        margin: $spacing;
+    }
+
+    a {
+        cursor: pointer;
+        @include text-link;
+        color: $white;
+    }
+}
