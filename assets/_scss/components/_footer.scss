@@ -46,9 +46,7 @@
     }
 
     .footer--main {
-        @include grid--container;
-        text-align: center;
-        color: $white;
+        @include grid;
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
     }
