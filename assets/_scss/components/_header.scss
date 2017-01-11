@@ -7,6 +7,38 @@
 
     .header--pre {
         background: $black;
+        
+        .socials {
+            @include grid;
+            justify-content: flex-end;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-right: 0;
+
+            @include phone-break {
+                padding: 0;
+                height: 10px;
+            }
+
+            li {
+                list-style: none;
+
+                .social {
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+
+                    svg {
+                        fill: $white;
+                        display: block;
+                    }
+                }
+
+                @include phone-break {
+                    display: none;
+                }
+            }
+        }
     }
 
     .header--main {
