@@ -1,0 +1,17 @@
+.socials {
+
+    li {
+        list-style: none;
+
+        .social {
+            cursor: pointer;
+            
+            svg {
+                fill: $white;
+                display: block;
+                min-width: 20px;
+                min-height: 20px;
+            }
+        }
+    }
+}
