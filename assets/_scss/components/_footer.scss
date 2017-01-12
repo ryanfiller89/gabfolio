@@ -49,6 +49,25 @@
         @include grid;
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
+
+        .footer__column {
+            flex: 1;
+            margin-right: $spacing;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .socials {
+            padding: 0;
+
+            li {
+                flex: 1;
+
+                .social {}
+            }
+        }
     }
 
     .footer--post {

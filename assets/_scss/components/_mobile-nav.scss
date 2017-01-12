@@ -199,11 +199,24 @@ body {
 
     .socials {
         justify-content: center;
+        flex-wrap: wrap;
         margin-top: 5vh;
 
-        li .social svg {
-            height: 5vh;
-            width: auto;
+        li .social{
+            svg {
+                @include tablet-break {
+                    width: 50px;
+                    margin: 0 10px;    
+                }
+
+                @include phone-break {
+                    width: 40px;
+                    margin: 0 5px 10px 5px;
+                }
+            }
+            &::after {
+                display: none;
+            }
         }
     }
 }
