@@ -4,7 +4,15 @@
         {% include components/nav.html %}
     </aside>
     <main class="footer--main">
-        {% include components/contact-form.html %}
+        <div class="footer__column">
+            {% include components/socials.html %}
+        </div>
+        <div class="footer__column">
+            footer stuff
+        </div>
+        <div class="footer__column">
+            {% include components/contact-form.html %}
+        </div>
     </main>
     <aside class="footer--post">
         <span class="footer__legal">
