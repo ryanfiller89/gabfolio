@@ -50,6 +50,10 @@
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
 
+        @include tablet-break {
+            flex-direction: column;
+        }
+
         .footer__column {
             flex: 1;
             margin-right: $spacing;
