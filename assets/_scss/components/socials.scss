@@ -1,11 +1,15 @@
 .socials {
+    @include grid;
+    flex-direction: row;
+    margin: 0;
 
     li {
         list-style: none;
 
         .social {
             cursor: pointer;
-            
+            display: block;
+
             svg {
                 fill: $white;
                 display: block;

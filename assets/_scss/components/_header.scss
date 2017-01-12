@@ -9,10 +9,7 @@
         background: $black;
 
         .socials {
-            @include grid;
             justify-content: flex-end;
-            margin-top: 0;
-            margin-bottom: 0;
             padding-right: 0;
 
             @include phone-break {
@@ -22,14 +19,8 @@
 
             li {
                 .social {
-                    display: block;
                     width: 25px;
                     height: 25px;
-
-                    svg {
-                        fill: $white;
-                        display: block;
-                    }
                 }
 
                 @include tablet-break {
