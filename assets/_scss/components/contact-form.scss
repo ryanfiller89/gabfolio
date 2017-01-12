@@ -3,6 +3,7 @@ $formheight: 250px;
 iframe.contact-form {
     border: 0;
     height: $formheight;
+    width: 100%;
 }
 
 form.contact {
@@ -16,17 +17,21 @@ form.contact {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: $spacing;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         .contact__row--half {
             display: block;
             width: calc(50% - #{$spacing}/2);
-            margin-bottom: $spacing;
+
         }
 
         .contact__row--full {
             display: block;
             width: 100%;
-            margin-bottom: $spacing;
         }
     }
 
