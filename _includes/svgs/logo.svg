@@ -1,17 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 55.4">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.2 61">
   <title>ryanfiller</title>
   <defs>
       <linearGradient id="lines" spreadMethod="repeat"
-      x1="0%" y1="0%" x2="0%" y2="3%">
-          <stop offset="0%" stop-color= "black" />
+      x1="0%" y1="0%" x2="0%" y2="2%">
+          <stop offset="0%" stop-color= "transparent" />
           <stop offset="50%" stop-color= "black" />
-          <stop offset="50%" stop-color= "transparent" />
           <stop offset="100%" stop-color= "transparent" />
-
       </linearGradient>
   </defs>
   <g>
-      <path fill="url(#lines)" class="st0" d="M9.9,19.1c-1,0.6-2,1.3-2.8,2.1l0.2-2.1c-2.2,0-3.3-0.1-5.5-0.3C1,28.4,0.7,33.1,0,42.7
+      <path fill="url(#lines)" d="M9.9,19.1c-1,0.6-2,1.3-2.8,2.1l0.2-2.1c-2.2,0-3.3-0.1-5.5-0.3C1,28.4,0.7,33.1,0,42.7
       	c2.2,0.2,3.3,0.2,5.5,0.3C5.8,38,6,35.5,6.4,30.6c0.3-4.5,2-6.7,5-6.8c1.1,0,2.1,0.4,3,1c1.2-2,1.7-3.1,2.9-5.1
       	c-1.3-0.8-2.9-1.3-4.4-1.3C11.8,18.5,10.8,18.7,9.9,19.1z M40.5,17c-3.1,5.7-4.7,8.6-7.8,14.3c-2.5-5.2-3.8-7.7-6.3-13
       	c-2.6,0.2-3.8,0.3-6.4,0.5c3.7,7.5,5.6,11.1,9.3,18.5c-4.2,7.3-6.3,11-10.6,18.2c2.5-0.2,3.8-0.3,6.3-0.5
@@ -39,5 +37,13 @@
       	C172.3,28.4,172.6,27.8,173,27.2z M204.6,20.9c-1-0.1-2,0.1-2.9,0.4c-1.1,0.5-2,1.2-2.8,2l0.2-2.1c-2.2-0.1-3.3-0.2-5.5-0.3
       	c-0.7,9.5-1,14.3-1.7,23.8c2.2,0.1,3.3,0.1,5.5,0.3c0.4-4.9,0.5-7.4,0.9-12.3c0.3-4.5,2-6.7,5-6.5c1.1,0.1,2.1,0.6,3,1.3
       	c1.2-1.9,1.7-2.9,2.9-4.9C207.8,21.7,206.2,21.1,204.6,20.9z"/>
+        <path id="SVGID_x5F_1_x5F_" class="st1" d="M34.4,53.2l163,6.8"/>
+        <text>
+            <textPath xlink:href="#SVGID_x5F_1_x5F_" startOffset="15.0879%">
+                <tspan fill="url(#lines)" style="font-family:'Raleway'; font-size:11px;">
+                    designer, illustrator, maker
+                </tspan>
+            </textPath>
+        </text>
   </g>
 </svg>

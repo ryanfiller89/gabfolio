@@ -33,28 +33,31 @@
     .header--main {
         @include grid;
         justify-content: space-between;
-        padding-top: $spacing;
-        padding-bottom: $spacing;
+        padding-top: $spacing/2;
+        padding-bottom: $spacing/2;
 
         .header__logo {
-            display: flex;
-            align-items: center;
+            height: auto;
+            width: 200px;
+            width: 220px;
+            margin-top: 10px;
+
+            @include phone-break {
+                width: 160px;
+            }
 
             svg {
-                height: 100px;
-                width: auto;
 
-                @include phone-break {
-                    height: auto;
-                    width: 35%;
-                }
-
-                path, polygon {
+                path {
                     fill: $black;
                 }
 
+                text {
+                    display: none;
+                }
+
                 &:hover {
-                    path, polygon {
+                    path {
                         fill: $secondary-color;
                     }
                 }
@@ -64,6 +67,7 @@
         .nav {
             list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
             justify-content: flex-end;
             align-items: center;

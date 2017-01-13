@@ -66,21 +66,25 @@
                 &:nth-child(2) {
                     z-index: 4;
 
-                    path {
+                    path, tspan {
+                        fill: $secondary-color;
+                    }
+
+                    tspan {
                         fill: $white;
                     }
                 }
 
                 &:nth-child(3) {
                     z-index: 3;
-                    path {
+                    path, tspan {
                         fill: cyan;
                     }
                 }
 
                 &:nth-child(4) {
                     z-index: 2;
-                    path {
+                    path,tspan {
                         fill: red;
                     }
                 }
@@ -90,6 +94,13 @@
                 svg {
                     &:nth-child(1) {
                         opacity: 0.125;
+                    }
+
+                    &:nth-child(2) {
+
+                        path,tspan {
+                            fill: $white;
+                        }
                     }
 
                     &:nth-child(3) {
