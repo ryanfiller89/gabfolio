@@ -58,6 +58,10 @@
                 width: 100%;
                 display: block;
 
+                path.initials {
+                    display: none;
+                }
+
                 &:nth-child(1) {
                     z-index: 5;
                     opacity: 0;
@@ -66,7 +70,7 @@
                 &:nth-child(2) {
                     z-index: 4;
 
-                    path, tspan {
+                    path.logo, tspan {
                         fill: $secondary-color;
                     }
 
@@ -77,14 +81,14 @@
 
                 &:nth-child(3) {
                     z-index: 3;
-                    path, tspan {
+                    path.logo, tspan {
                         fill: cyan;
                     }
                 }
 
                 &:nth-child(4) {
                     z-index: 2;
-                    path,tspan {
+                    path.logo, tspan {
                         fill: red;
                     }
                 }
@@ -98,7 +102,7 @@
 
                     &:nth-child(2) {
 
-                        path,tspan {
+                        path.logo, tspan {
                             fill: $white;
                         }
                     }
@@ -114,7 +118,21 @@
                     }
                 }
             }
+
+            @include phone-break {
+                width: 150%;
+
+                svg {
+                    path.logo, text.tagline {
+                        display: none;
+                    }
+
+                    path.initials {
+                        display: block;
+                        fill: $white;
+                    }
+                }
+            }
         }
     }
-
 }

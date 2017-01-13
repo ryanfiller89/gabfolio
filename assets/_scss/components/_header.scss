@@ -48,11 +48,15 @@
 
             svg {
 
-                path {
+                path.logo {
                     fill: $black;
                 }
 
-                text {
+                text.tagline {
+                    display: none;
+                }
+
+                path.initials {
                     display: none;
                 }
 

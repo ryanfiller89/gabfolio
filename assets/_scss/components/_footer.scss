@@ -72,11 +72,15 @@
             height: auto;
 
             svg {
-                path {
+                path.logo {
                     fill: $white;
                 }
 
-                text {
+                text.tagline {
+                    display: none;
+                }
+
+                path.initials {
                     display: none;
                 }
 
