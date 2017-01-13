@@ -45,28 +45,94 @@
             z-index: 1;
         }
 
-        svg {
-            z-index: 2;
+        .homepage__logo {
+            position: relative;
             display: block;
-            width: 25vw;
-            height: auto;
-            filter: drop-shadow( 0 0 10px $dark-gray );
-            transition: 1s;
-            // filter: blur(1px);
+            width: 50vw;
+            height: 50vw;
 
-            polygon {
-                fill: $white;
-                cursor: pointer;
+            svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                display: block;
 
-                &:hover {
-                    fill: $secondary-color;
+                path.initials {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    z-index: 5;
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    z-index: 4;
+
+                    path.logo, tspan {
+                        fill: $secondary-color;
+                    }
+
+                    tspan {
+                        fill: $white;
+                    }
+                }
+
+                &:nth-child(3) {
+                    z-index: 3;
+                    path.logo, tspan {
+                        fill: cyan;
+                    }
+                }
+
+                &:nth-child(4) {
+                    z-index: 2;
+                    path.logo, tspan {
+                        fill: red;
+                    }
                 }
             }
 
-            @include tablet-break {
-                width: 50vw;
+            &:hover {
+                svg {
+                    &:nth-child(1) {
+                        opacity: 0.125;
+                    }
+
+                    &:nth-child(2) {
+
+                        path.logo, tspan {
+                            fill: $white;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        right: -1px;
+                        filter: blur(2px);
+                    }
+
+                    &:nth-child(4) {
+                        left: -1px;
+                        filter: blur(2px);
+                    }
+                }
+            }
+
+            @include phone-break {
+                width: 150%;
+
+                svg {
+                    path.logo, text.tagline {
+                        display: none;
+                    }
+
+                    path.initials {
+                        display: block;
+                        fill: $white;
+                    }
+                }
             }
         }
     }
-
 }

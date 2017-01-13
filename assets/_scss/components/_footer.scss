@@ -50,12 +50,56 @@
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
 
+        @include tablet-break {
+            display: block;
+        }
+
         .footer__column {
             flex: 1;
             margin-right: $spacing;
 
             &:last-child {
                 margin-right: 0;
+            }
+
+            @include tablet-break {
+                margin-right: 0;
+            }
+        }
+
+        .footer__logo {
+            width: 100%;
+            height: auto;
+
+            svg {
+                path.logo {
+                    fill: $white;
+                }
+
+                text.tagline {
+                    display: none;
+                }
+
+                path.initials {
+                    display: none;
+                }
+
+                &:hover {
+                    path {
+                        fill: $secondary-color;
+                    }
+                }
+
+                @include tablet-break {
+                    display: block;
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @include phone-break {
+                    width: 75%;
+                }
             }
         }
 
@@ -65,7 +109,12 @@
             li {
                 flex: 1;
 
-                .social {}
+                .social::after {
+                    @include tablet-break {
+                        margin-top: 0;
+                        opacity: .5;
+                    }
+                }
             }
         }
     }
