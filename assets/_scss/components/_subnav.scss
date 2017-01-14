@@ -44,6 +44,8 @@
     }
 
     .subnav--mobile {
+        position: relative;
+
         @include tablet-break {
             display: block;
             width: 50%;
@@ -71,6 +73,17 @@
                 align-items: center;
                 height: 50px;
                 width: 50px;
+                cursor: pointer;
+
+                .subnav--mobile__dropdown {
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+
+                    border-right: 10px solid $white;
+                }
             }
         }
 
@@ -80,6 +93,16 @@
             margin: 0;
             max-height: 0;
             overflow: hidden;
+
+            @include tablet-break {
+                position: absolute;
+                width: 100%;
+                z-index: 200;
+            }
+
+            @include phone-break {
+                position: static;
+            }
 
             .subnav--mobile__link {
                 background: $black;
