@@ -1,4 +1,10 @@
 .recent-posts {
+
+    header {
+        color: $white;
+        @include line-right;
+    }
+
     .excerpt a {
         width: 100%;
         display: flex;
@@ -22,6 +28,12 @@
 
             .excerpt__link {
                 color: $white;
+            }
+        }
+
+        &:hover {
+            .excerpt__link {
+                color: $secondary-color;
             }
         }
     }

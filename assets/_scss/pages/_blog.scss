@@ -45,9 +45,20 @@
 
             .meta {
                 margin-bottom: ($spacing/4);
+                @include body-font;
+                font-size: .8em;
+                font-weight: bold;
+
+                span {
+                    color: $white;
+                }
             }
 
             .excerpt__title {
+                @include header-font;
+                text-decoration: none;
+                font-size: 2em;
+                color: $white;
                 margin-bottom: 0;
             }
         }
@@ -61,10 +72,17 @@
 
             .excerpt__link {
                 text-decoration: none;
+                @include text-link;
+                @include nav-font;
+                font-size: 1.5em;
 
                 @include tablet-break {
                     display: block;
                     text-align: center;
+                }
+
+                &::after {
+                    content: ' ▸▸';
                 }
             }
         }
@@ -75,25 +93,52 @@
             box-shadow: $shadow;
 
             .excerpt__header {
-
                 &::before {
                     background-color: $secondary-color;
                 }
+
+                .excerpt__title {
+                    color: $white;
+                }
+            }
+
+            .excerpt__body p {
+                color: $primary-color;
+            }
+
+            .excerpt__link {
+                color: $secondary-color;
             }
         }
     }
 }
 
-.blog-post {
+.page-content.blog-post {
     .meta {
         margin-bottom: (2*$spacing);
         text-align: center;
+        color: $light-gray;
 
         .meta__date {
             @include strikethrough;
             margin-bottom: $spacing;
+            font-size: 1em;
+        }
+
+        .meta__tag {
+            font-size: 1.25em;
         }
     }
+
+    // p:first-of-type::first-letter {
+    //     initial-letter: 3;
+    //     color: $primary-color;
+    //     @include header-font;
+    //     float: left;
+    //     font-size: 3.7em;
+    //     margin:0.15em 0.125em 0 0;
+    //     line-height:0.75;
+    // }
 }
 
 .meta {
