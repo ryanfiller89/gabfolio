@@ -27,12 +27,12 @@
     }
 }
 
-@mixin strikethrough {
+@mixin line-left {
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    &::before, &::after {
+    &::before, {
         content: '';
         display: block;
         flex: 1;
@@ -43,9 +43,29 @@
     &::before {
         margin-right: .5em;
     }
+}
+
+@mixin line-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &::after, {
+        content: '';
+        display: block;
+        flex: 1;
+        height: .125em;
+        background: currentColor;
+    }
+
     &::after {
         margin-left: .5em;
     }
+}
+
+@mixin strikethrough {
+    @include line-left;
+    @include line-right;
 }
 
 body {
@@ -215,52 +235,54 @@ h4 {
     }
 }
 
-.excerpt {
-    .excerpt__title {
-        @include header-font;
-        text-decoration: none;
-        font-size: 2em;
-        color: $white;
-
-        a {
-            @include text-link;
-        }
-    }
-
-    .excerpt__meta {
-        @include body-font;
-        font-size: .8em;
-        font-weight: bold;
-
-        span {
-            color: $white;
-        }
-    }
-
-    .excerpt__link {
-        @include text-link;
-        @include nav-font;
-        font-size: 1.5em;
-
-        &::after {
-            content: ' ▸▸';
-        }
-    }
-
-    &:hover, &:active {
-
+.blog-list {
+    .excerpt {
         .excerpt__title {
+            @include header-font;
+            text-decoration: none;
+            font-size: 2em;
             color: $white;
+
+            a {
+                @include text-link;
+            }
         }
 
-        .excerpt__body {
-            p {
-                color: $primary-color;
+        .excerpt__meta {
+            @include body-font;
+            font-size: .8em;
+            font-weight: bold;
+
+            span {
+                color: $white;
             }
         }
 
         .excerpt__link {
-            color: $secondary-color;
+            @include text-link;
+            @include nav-font;
+            font-size: 1.5em;
+
+            &::after {
+                content: ' ▸▸';
+            }
+        }
+
+        &:hover, &:active {
+
+            .excerpt__title {
+                color: $white;
+            }
+
+            .excerpt__body {
+                p {
+                    color: $primary-color;
+                }
+            }
+
+            .excerpt__link {
+                color: $secondary-color;
+            }
         }
     }
 }
@@ -311,6 +333,22 @@ h4 {
         @include nav-font;
         color: $white;
         font-size: 1.25em;
+    }
+
+    .recent-posts {
+        header {
+            color: $white;
+            @include line-right;
+        }
+
+        .excerpt {
+
+            a:hover {
+                .excerpt__link {
+                    color: $secondary-color;
+                }
+            }
+        }
     }
 
     .footer__legal {

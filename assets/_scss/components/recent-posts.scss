@@ -1,0 +1,28 @@
+.recent-posts {
+    .excerpt a {
+        width: 100%;
+        display: flex;
+
+        .excerpt__thumbnail {
+            display: block;
+            height: 75px;
+            width: 75px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .excerpt__text {
+            flex: 1;
+            padding-left: $spacing/2;
+
+            .excerpt__title {
+                margin-top: 0;
+                margin-bottom: $spacing/4;
+            }
+
+            .excerpt__link {
+                color: $white;
+            }
+        }
+    }
+}
