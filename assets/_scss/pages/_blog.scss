@@ -1,6 +1,5 @@
 .page-content.blog-list {
     @include grid;
-    // display: block;
     flex-direction: row;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -102,7 +101,7 @@
                 }
             }
 
-            .excerpt__body p {
+            .excerpt__body {
                 color: $primary-color;
             }
 
