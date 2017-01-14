@@ -6,8 +6,9 @@
     .portfolio-grid-block__info {
         max-height: 100%;
 
-        .excerpt__title, .excerpt__meta, .excerpt__link {
+        .excerpt__title, .meta, .excerpt__link {
             display: block;
+            color: $white;
         }
     }
 }
@@ -88,9 +89,13 @@
                     margin-bottom: $spacing;
                 }
 
-                .excerpt__meta {
+                .meta {
                     display: none;
-                    .excerpt__tag {
+                    .meta__date {
+                        display: none;
+                    }
+
+                    .meta__tag {
                         color: $white;
                     }
                     margin-bottom: $spacing/2;
@@ -106,18 +111,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-.site.portfolio-list-category {
-    @include tablet-break {
-        .excerpt__title {
-            margin-bottom: 0 !important;
-        }
-
-        .excerpt__tag {
-            display: none !important;
         }
     }
 }
