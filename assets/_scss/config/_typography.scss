@@ -87,13 +87,6 @@ a {
     @include text-link;
 }
 
-.portfolio__h1 {
-    @include header-font;
-    font-size: 4em;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 h2 {
     @include header-font;
     color: $primary-color;
@@ -193,27 +186,6 @@ h4 {
 
         @include tablet-break {
             font-size: 2.5em;
-        }
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-        @include nav-font;
-        color: $white;
-        background-color: $gray;
-        font-size: 1em;
-        cursor: pointer;
-
-        &:hover {
-            color: $secondary-color;
-        }
-
-        @include large-break {
-            background-color: transparent;
-            color: $white;
-        }
-
-        @include tablet-break {
-            display: none;
         }
     }
 }

@@ -55,6 +55,24 @@
                 background-color: transparent;
                 color: $black;
                 text-shadow: $shadow;
+                @include nav-font;
+                color: $white;
+                background-color: $gray;
+                font-size: 1em;
+                cursor: pointer;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                @include large-break {
+                    background-color: transparent;
+                    color: $white;
+                }
+
+                @include tablet-break {
+                    display: none;
+                }
             }
         }
     }
@@ -80,7 +98,11 @@
 
         .portfolio__h1 {
             margin: 0;
-            padding: 1.5em 0
+            padding: 1.5em 0;
+            @include header-font;
+            font-size: 4em;
+            text-align: center;
+            text-transform: uppercase;
         }
     }
 }
