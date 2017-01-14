@@ -7,12 +7,7 @@
             <a href="{{ post.url }}">
                 <div class="excerpt__thumbnail" style="background-image:url({{ post.image }});"> </div>
                 <div class="excerpt__text">
-                    <section class="excerpt__meta">
-                        <span class="excerpt__date">{{ post.date | date: "%b %d, %Y" }}</span>
-                        {% for category in post.categories %}
-                                <span class="excerpt__tag">#{{ category }}</span>
-                        {% endfor %}
-                    </section>
+                    {% include components/blog-meta.html%}
                     <h2 class="excerpt__title">{{ post.title }}</h2>
                     <span class="excerpt__link">Read More</span>
                 </div>
