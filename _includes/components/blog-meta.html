@@ -1,0 +1,6 @@
+<section class="meta">
+    <span class="meta__date">{{ post.date | date: "%b %d, %Y" }}</span>
+    {% for category in post.categories %}
+            <span class="meta__tag">#{{ category }}</span>
+    {% endfor %}
+</section>
