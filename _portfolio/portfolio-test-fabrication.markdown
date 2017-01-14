@@ -3,6 +3,7 @@ layout: portfolio-detail
 title:  test
 category: fabrication
 tags: tag3 tag4
+client-name: facebook
 client-link: www.facebook.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:

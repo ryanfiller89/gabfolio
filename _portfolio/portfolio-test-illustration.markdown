@@ -3,6 +3,7 @@ layout: portfolio-detail
 title:  test
 category: illustration
 tags: tag4 tag5
+client-name: batman
 client-link: www.batman.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:

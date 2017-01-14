@@ -3,6 +3,7 @@ layout: portfolio-detail
 title:  test
 category: design
 tags: tag1 tag2
+client-name: google
 client-link: www.google.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:
