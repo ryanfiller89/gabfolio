@@ -131,6 +131,29 @@ h4 {
     }
 }
 
+.meta {
+    margin-bottom: ($spacing/4);
+
+    .meta__date {
+        &::after {
+            content: '|';
+            margin: 0 .5em;
+        }
+    }
+
+    .meta__tag {
+        &::after {
+            content: ', ';
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
 .page-content p a {
     @include text-link;
     border-bottom: 2px solid $secondary-color;
