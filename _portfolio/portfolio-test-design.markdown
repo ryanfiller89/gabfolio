@@ -3,7 +3,7 @@ layout: portfolio-detail
 title:  test
 category: design
 tags: tag1 tag2
-link: www.google.com
+client-link: www.google.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:
     - https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif
