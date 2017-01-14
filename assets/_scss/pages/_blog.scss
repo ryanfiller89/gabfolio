@@ -87,8 +87,7 @@
         }
 
         &:hover, &:active {
-            position: relative;
-            top: -1.25px;
+            @include float;
             box-shadow: $shadow;
 
             .excerpt__header {
