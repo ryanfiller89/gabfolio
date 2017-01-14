@@ -6,14 +6,8 @@ permalink: /contact-success/
 
 <div class="contact-success">
     <span class="contact-success__message">
-        Success submission!
+        Successful submission! I'll respond as soon as I can.
     </span>
 
-    <a onclick="goBack()">Send Another</a>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <a href="/contact">Send Another?</a>
 </div>

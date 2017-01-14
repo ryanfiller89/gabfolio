@@ -1,3 +1,12 @@
+.contact__header {
+    @include header-font;
+   color: $white;
+   @include line-right;
+   font-size: 1.75em;
+   margin-bottom: $spacing/2;
+   text-transform: uppercase;
+}
+
 $formheight: 250px;
 
 iframe.contact-form {
@@ -78,6 +87,7 @@ form.contact {
     .contact-success__message {
         font-size: 1.25em;
         margin: $spacing;
+        text-align: center;
     }
 
     a {

@@ -15,18 +15,11 @@
                 <article class="excerpt__block-link">
                     <a href="{{ post.url }}" class="excerpt">
                         <div class="excerpt__header" style="background-image:url({{ post.image }});">
-                            <section class="excerpt__meta">
-                                <span class="excerpt__date">{{ post.date | date: "%b %d, %Y" }}</span>
-                				{% for category in post.categories %}
-                						<span class="excerpt__tag">#{{ category }}</span>
-                                {% endfor %}
-                			</section>
+                            {% include components/blog-meta.html%}
                 			<h2 class="excerpt__title">{{ post.title }}</h2>
                 		</div>
                         <main class="excerpt__body">
-                			<p class="excerpt__text">
-                			    {{ post.excerpt }}
-                			</p>
+                			{{ post.excerpt }}
                 			<span class="excerpt__link">Read More</span>
                 		</main>
                     </a>

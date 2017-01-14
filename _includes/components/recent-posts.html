@@ -1,0 +1,16 @@
+<div class="recent-posts">
+    <header class="recent-posts__header">
+        Recent Posts
+    </header>
+    {% for post in site.posts limit:3 %}
+        <article class="recent-post">
+            <a href="{{ post.url }}">
+                <div class="recent-post__thumbnail" style="background-image:url({{ post.image }});"> </div>
+                <div class="recent-post__text">
+                    <header class="recent-post__title">{{ post.title }}</header>
+                    <span class="recent-post__link">Read More</span>
+                </div>
+            </a>
+        </article>
+    {% endfor %}
+</div>
