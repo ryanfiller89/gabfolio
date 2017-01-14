@@ -19,7 +19,7 @@
     <ul class="subnav">
         {% for item in site.portfolio %}
             <li class="subnav__link {% if page.category == item.category %}active{% endif %}">
-                <a href="/portfolio/{{ item.categories }}/">
+                <a href="/{{ item.categories }}/">
                     {{ item.categories }}
                 </a>
             </li>
@@ -38,7 +38,7 @@
     <ul class="subnav--mobile__list">
         {% for item in site.portfolio %}
             <li class="subnav--mobile__link {% if page.category == item.category %}active{% endif %}">
-                <a href="/portfolio/{{ item.categories }}/">
+                <a href="/{{ item.categories }}/">
                     {{ item.categories }}
                 </a>
             </li>

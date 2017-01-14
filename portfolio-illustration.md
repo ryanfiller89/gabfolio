@@ -1,7 +1,7 @@
 ---
 layout: portfolio-list-category
 title: Illustration
-permalink: /portfolio/illustration/
+permalink: /illustration/
 category: illustration
 parent: portfolio
 ---

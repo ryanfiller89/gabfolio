@@ -44,7 +44,7 @@ defaults:
 collections:
     portfolio:
         output: true
-        permalink: /portfolio/:categories/:title/
+        permalink: /:categories/:title/
 
 sass:
     sass_dir: /assets/_scss

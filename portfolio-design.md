@@ -1,7 +1,7 @@
 ---
 layout: portfolio-list-category
 title: Design
-permalink: /portfolio/design/
+permalink: /design/
 category: design
 parent: portfolio
 ---

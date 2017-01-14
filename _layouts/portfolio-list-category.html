@@ -13,8 +13,6 @@
         <main class="page-content portfolio-list">
             <!-- <p>{{ page.content }}</p> -->
 
-			{% include components/subnav.html %}
-
             <div class="portfolio-grid">
                 {% for work in site.portfolio %}
                     {% if page.category == work.category %}
