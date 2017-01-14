@@ -9,11 +9,5 @@ permalink: /contact-success/
         Success submission!
     </span>
 
-    <a onclick="goBack()">Send Another</a>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    <a href="/contact">Send Another</a>
 </div>
