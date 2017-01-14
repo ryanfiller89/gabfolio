@@ -1,75 +1,86 @@
-@include large-break {
-    .portfolio-page {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+.portfolio-page {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-        .header {
-            width: 100%;
-            order: 1;
-        }
+    .header {
+        width: 100%;
+        order: 1;
+    }
 
-        .footer {
-            width: 100%;
-            order: 10;
+    .footer {
+        width: 100%;
+        order: 10;
 
-            &:first-of-type {
-                box-shadow: 0 -50px 50px 15px $white;
-                position: relative;
-                z-index: 5;
-            }
-        }
-
-        .banner--swiper {
-            width: 50%;
-            order: 3;
-            overflow: hidden;
+        &:first-of-type {
+            box-shadow: 0 -50px 50px 15px $white;
             position: relative;
-            z-index: 10;
+            z-index: 5;
+        }
+    }
 
-            &::after {
-                display: none;
-            }
+    .banner--swiper {
+        width: 50%;
+        height: 50vw;
+        order: 3;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
 
-            .swiper-pagination {
-                top: -.75*$spacing;
-                z-index: 15;
-            }
-
-            .swiper-button-container {
-                height: $spacing;
-                position: absolute;
-                bottom: 0;
-                top: inherit;
-                height: 4.125vw;
-
-                .swiper-button-next, .swiper-button-prev {
-                    background-color: transparent;
-                    color: $black;
-                    text-shadow: $shadow;
-                }
-            }
+        @include tablet-break {
+            width: 100%;
+            order: 2;
+            height: 100vw;
         }
 
+        &::after {
+            display: none;
+        }
 
-        .page-content.portfolio-detail {
+        .swiper-pagination {
+            top: -.75*$spacing;
+            z-index: 15;
+        }
+
+        .swiper-button-container {
+            height: $spacing;
+            position: absolute;
+            bottom: 0;
+            top: inherit;
+            height: 4.125vw;
+
+            .swiper-button-next, .swiper-button-prev {
+                background-color: transparent;
+                color: $black;
+                text-shadow: $shadow;
+            }
+        }
+    }
+
+
+    .page-content.portfolio-detail {
+        margin: 0;
+        width: 50%;
+        height: 50vw;
+        overflow: scroll;
+        align-self: flex-end;
+        order: 2;
+
+        @include tablet-break {
+            order: 3;
+            width: 100%;
+            height: auto;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .portfolio__h1 {
             margin: 0;
-            width: 50%;
-            height: 100vh;
-            overflow: scroll;
-            align-self: flex-end;
-            order: 2;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
-            .portfolio__h1 {
-                margin: 0;
-                padding: 1.5em 0
-            }
+            padding: 1.5em 0
         }
     }
 }
