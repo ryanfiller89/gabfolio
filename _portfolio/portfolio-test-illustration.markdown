@@ -2,7 +2,8 @@
 layout: portfolio-detail
 title:  test
 category: illustration
-tags: tag4, tag5
+tags: tag4 tag5
+link: www.batman.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:
     - https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif
