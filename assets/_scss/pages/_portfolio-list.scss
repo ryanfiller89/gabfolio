@@ -13,7 +13,7 @@
     }
 }
 
-.page-content.portfolio-list {
+.page-content.portfolio-list, .page-content.portfolio-list-category {
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -111,6 +111,20 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.site {
+    .portfolio-list {
+        .meta__tag {
+            display: none;
+        }
+    }
+
+    .portfolio-list-category {
+        .meta__category {
+            display: none;
         }
     }
 }
