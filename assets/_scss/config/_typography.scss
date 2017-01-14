@@ -131,65 +131,6 @@ h4 {
     }
 }
 
-.header {
-    .nav__link {
-        a {
-            @include nav-font;
-            font-size: 1.5em;
-            color: $black;
-
-                &:hover {
-                    color: $light-gray;
-                }
-            }
-
-            &.current-menu-item, &.current-page-ancestor, &.current_page_parent {
-                a {
-                    color: $secondary-color;
-                }
-            }
-        }
-
-        .subnav__link {
-            a {
-                color: $white;
-                font-size: 1.25em;
-            }
-        }
-}
-
-.subnav--mobile {
-    .subnav--mobile__title {
-        @include header-font;
-        font-size: 1.25em;
-    }
-
-    .subnav--mobile__list {
-        text-transform: uppercase;
-    }
-}
-
-.banner {
-    h1.banner__header {
-        @include header-font;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 6em;
-        letter-spacing: .025em;
-        color: $white;
-        text-shadow: $shadow;
-
-        @include tablet-break {
-            font-size: 4em;
-        }
-
-        @include tablet-break {
-            font-size: 2.5em;
-        }
-    }
-}
-
 .page-content p a {
     @include text-link;
     border-bottom: 2px solid $secondary-color;
@@ -216,30 +157,5 @@ h4 {
         position: relative;
         top: .125em;
         transform: rotate(180deg);
-    }
-}
-
-.footer {
-    .nav__link a {
-        @include nav-font;
-        color: $white;
-        font-size: 1.25em;
-    }
-
-    .footer__legal {
-        @include header-font;
-        font-size: .9em;
-    }
-}
-
-.site.home {
-    .footer {
-        .nav__link a {
-            font-size: 2em;
-
-            @include tablet-break {
-                font-size: 1.5em;
-            }
-        }
     }
 }

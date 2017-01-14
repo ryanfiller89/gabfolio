@@ -31,6 +31,9 @@
                 flex: 1;
 
                 a {
+                    @include nav-font;
+                    color: $white;
+                    font-size: 1.25em;
                     text-align: center;
                     display: block;
                     width: 100%;
@@ -130,6 +133,20 @@
             @include grid--container;
             justify-content: center;
             text-align: center;
+            @include header-font;
+            font-size: .9em;
+        }
+    }
+}
+
+.site.home {
+    .footer {
+        .nav__link a {
+            font-size: 2em;
+
+            @include tablet-break {
+                font-size: 1.5em;
+            }
         }
     }
 }

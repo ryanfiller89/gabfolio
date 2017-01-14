@@ -25,6 +25,22 @@
         text-shadow: $shadow;
         @include grid--container;
         justify-content: center;
+        @include header-font;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 6em;
+        letter-spacing: .025em;
+        color: $white;
+        text-shadow: $shadow;
+
+        @include tablet-break {
+            font-size: 4em;
+        }
+
+        @include tablet-break {
+            font-size: 2.5em;
+        }
     }
 }
 
