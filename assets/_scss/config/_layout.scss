@@ -20,7 +20,7 @@ body {
 }
 
 $container-width: 80vw;
-$spacing: 3vw;
+$spacing: 2rem;
 
 @mixin container() {
     max-width: $container-width;
