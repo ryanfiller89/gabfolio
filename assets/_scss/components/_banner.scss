@@ -14,8 +14,8 @@
     }
 
     @include phone-break {
-        padding-top: 4*$spacing;
-        padding-bottom: 4*$spacing;
+        padding-top: 2*$spacing;
+        padding-bottom: 2*$spacing;
     }
 
     .banner__header {
@@ -33,10 +33,6 @@
         letter-spacing: .025em;
         color: $white;
         text-shadow: $shadow;
-
-        @include tablet-break {
-            font-size: 5em;
-        }
 
         @include tablet-break {
             font-size: 3.5em;
@@ -209,7 +205,7 @@
         }
 
         @include phone-break {
-            bottom: $spacing;
+            bottom: 0;
         }
 
         .swiper-pagination-bullet {

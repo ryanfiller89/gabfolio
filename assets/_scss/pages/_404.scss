@@ -39,7 +39,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
         margin: 0;
         padding: 0 $spacing;
         max-width: 100%;
-        background-image: url("https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif");
+        background-image: url("../images/404/2001.gif");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -53,7 +53,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
         .message--404 {
             text-shadow: $shadow;
             width: 100%;
-            margin-bottom: 4*$spacing;
+            margin-bottom: 2*$spacing;
             text-align: center;
             font-size: 3em;
             position: relative;
@@ -64,6 +64,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
             @include phone-break {
                 font-size: 2em;
+                margin-bottom: 2*$spacing;
             }
 
             &__code {
@@ -84,6 +85,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
             display: flex;
             flex-wrap: wrap;
 
+            @include tablet-break {
+                padding-bottom: $spacing;
+            }
+
             &__link {
                 flex-basis: 50%;
                 list-style: none;
@@ -93,6 +98,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                 z-index: 10;
                 display: flex;
                 align-items: flex-start;
+
+                @include tablet-break {
+                    padding: 0 1.5*$spacing 0 0;
+                }
 
                 a {
                     position: relative;
@@ -106,6 +115,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
                     @include phone-break {
                         font-size: 1.5em;
+                        padding-left: $spacing;;
                     }
 
                     &:hover {
@@ -124,6 +134,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                             width: 1.25*$spacing;
                             position: absolute;
                             left: $spacing/2;
+
+                            @include tablet-break {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -131,11 +145,6 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
             @include tablet-break {
                 display: block;
-            }
-
-            @include phone-break {
-                width: calc(100% - 3*#{$spacing});
-                margin: 0 1.5*$spacing 2.5*$spacing 1.5*$spacing;
             }
         }
     }

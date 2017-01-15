@@ -121,7 +121,7 @@ body {
 
         .mobile-nav__row {
             width: 100%;
-            min-height: 1.5*$navicon-size;
+            min-height: 1.25*$navicon-size;
             border-bottom: 2px solid transparentize($white, .75);
             position: relative;
             display: flex;
@@ -142,8 +142,8 @@ body {
             .mobile-nav__selector-wrap {
                 position: relative;
                 right: 0;
-                height: 1.5*$navicon-size;
-                width: 1.5*$navicon-size;
+                height: 1.25*$navicon-size;
+                width: 1.25*$navicon-size;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
@@ -206,7 +206,7 @@ body {
             svg {
                 @include tablet-break {
                     width: 50px;
-                    margin: 0 10px;    
+                    margin: 0 10px;
                 }
 
                 @include phone-break {
