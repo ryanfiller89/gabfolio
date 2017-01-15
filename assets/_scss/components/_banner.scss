@@ -205,7 +205,7 @@
         }
 
         @include phone-break {
-            bottom: $spacing;
+            bottom: 0;
         }
 
         .swiper-pagination-bullet {

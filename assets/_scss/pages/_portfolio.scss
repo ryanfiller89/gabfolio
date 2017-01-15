@@ -26,25 +26,26 @@
 
     .portfolio-grid {
         @include grid;
-        padding: $spacing/3;
+        padding: $spacing/2;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
 
         .project__block-link {
             box-sizing: border-box;
-            padding: $spacing/3;
+            padding: $spacing/2;
             display: block;
-            flex-basis: 32.66666vw;
-            height: 32.66666vw;
+            flex-basis: calc(33.33333vw - #{$spacing/3});
+            height: calc(33.33333vw - #{$spacing/3});
 
             @include tablet-break {
-                flex-basis: 49vw;
-                height: 49vw;
+                flex-basis: calc(50vw - #{$spacing/2});
+                height: calc(50vw - #{$spacing/2});
             }
 
             @include phone-break {
-                flex-basis: 98vw;
-                height: 98vw;
+                flex-basis: calc(100vw - #{$spacing});
+                height: calc(100vw - #{$spacing});
             }
 
             .portfolio-grid-block {
@@ -191,7 +192,8 @@
         }
 
         .portfolio__header {
-            padding: 2.5*$spacing;
+            padding-top: 3*$spacing;
+            padding-bottom: 4*$spacing;
 
             .portfolio__h1 {
                 margin: 0;
