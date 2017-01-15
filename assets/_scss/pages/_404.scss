@@ -64,7 +64,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
             @include phone-break {
                 font-size: 2em;
-                margin-bottom: 4*$spacing;
+                margin-bottom: 2*$spacing;
             }
 
             &__code {
@@ -85,6 +85,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
             display: flex;
             flex-wrap: wrap;
 
+            @include tablet-break {
+                padding-bottom: $spacing;
+            }
+
             &__link {
                 flex-basis: 50%;
                 list-style: none;
@@ -94,6 +98,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                 z-index: 10;
                 display: flex;
                 align-items: flex-start;
+
+                @include tablet-break {
+                    padding: 0 1.5*$spacing 0 0;
+                }
 
                 a {
                     position: relative;
@@ -107,6 +115,7 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
                     @include phone-break {
                         font-size: 1.5em;
+                        padding-left: $spacing;;
                     }
 
                     &:hover {
@@ -132,11 +141,6 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
 
             @include tablet-break {
                 display: block;
-            }
-
-            @include phone-break {
-                width: calc(100% - 3*#{$spacing});
-                margin: 0 1.5*$spacing 2.5*$spacing 1.5*$spacing;
             }
         }
     }
