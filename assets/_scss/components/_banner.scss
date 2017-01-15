@@ -25,12 +25,30 @@
         text-shadow: $shadow;
         @include grid--container;
         justify-content: center;
+        @include header-font;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 6em;
+        letter-spacing: .025em;
+        color: $white;
+        text-shadow: $shadow;
+
+        @include tablet-break {
+            font-size: 5em;
+        }
+
+        @include tablet-break {
+            font-size: 3.5em;
+        }
     }
 }
 
 .overlap {
     .banner {
-        padding-bottom: 6*$spacing;
+        .banner__header {
+            padding-bottom: 4*$spacing;
+        }
 
         &::after {
             content: '';
@@ -43,17 +61,29 @@
             margin: 0 auto;
             z-index: 2;
             box-shadow: $shadow;
-
-            @include tablet-break {
-                display: none;
-            }
         }
     }
 
-    &+ .blog-post  {
+    & + .page-content {
         background: $white;
         z-index: 4;
         margin-top: -4*$spacing;
+    }
+
+    @include tablet-break {
+        .banner {
+            .banner__header {
+                padding-bottom: 0;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        & + .page-content {
+            margin-top: 0;
+        }
     }
 }
 
@@ -112,57 +142,74 @@
 
     .swiper-button-container {
         width: 100%;
+        height: auto;
         display: flex;
         justify-content: space-between;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         z-index: 10;
-
-        @include large-break {
-            top: -2.5em;
-        }
 
         .swiper-button-prev, .swiper-button-next {
             cursor: pointer;
-            display: block;
+            padding: $spacing/2 0;
+            width: 3*$spacing;
+            background-color: $black;
+            display: flex;
             justify-content: center;
             align-items: center;
-            width: 10vw;
-            text-align: center;
-            padding: .5em 0;
-            font-size: 1.5em;
-            line-height: 1em;
-            color: $white;
-            background: $black;
 
-            span {
-                position: relative;
-                top: -.025em;
+            @include tablet-break {
+                height: 2*$spacing;
+            }
+
+            @include phone-break {
+                display: none;
+            }
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                text-shadow: $shadow;
+                width: 0;
+                height: 0;
+                border-top: $spacing/4 solid transparent;
+                border-bottom: $spacing/4 solid transparent;
+
+                border-left: $spacing/3 solid $white;
             }
 
             &:hover {
-                @include float;
+                &::before, &::after {
+                    @include float;
+                }
             }
         }
 
         .swiper-button-prev {
-            transform: rotate(180deg);
+            &::before, &::after {
+                transform: rotate(180deg);
+            }
         }
     }
 
     .swiper-pagination {
-        width: 100%;
-        max-width: $container-width;
-        margin: 0 auto;
-        position: relative;
-        z-index: 10;
-        top: -5*$spacing;
+        height: 1.5*$spacing;
+        width: auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        @include large-break {
-            top: 0;
+        @include tablet-break {
+            height: 2*$spacing;
+        }
+
+        @include phone-break {
+            bottom: $spacing;
         }
 
         .swiper-pagination-bullet {

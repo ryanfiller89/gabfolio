@@ -15,7 +15,7 @@
                         <ul class="mobile-subnav js-mobile-subnav">
                         {% for item in site.portfolio %}
                             <li class="mobile-nav__row">
-                                <a href="/portfolio/{{ item.categories }}/">{{ item.categories }}</a>
+                                <a href="/{{ item.categories }}/">{{ item.categories }}</a>
                             </li>
                         {% endfor %}
                         </ul>

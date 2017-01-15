@@ -11,12 +11,12 @@
 		{% include components/swiper.html %}
 
 		<main class="page-content portfolio-detail">
-			<h1 class="portfolio__h1">{{ page.title }}</h1>
-		    <section class="post__meta">
-		        {% for category in page.categories %}
-		                <span class="post__tag">#{{ category }}</span>
-		        {% endfor %}
-		    </section>
+			<div class="portfolio__header">
+				<h1 class="portfolio__h1">{{ page.title }}</h1>
+
+				{% include components/meta.html %}
+			</div>
+
 		    {{ content }}
 		    <a class="back__link" href="/portfolio/{{ page.categories }}"> Back to {{ page.categories }}</a>
 		</main>

@@ -138,26 +138,3 @@
     //     line-height:0.75;
     // }
 }
-
-.meta {
-    margin-bottom: ($spacing/4);
-
-    .meta__date {
-        &::after {
-            content: '|';
-            margin: 0 .5em;
-        }
-    }
-
-    .meta__tag {
-        &::after {
-            content: ', ';
-        }
-
-        &:last-child {
-            &::after {
-                display: none;
-            }
-        }
-    }
-}

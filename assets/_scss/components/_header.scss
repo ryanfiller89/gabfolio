@@ -84,7 +84,15 @@
                     a {
                         text-decoration: none;
                         margin-left: .75em;
-                    }
+                        @include nav-font;
+                        font-size: 1.5em;
+                        color: $black;
+
+                            &:hover {
+                                color: $light-gray;
+                            }
+                        }
+
                     &.active a {
                         color: $secondary-color;
                     }
