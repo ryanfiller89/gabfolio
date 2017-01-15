@@ -134,6 +134,10 @@ $gradient: darken($color, 0) 0%, darken($color, 0) $percentage;
                             width: 1.25*$spacing;
                             position: absolute;
                             left: $spacing/2;
+
+                            @include tablet-break {
+                                display: none;
+                            }
                         }
                     }
                 }
