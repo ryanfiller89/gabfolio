@@ -34,8 +34,8 @@
             box-sizing: border-box;
             padding: $spacing/3;
             display: block;
-            flex-basis: 33.33333vw;
-            height: 33.33333vw;
+            flex-basis: 32.66666vw;
+            height: 32.66666vw;
 
             @include tablet-break {
                 flex-basis: 49vw;
