@@ -53,7 +53,9 @@ form.contact {
         @include body-font;
         border: none;
         padding: $spacing/4;
-        border: 2px solid $white;
+        border: 2px solid transparent;
+        border-radius: 0;
+        -webkit-appearence: none;
 
             &:focus {
                 // background-color: lighten($secondary-color, 20%);
@@ -69,6 +71,8 @@ form.contact {
     .button {
         @include button--secondary;
         border: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
 
         &:focus {
             border: 0;
