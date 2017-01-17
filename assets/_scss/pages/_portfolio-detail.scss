@@ -63,6 +63,18 @@
             padding-top: 3*$spacing;
             padding-bottom: 4*$spacing;
 
+            &::after {
+                content: '';
+                display: block;
+                width: $spacing/2;
+                height: $spacing/2;
+                border-right: 2px solid $secondary-color;
+                border-bottom: 2px solid $secondary-color;
+                margin: 0 auto;
+                transform: rotate(45deg);
+                margin-top: $spacing;
+            }
+
             .portfolio__h1 {
                 margin: 0;
                 @include header-font;

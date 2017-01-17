@@ -93,8 +93,10 @@
         .footer__logo {
             width: 100%;
             height: auto;
+            display: block;
 
             svg {
+                width: 100%;
                 path.logo {
                     fill: $white;
                 }
@@ -128,9 +130,14 @@
 
         .socials {
             padding: 0;
+            width: 100%;
 
             li {
                 flex: 1;
+
+                svg {
+                    width: 100%;
+                }
 
                 .social::after {
                     @include tablet-break {
