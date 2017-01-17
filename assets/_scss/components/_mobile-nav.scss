@@ -203,6 +203,8 @@ body {
         margin-top: 5vh;
 
         li .social{
+            width: 0px;
+            
             svg {
                 @include tablet-break {
                     width: 50px;
