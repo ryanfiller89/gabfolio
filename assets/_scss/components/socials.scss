@@ -10,6 +10,7 @@
         .social {
             cursor: pointer;
             display: block;
+            width: 100%;
 
             svg {
                 width: 100%;
@@ -17,6 +18,10 @@
                 display: block;
                 min-width: 20px;
                 min-height: 20px;
+
+                path {
+                    fill: $white;
+                }
             }
         }
     }
