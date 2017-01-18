@@ -49,13 +49,21 @@
     }
 
     .footer--main {
-        @include grid;
+        @include grid--container;
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
 
+        @include tablet-break {
+            max-width: 80vw;
+        }
+
+        @include phone-break {
+            max-width: 100%;
+        }
+
         .footer__column {
             flex: 1;
-            margin-right: $spacing;
+            margin-right: $spacing*2;
 
             &:last-child {
                 margin-right: 0;
@@ -64,56 +72,42 @@
             @include tablet-break {
                 margin-right: 0;
             }
+
+            &.footer__branding {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &.footer__contact {
+                flex: 2;
+            }
         }
 
         @include tablet-break {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: block;
 
             .footer__branding {
-                max-width: calc(50% - (#{$spacing}/2));
-            }
-
-            .footer__recent-posts {
-                max-width: calc(50% - (#{$spacing}/2));
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 2*$spacing;
             }
 
             .footer__contact {
-                min-width: 100%;
-            }
-
-            @include phone-break {
-                flex-direction: column;
-
-                .footer__branding {
-                    width: 100%;
-                    max-width: 100%;
-                    margin-bottom: 2*$spacing;
-                    order: 1;
-                }
-
-                .footer__recent-posts {
-                    width: 100%;
-                    max-width: 100%;
-                    margin-bottom: 0;
-                    order: 3;
-                }
-
-                .footer__contact {
-                    width: 100%;
-                    max-width: 100%;
-                    margin-bottom: 2*$spacing;
-                    order: 2;
-                }
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 2*$spacing;
             }
         }
 
         .footer__logo {
             width: 100%;
             height: auto;
+            display: block;
 
             svg {
+                width: 100%;
                 path.logo {
                     fill: $white;
                 }
@@ -147,9 +141,14 @@
 
         .socials {
             padding: 0;
+            flex-wrap: wrap;
+
+            @include tablet-break {
+                flex-wrap: nowrap;
+            }
 
             li {
-                flex: 1;
+                flex: 0 1 25%;
 
                 .social::after {
                     @include tablet-break {

@@ -2,6 +2,7 @@
     @include grid;
     flex-direction: row;
     margin: 0;
+    width: 100%;
 
     li {
         list-style: none;
@@ -9,12 +10,18 @@
         .social {
             cursor: pointer;
             display: block;
+            width: 100%;
 
             svg {
+                width: 100%;
                 fill: $white;
                 display: block;
                 min-width: 20px;
                 min-height: 20px;
+
+                path {
+                    fill: $white;
+                }
             }
         }
     }

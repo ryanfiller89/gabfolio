@@ -129,6 +129,12 @@ body {
             align-items: stretch;
             flex-wrap: wrap;
 
+            &.active {
+                > a {
+                    color: $secondary-color;
+                }
+            }
+
             a {
                 color: $white;
                 @include nav-font;
@@ -152,7 +158,7 @@ body {
                 &.open {
                     background: $gray;
                     .mobile-nav__selector {
-                        transform: rotate(45deg);
+                        transform: rotate(135deg);
                     }
                 }
 
@@ -203,17 +209,30 @@ body {
         margin-top: 5vh;
 
         li .social{
-            svg {
-                @include tablet-break {
-                    width: 50px;
-                    margin: 0 10px;
-                }
+            display: block;
 
-                @include phone-break {
-                    width: 40px;
-                    margin: 0 5px 10px 5px;
+            svg {
+                width: 0;
+            }
+
+            @include tablet-break {
+                margin: 0 10px;
+
+                svg {
+                    width: 50px;
+                    height: auto;
                 }
             }
+
+            @include phone-break {
+                margin: 0 5px 10px 5px;
+
+                svg {
+                    width: 40px;
+                    height: auto;
+                }
+            }
+
             &::after {
                 display: none;
             }
