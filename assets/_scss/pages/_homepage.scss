@@ -33,6 +33,8 @@
         align-items: center;
         padding: 0;
         @include grid;
+        padding-left: 0;
+        padding-right: 0;
         justify-content: center;
         @include image-overlay;
 
@@ -40,20 +42,16 @@
             height: 70vh;
         }
 
-        &::after {
-            content: '';
-            background: $primary-color;
-            opacity: .25;
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            z-index: 1;
+        &::before {
+            z-index: 2;
         }
 
         .homepage__logo {
-            position: relative;
+            position: absolute;
             display: block;
             width: 50vw;
             height: 50vw;
+            cursor: pointer;
 
             svg {
                 position: absolute;
@@ -135,6 +133,29 @@
                         display: block;
                         fill: $white;
                     }
+                }
+            }
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: $spacing/2;
+
+            .swiper-pagination-bullet {
+                height: $spacing/2;
+                width: $spacing/2;
+                border-radius: $spacing/4;
+                background-color: $secondary-color;
+
+                &-active {
+                    background-color: $primary-color;
                 }
             }
         }
