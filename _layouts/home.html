@@ -7,14 +7,25 @@
 	<div class="site {{ page.layout }}">
 		{% include components/header.html %}
 
-		<main class="page-content homepage" style="background-image: url('https://media.giphy.com/media/xT8qBfjJhOmNPTVWU0/giphy.gif');">
+		<section class="page-content homepage swiper-container--home">
 			<div class="homepage__logo">
 				{% include svgs/logo.svg %}
 				{% include svgs/logo.svg %}
 				{% include svgs/logo.svg %}
 				{% include svgs/logo.svg %}
 			</div>
-		</main>
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+					{% for image in page.slides %}
+						<section class="swiper-slide" style="background-image: url('{{ image }}')">
+						</section>
+					{% endfor %}
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination">
+			</div>
+		</section>
 
 		{% include components/footer.html %}
 	</div>

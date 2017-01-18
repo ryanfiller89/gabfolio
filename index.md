@@ -3,6 +3,10 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+slides:
+    - https://media.giphy.com/media/l3978y5HqiEtqupiM/giphy.gif
+    - https://media.giphy.com/media/foqJmiSmrgmrK/source.gif
+    - https://media.giphy.com/media/cHrCWsAoMTlyE/giphy.gif
 # title: ryanfiller.com
 # permalink:
 ---
