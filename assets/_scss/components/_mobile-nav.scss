@@ -129,6 +129,12 @@ body {
             align-items: stretch;
             flex-wrap: wrap;
 
+            &.active {
+                > a {
+                    color: $secondary-color;
+                }
+            }
+
             a {
                 color: $white;
                 @include nav-font;
@@ -152,7 +158,7 @@ body {
                 &.open {
                     background: $gray;
                     .mobile-nav__selector {
-                        transform: rotate(45deg);
+                        transform: rotate(135deg);
                     }
                 }
 
@@ -204,6 +210,10 @@ body {
 
         li .social{
             display: block;
+
+            svg {
+                width: 0;
+            }
 
             @include tablet-break {
                 margin: 0 10px;
