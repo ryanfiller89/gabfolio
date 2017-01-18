@@ -53,6 +53,14 @@
         padding-top: 2*$spacing;
         padding-bottom: 2*$spacing;
 
+        @include tablet-break {
+            max-width: 80vw;
+        }
+
+        @include phone-break {
+            max-width: 100%;
+        }
+
         .footer__column {
             flex: 1;
             margin-right: $spacing*2;
