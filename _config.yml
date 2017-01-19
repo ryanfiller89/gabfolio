@@ -26,6 +26,13 @@ markdown: kramdown
 
 permalink: /blog/:title/
 
+pagination:
+  collection: posts
+  limit: false
+  per_page: 1
+  permalink: /page:num/
+  title_suffix: ""
+
 defaults:
     -
         scope:
@@ -59,6 +66,7 @@ jekyll-archives:
 gems:
   - jekyll-feed
   - jekyll-archives
+  - octopress-paginate
   - octopress-autoprefixer
 exclude:
   - Gemfile

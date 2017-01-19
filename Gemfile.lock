@@ -46,6 +46,10 @@ GEM
     octopress-autoprefixer (2.0.0)
       autoprefixer-rails
       jekyll (~> 3.0)
+    octopress-hooks (2.6.2)
+      jekyll (>= 2.0)
+    octopress-paginate (1.2.0)
+      octopress-hooks
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.4)
@@ -83,6 +87,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   octopress-autoprefixer
+  octopress-paginate
 
 RUBY VERSION
    ruby 2.3.3p222
