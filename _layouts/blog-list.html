@@ -11,7 +11,7 @@
         {% include components/banner.html %}
 
         <main class="page-content blog-list">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
                 <article class="excerpt__block-link">
                     <a href="{{ post.url }}" class="excerpt">
                         <div class="excerpt__header" style="background-image:url({{ post.image }});">
@@ -25,6 +25,25 @@
                     </a>
                 </article>
             {% endfor %}
+
+		{% if paginator.total_pages > 1 %}
+			<div class="blog-pagination">
+				<div class="blog-pagination__prev">
+					{% if paginator.previous_page %}
+						<a href="{{ paginator.previous_page_path }}">Previous</a>
+					{% endif %}
+				</div>
+
+				<span class="blog-pagination__current">{{ paginator.page }}</span>
+
+				<div class="blog-pagination__next">
+					{% if paginator.next_page %}
+						<a href="{{ paginator.next_page_path }}">Next</a>
+					{% endif %}
+				</div>
+			</div>
+		{% endif %}
+
         </main>
 
         {% include components/footer.html %}
