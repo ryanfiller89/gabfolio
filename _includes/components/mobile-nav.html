@@ -3,26 +3,27 @@
         {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
         {% for p in navigation_pages %}
             {% if p.navigation_weight %}
-                <li class="mobile-nav__row {% if p.url == page.url %}active{% endif %}{% if p.url contains page.parent %}{% unless page.parent == "portfolio" %}active{% endunless %}{% endif %}">
-                    <a href="{{ p.url }}">{{ p.title }}</a>
+                {% if p.url contains '/page' %}{% else %}
+                    <li class="mobile-nav__row {% if p.url == page.url %} active{% endif %}{% if p.url contains page.parent %}{% unless page.parent == "portfolio" %} active{% endunless %}{% endif %}">
+                        <a href="{{ p.url }}">{{ p.title }}</a>
 
-                    {% if p.title == 'Portfolio' %}
+                        {% if p.title == 'Portfolio' %}
 
-                        <div class="mobile-nav__selector-wrap js-mobile-nav-selector">
-                            <div class="mobile-nav__selector"></div>
-                        </div>
+                            <div class="mobile-nav__selector-wrap js-mobile-nav-selector">
+                                <div class="mobile-nav__selector"></div>
+                            </div>
 
-                        <ul class="mobile-subnav js-mobile-subnav">
-                        {% for item in site.portfolio %}
-                            <li class="mobile-nav__row {% if page.category == item.category %}active js-sub-active{% endif %}">
-                                <a href="/{{ item.categories }}/">{{ item.categories }}</a>
-                            </li>
-                        {% endfor %}
-                        </ul>
+                            <ul class="mobile-subnav js-mobile-subnav">
+                            {% for item in site.portfolio %}
+                                <li class="mobile-nav__row {% if page.category == item.category %}active js-sub-active{% endif %}">
+                                    <a href="/{{ item.categories }}/">{{ item.categories }}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
 
-                    {% endif %}
-
-                </li>
+                        {% endif %}
+                    </li>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </ul>
