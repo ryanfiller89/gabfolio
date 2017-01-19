@@ -7,12 +7,14 @@
 				</section>
 			{% endfor %}
 	</div>
-	<!-- If we need pagination -->
-	<div class="swiper-pagination">
-	</div>
-	<!-- If we need navigation buttons -->
-	<div class="swiper-button-container">
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-	</div>
+	{% if page.slides.size > 1 %}
+		<!-- If we need pagination -->
+		<div class="swiper-pagination">
+		</div>
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-container">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	{% endif %}
 </section>

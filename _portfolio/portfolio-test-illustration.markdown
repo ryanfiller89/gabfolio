@@ -6,10 +6,7 @@ tags: tag4 tag5
 client-link: www.batman.com
 thumbnail: /assets/images/site-assets/placeholder-thumb.jpg
 slides:
-    - https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif
-    - https://media.giphy.com/media/kcnvITNDYaaas/giphy.gif
-    - https://media.giphy.com/media/Gi7eBuLHjqCru/giphy.gif
-    - https://media.giphy.com/media/kcnvITNDYaaas/giphy.gif
+    - http://assets.infinitytheforums.com/en/monthly_2015_06/5fbcd46d4c0647971e0fed7a59c37713.jpg.60f3616f8c17af9a7c0c7edcbb29a9f2.jpg
 
 ---
 
