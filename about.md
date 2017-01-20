@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 navigation_weight: 1
+banner: /assets/images/site-assets/placeholder.png
 ---
 
 <p>
