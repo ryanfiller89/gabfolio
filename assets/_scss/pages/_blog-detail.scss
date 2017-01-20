@@ -28,11 +28,11 @@
             initial-letter: 5;
             color: $white;
             background-color: $primary-color;
-            padding: 1.5*$spacing;
+            padding: .33em;
             @include header-font;
             float: left;
             font-size: 4em;
-            margin: -$spacing $spacing/2 $spacing/2 $spacing/2;
+            margin: -.25em .25em 0 0;
         }
     }
 }
