@@ -55,7 +55,6 @@ sass:
 
 gems:
   - jekyll-feed
-  - jekyll-archives
   - octopress-paginate
   - octopress-autoprefixer
 exclude:
