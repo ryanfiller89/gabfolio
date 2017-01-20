@@ -67,6 +67,7 @@
 
             .excerpt__text {
                 margin-bottom: ($spacing/2);
+                color: $primary-color;
             }
 
             .excerpt__link {
@@ -100,7 +101,7 @@
                 }
             }
 
-            .excerpt__body {
+            .excerpt__body .excerpt__text {
                 color: $primary-color;
             }
 

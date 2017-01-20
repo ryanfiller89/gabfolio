@@ -63,6 +63,10 @@
                 margin: 10vh 0;
             }
 
+            svg, svg path {
+                transition: $transition/2;
+            }
+
             svg {
                 position: absolute;
                 top: 50%;

@@ -1,8 +1,54 @@
 $transition: .2s;
 
+a {
+    transition: $transition;
+}
+
+svg, svg path {
+    transition: $transition;
+}
+
+.button {
+    transition: $transition;
+}
+
+.mobile-nav__selector-wrap, .mobile-nav__selector {
+    transition: $transition;
+}
+
+.mobile-subnav {
+    transition: 2*$transition;
+}
+
+.subnav--mobile__dropdown, .subnav--mobile__list {
+    transition: 2*$transition;
+}
+
+.portfolio-grid-block {
+    .portfolio-grid-block__info {
+        transition: max-height $transition;
+    }
+
+}
+
+.excerpt__block-link {
+    .excerpt__text {
+        transition: color 0s;
+    }
+
+    .excerpt__header::before {
+        transition: background-color 2*$transition;
+    }
+
+    .excerpt__link {
+        transition: color $transition;
+    }
+}
+
 @mixin float {
     position: relative;
     top: -1px;
+    transition: position 2*$transition;
 }
 
 @mixin social-hover($brand-color) {
