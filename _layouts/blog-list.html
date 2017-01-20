@@ -14,7 +14,7 @@
             {% for post in paginator.posts %}
                 <article class="excerpt__block-link">
                     <a href="{{ post.url }}" class="excerpt">
-                        <div class="excerpt__header" style="background-image:url({{ post.image }});">
+                        <div class="excerpt__header" style="background-image:url({{ post.thumbnail }});">
                             {% include components/meta.html%}
                 			<h2 class="excerpt__title">{{ post.title }}</h2>
                 		</div>
