@@ -78,4 +78,18 @@
         }
     }
 
+    blockquote p {
+        color: $light-gray;
+        position: relative;
+
+        &::before {
+            content: '"';
+            @include header-font;
+            color: $primary-color;
+            font-size: 4em;
+            position: absolute;
+            left: -$spacing;
+            top: $spacing/2;
+        }
+    }
 }
