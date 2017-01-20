@@ -81,15 +81,15 @@
     blockquote p {
         color: $light-gray;
         position: relative;
+        font-size: 1.25em;
 
         &::before {
             content: '"';
             @include header-font;
             color: $primary-color;
-            font-size: 4em;
+            font-size: 3em;
             position: absolute;
             left: -$spacing;
-            top: $spacing/2;
         }
     }
 }
