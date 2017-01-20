@@ -63,11 +63,19 @@
         }
 
         .excerpt__body {
-            padding: 0 $spacing  $spacing $spacing;
+            padding: 0 $spacing $spacing $spacing;
+
+            @include tablet-break {
+                padding: 0;
+            }
 
             .excerpt__text {
                 margin-bottom: ($spacing/2);
                 color: $primary-color;
+
+                @include tablet-break {
+                     padding: 0 $spacing
+                }
             }
 
             .excerpt__link {
@@ -77,8 +85,9 @@
                 font-size: 1.5em;
 
                 @include tablet-break {
-                    display: block;
+                    @include button--primary;
                     text-align: center;
+                    padding: $spacing/2;
                 }
 
                 &::after {
