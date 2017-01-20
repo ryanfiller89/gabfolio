@@ -26,23 +26,23 @@
                 </article>
             {% endfor %}
 
-		{% if paginator.total_pages > 1 %}
-			<div class="blog-pagination">
-				<div class="blog-pagination__prev">
-					{% if paginator.previous_page %}
-						<a href="{{ paginator.previous_page_path }}">Previous</a>
-					{% endif %}
-				</div>
+			{% if paginator.total_pages > 1 %}
+				<div class="blog-pagination">
+					<div class="blog-pagination__prev">
+						{% if paginator.previous_page %}
+							<a href="{{ paginator.previous_page_path }}">Previous</a>
+						{% endif %}
+					</div>
 
-				<span class="blog-pagination__current">{{ paginator.page }}</span>
+					<span class="blog-pagination__current">{{ paginator.page }}</span>
 
-				<div class="blog-pagination__next">
-					{% if paginator.next_page %}
-						<a href="{{ paginator.next_page_path }}">Next</a>
-					{% endif %}
+					<div class="blog-pagination__next">
+						{% if paginator.next_page %}
+							<a href="{{ paginator.next_page_path }}">Next</a>
+						{% endif %}
+					</div>
 				</div>
-			</div>
-		{% endif %}
+			{% endif %}
 
         </main>
 
