@@ -13,9 +13,17 @@
         </div>
 
         <main class="page-content blog-post">
+
             {% include components/meta.html%}
-			
-            {{ content }}
+
+			<p class="blog-post__excerpt">
+				{{ page.excerpt }}
+			</p>
+
+			<div class="blog-post__content">
+            	{{ content }}
+			</div>
+
             <a class="back__link" href="/blog"> Back to all posts</a>
         </main>
 

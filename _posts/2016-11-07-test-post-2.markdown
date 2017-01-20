@@ -4,6 +4,7 @@ title:  "I hope this works 2"
 date:   2016-12-07 13:52:34 -0600
 tags: test
 image: /assets/images/site-assets/placeholder-thumb.jpg
+excerpt: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.
 ---
 
 Short post. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
