@@ -16,7 +16,6 @@
 title: ryanfiller.com
 email: ryanfiller89@gmail.com
 description: i like turtles
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ryanfiller.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ryanfiller_
 github_username:  ryanfiller89
