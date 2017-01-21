@@ -54,7 +54,7 @@ defaults:
         scope:
             type: "portfolio"
         values:
-            parent: portfolio
+            parent: work
 
 collections:
     portfolio:
