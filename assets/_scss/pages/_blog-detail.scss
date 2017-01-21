@@ -21,6 +21,14 @@
         line-height: 1.75em;
         margin-bottom: 3*$spacing;
         text-align: center;
+
+        @include tablet-break {
+            font-size: 1.25em;
+        }
+
+        @include phone-break {
+            font-size: 1.125em;
+        }
     }
 
     .blog-post__content {

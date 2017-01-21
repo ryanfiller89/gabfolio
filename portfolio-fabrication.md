@@ -1,8 +1,8 @@
 ---
 layout: portfolio-list-category
-title: Design
-permalink: /design/
-category: design
+title: Fabrication
+permalink: /fabrication/
+category: fabrication
 parent: work
 ---
 

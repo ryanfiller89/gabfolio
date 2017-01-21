@@ -3,7 +3,7 @@ layout: portfolio-list-category
 title: Illustration
 permalink: /illustration/
 category: illustration
-parent: portfolio
+parent: work
 ---
 
 illustratio portfolio page

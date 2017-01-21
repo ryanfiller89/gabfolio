@@ -4,10 +4,10 @@
         {% for p in navigation_pages %}
             {% if p.navigation_weight %}
                 {% if p.url contains '/page' %}{% else %}
-                    <li class="mobile-nav__row {% if p.url == page.url %} active{% endif %}{% if p.url contains page.parent %}{% unless page.parent == "portfolio" %} active{% endunless %}{% endif %}">
+                    <li class="mobile-nav__row {% if p.url == page.url %} active{% endif %}{% if p.url contains page.parent %}{% unless page.parent == "work" %} active{% endunless %}{% endif %}">
                         <a href="{{ p.url }}">{{ p.title }}</a>
 
-                        {% if p.title == 'Portfolio' %}
+                        {% if p.title == 'Work' %}
 
                             <div class="mobile-nav__selector-wrap js-mobile-nav-selector">
                                 <div class="mobile-nav__selector"></div>

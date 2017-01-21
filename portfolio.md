@@ -1,7 +1,7 @@
 ---
 layout: portfolio-list
-title: Portfolio
-permalink: /portfolio/
+title: Work
+permalink: /work/
 navigation_weight: 2
 ---
 

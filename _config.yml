@@ -15,11 +15,22 @@
 # in the templates via {{ site.myvariable }}.
 title: ryanfiller.com
 email: ryanfiller89@gmail.com
-description: i like turtles
-baseurl: "" # the subpath of your site, e.g. /blog
+description: porftfolio and blog for ryan filler
 url: "http://ryanfiller.com" # the base hostname & protocol for your site, e.g. http://example.com
+author: ryanfiller_
 twitter_username: ryanfiller_
 github_username:  ryanfiller89
+facebook:
+  admins: 1289580190
+logo: /assets/images/site-assets/ryanfiller.jpg
+social:
+  name: Ryan Filler
+  links:
+    - https://twitter.com/ryanfiller_
+    - https://www.facebook.com/ryan.filler
+    - https://www.linkedin.com/in/ryanfiller
+    - https://plus.google.com/u/0/112417000136872017947
+    - https://github.com/ryanfiller89
 
 # Build settings
 markdown: kramdown
@@ -43,7 +54,7 @@ defaults:
         scope:
             type: "portfolio"
         values:
-            parent: portfolio
+            parent: work
 
 collections:
     portfolio:
@@ -57,6 +68,7 @@ gems:
   - jekyll-feed
   - octopress-paginate
   - octopress-autoprefixer
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
