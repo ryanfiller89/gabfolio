@@ -136,6 +136,34 @@ h4 {
     }
 }
 
+blockquote {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+
+    @include phone-break {
+        margin: $spacing $spacing/4;
+    }
+
+    p {
+        color: $light-gray;
+        position: relative;
+        font-size: 1.25em;
+
+        &::before {
+            content: '"';
+            @include header-font;
+            color: $primary-color;
+            font-size: 3em;
+            position: absolute;
+            left: -$spacing;
+        }
+
+        @include tablet-break {
+            font-size: 1.125em;
+        }
+    }
+}
+
 .meta {
     margin-bottom: ($spacing/4);
 
