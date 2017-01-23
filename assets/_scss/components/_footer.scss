@@ -105,6 +105,7 @@
             width: 100%;
             height: auto;
             display: block;
+            max-height: 75px;
 
             svg {
                 width: 100%;
@@ -150,10 +151,18 @@
             li {
                 flex: 0 1 25%;
 
-                .social::after {
-                    @include tablet-break {
-                        margin-top: 0;
-                        opacity: .5;
+
+                .social {
+
+                    svg {
+                        max-height: 67px;    
+                    }
+
+                    &::after {
+                        @include tablet-break {
+                            margin-top: 0;
+                            opacity: .5;
+                        }
                     }
                 }
             }
