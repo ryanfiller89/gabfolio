@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+main, article, aside, blockquote,	caption, header, footer {
+    display: block;
+}
+
 /* Config */
 @import "config/responsive";
 @import "config/colors";
