@@ -82,7 +82,7 @@ body {
     position: relative;
     z-index: 500;
     &.open {
-        transform: translateX(calc(-100% + ((2 * #{$spacing})) + #{$navicon-size}));
+        transform: translateX(-100%) translateX(2*$spacing) translateX($navicon-size);
         .mobile-tray {
             display: block;
         }
@@ -103,7 +103,7 @@ body {
     display: none;
 }
 
-.mobile-nav-wrap {
+.mobile-tray {
     background: $primary-color;
     position: absolute;
     left: 100%;
@@ -139,7 +139,7 @@ body {
                 color: $white;
                 @include nav-font;
                 font-size: 1.25em;
-                padding-left: $spacing;
+                padding: .75*$spacing 0 .75*$spacing $spacing;
                 display: flex;
                 align-items: center;
                 flex: 1;
@@ -213,6 +213,7 @@ body {
 
             svg {
                 width: 0;
+                max-height: 50px;
             }
 
             @include tablet-break {

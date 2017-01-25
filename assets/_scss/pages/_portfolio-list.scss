@@ -33,16 +33,16 @@
             box-sizing: border-box;
             padding: $spacing/2;
             display: block;
-            flex-basis: calc(33.33333vw - #{$spacing/3});
+            width: 33.333%;
             height: calc(33.33333vw - #{$spacing/3});
 
             @include tablet-break {
-                flex-basis: calc(50vw - #{$spacing/2});
+                width: 50%;
                 height: calc(50vw - #{$spacing/2});
             }
 
             @include phone-break {
-                flex-basis: calc(100vw - #{$spacing});
+                width: 100%;
                 height: calc(100vw - #{$spacing});
             }
 
