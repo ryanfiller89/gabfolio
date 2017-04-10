@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ryanfiller.com
+title: gabbywindham.com
 email: ryanfiller89@gmail.com
 description: porftfolio and blog for ryan filler
 url: "http://ryanfiller.com" # the base hostname & protocol for your site, e.g. http://example.com
