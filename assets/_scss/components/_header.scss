@@ -2,11 +2,11 @@
     background: $white;
 
     &:last-of-type {
-        border-bottom: $spacing/4 solid $primary-color;
+        border-bottom: $spacing/4 solid $darkgrey;
     }
 
     .header--pre {
-        background: $black;
+        background: $darkgrey;
 
         .socials {
             justify-content: flex-end;
@@ -49,7 +49,7 @@
             svg {
 
                 path.logo {
-                    fill: $black;
+                    fill: $darkgrey;
                 }
 
                 text.tagline {
@@ -62,7 +62,7 @@
 
                 &:hover {
                     path {
-                        fill: $secondary-color;
+                        fill: $yellow;
                     }
                 }
             }
@@ -86,24 +86,24 @@
                         margin-left: .75em;
                         @include nav-font;
                         font-size: 1.5em;
-                        color: $black;
+                        color: $darkgrey;
 
                             &:hover {
-                                color: $light-gray;
+                                color: $darkgrey;
                             }
                         }
 
                     &.active a {
-                        color: $secondary-color;
+                        color: $yellow;
                     }
                     &:hover a {
-                        color: $primary-color;
+                        color: $darkgrey;
                     }
                 }
         }
     }
 
     .header--post {
-        background: $gray;
+        background: $darkgrey;
     }
 }

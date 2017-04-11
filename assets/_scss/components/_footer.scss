@@ -1,8 +1,8 @@
 .footer {
-        background: $primary-color;
+        background: $darkgrey;
 
     .footer--pre {
-        background: $gray;
+        background: $darkgrey;
         @include grid;
         padding: 0;
 
@@ -20,10 +20,10 @@
 
             @include tablet-break {
                 display: block;
-                background: $dark-gray;
+                background: $darkgrey;
 
                 .nav__link {
-                    border-bottom: 1px solid $primary-color;
+                    border-bottom: 1px solid $darkgrey;
                 }
             }
 
@@ -41,7 +41,7 @@
                     padding-bottom: .5em;
 
                     &:hover {
-                        background: $dark-gray;
+                        background: $darkgrey;
                     }
                 }
             }
@@ -123,7 +123,7 @@
 
                 &:hover {
                     path {
-                        fill: $secondary-color;
+                        fill: $yellow;
                     }
                 }
 
@@ -155,7 +155,7 @@
                 .social {
 
                     svg {
-                        max-height: 67px;    
+                        max-height: 67px;
                     }
 
                     &::after {
@@ -170,7 +170,7 @@
     }
 
     .footer--post {
-        background: $dark-gray;
+        background: $darkgrey;
         color: $white;
         padding-top: .5em;
         padding-bottom: .5em;

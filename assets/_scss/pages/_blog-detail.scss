@@ -2,7 +2,7 @@
     .meta {
         margin-bottom: (2*$spacing);
         text-align: center;
-        color: $light-gray;
+        color: $darkgrey;
 
         .meta__date {
             @include strikethrough;
@@ -16,7 +16,7 @@
     }
 
     .blog-post__excerpt {
-        color: $light-gray;
+        color: $darkgrey;
         font-size: 1.5em;
         line-height: 1.75em;
         margin-bottom: 3*$spacing;
@@ -35,7 +35,7 @@
         p:first-of-type::first-letter {
             initial-letter: 5;
             color: $white;
-            background-color: $primary-color;
+            background-color: $darkgrey;
             padding: .33em;
             @include header-font;
             float: left;

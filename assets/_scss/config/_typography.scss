@@ -1,29 +1,28 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,900,900i");
 
 @mixin body-font() {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: normal;
 }
 
 @mixin header-font() {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
 @mixin nav-font() {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
 }
 
 @mixin text-link {
-    color: $primary-color;
+    color: $darkgrey;
     text-decoration: none;
 
     &:hover {
-        color: $secondary-color;
+        color: $yellow;
     }
 }
 
@@ -94,7 +93,7 @@ a {
 
 h2 {
     @include header-font;
-    color: $primary-color;
+    color: $darkgrey;
     font-size: 3.5em;
 
     @include tablet-break {
@@ -108,7 +107,7 @@ h2 {
 
 h3 {
     @include header-font;
-    color: $light-gray;
+    color: $darkgrey;
     font-size: 2.5em;
 
     @include tablet-break {
@@ -122,7 +121,7 @@ h3 {
 
 h4 {
     @include body-font;
-    color: $gray;
+    color: $darkgrey;
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -145,14 +144,14 @@ blockquote {
     }
 
     p {
-        color: $light-gray;
+        color: $darkgrey;
         position: relative;
         font-size: 1.25em;
 
         &::before {
             content: '"';
             @include header-font;
-            color: $primary-color;
+            color: $darkgrey;
             font-size: 3em;
             position: absolute;
             left: -$spacing;
@@ -189,12 +188,12 @@ blockquote {
 
 .page-content p a {
     @include text-link;
-    border-bottom: 2px solid $secondary-color;
+    border-bottom: 2px solid $yellow;
     transition: 3*$transition;
 
     &:hover {
         color: $white;
-        background-color: $secondary-color;
+        background-color: $yellow;
     }
 }
 

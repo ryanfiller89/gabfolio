@@ -26,11 +26,11 @@
         }
 
         &:hover {
-            background: $black;
+            background: $darkgrey;
         }
 
         &.active {
-            background: $primary-color;
+            background: $darkgrey;
         }
     }
 }
@@ -67,7 +67,7 @@
             margin: $spacing $spacing $spacing/2 $spacing;
         }
 
-        background: $gray;
+        background: $darkgrey;
         color: $white;
 
         .subnav--mobile__title {
@@ -115,7 +115,7 @@
             }
 
             .subnav--mobile__link {
-                background: $black;
+                background: $darkgrey;
                 a {
                     display: block;
                     padding: $spacing;
@@ -123,14 +123,14 @@
                 }
 
                 &.active {
-                    background: $primary-color;
+                    background: $darkgrey;
                 }
             }
         }
 
         &.open {
             .subnav--mobile__dropdown--wrap {
-                background: $black;
+                background: $darkgrey;
 
                 .subnav--mobile__dropdown {
                     transform: rotate(-90deg);

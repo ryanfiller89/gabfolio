@@ -6,7 +6,6 @@
     padding-bottom: 2*$spacing;
 
     @include image-overlay;
-    box-shadow: $shadow-inset;
 
     @include tablet-break {
         padding-top: 3*$spacing;
@@ -22,7 +21,6 @@
         margin: 0;
         position: relative;
         z-index: 5;
-        text-shadow: $shadow;
         @include grid--container;
         justify-content: center;
         @include header-font;
@@ -32,7 +30,6 @@
         font-size: 6em;
         letter-spacing: .025em;
         color: $white;
-        text-shadow: $shadow;
 
         @include tablet-break {
             font-size: 3.5em;
@@ -56,7 +53,6 @@
             right: 0; bottom: -1*$spacing; left: 0;
             margin: 0 auto;
             z-index: 2;
-            box-shadow: $shadow;
         }
     }
 
@@ -105,7 +101,6 @@
         right: 0; bottom: -1*$spacing; left: 0;
         margin: 0 auto;
         z-index: 2;
-        box-shadow: $shadow;
 
         @include tablet-break {
             display: none;
@@ -149,7 +144,7 @@
             cursor: pointer;
             padding: $spacing/2 0;
             width: 3*$spacing;
-            background-color: $black;
+            background-color: $darkgrey;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -165,7 +160,6 @@
             &::before, &::after {
                 content: '';
                 display: block;
-                text-shadow: $shadow;
                 width: 0;
                 height: 0;
                 border-top: $spacing/4 solid transparent;
@@ -211,7 +205,7 @@
         .swiper-pagination-bullet {
             display: block;
             cursor: pointer;
-            background-color: $secondary-color;
+            background-color: $yellow;
             height: .3em;
             width: .3em;
             padding: .3em;
@@ -219,7 +213,7 @@
             border-radius: 100%;
 
             &-active {
-                background-color: $primary-color;
+                background-color: $darkgrey;
             }
 
             &:hover {

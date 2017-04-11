@@ -68,8 +68,8 @@
                 display: block;
                 width: $spacing/2;
                 height: $spacing/2;
-                border-right: 2px solid $secondary-color;
-                border-bottom: 2px solid $secondary-color;
+                border-right: 2px solid $yellow;
+                border-bottom: 2px solid $yellow;
                 margin: 0 auto;
                 transform: rotate(45deg);
                 margin-top: $spacing;
@@ -93,7 +93,7 @@
 
                 .meta__tag {
                     font-size: 1.5em;
-                    color: $light-gray;
+                    color: $darkgrey;
                 }
 
                 .meta__link {

@@ -13,7 +13,7 @@ $navicon-size: 50px;
 
     .navicon {
         display: block;
-        background: $primary-color;
+        background: $darkgrey;
         width: $navicon-size;
         height: $navicon-size/10;
         position: relative;
@@ -25,7 +25,7 @@ $navicon-size: 50px;
             width: 100%;
             height: 5px;
             display: block;
-            background: $primary-color;
+            background: $darkgrey;
             position: absolute;
         }
 
@@ -46,14 +46,14 @@ $navicon-size: 50px;
                 top: 0;
                 transform: rotate(45deg);
                 transition: transform 2*$transition;
-                background: $secondary-color;
+                background: $yellow;
             }
 
             &::after {
                 bottom: 0;
                 transform: rotate(-45deg);
                 transition: transform 2*$transition;
-                background: $secondary-color;
+                background: $yellow;
             }
         }
     }
@@ -98,13 +98,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: transparentize($black, .5);
+    background: transparentize($darkgrey, .5);
     z-index: 40;
     display: none;
 }
 
 .mobile-tray {
-    background: $primary-color;
+    background: $darkgrey;
     position: absolute;
     left: 100%;
     top: 0;
@@ -131,7 +131,7 @@ body {
 
             &.active {
                 > a {
-                    color: $secondary-color;
+                    color: $yellow;
                 }
             }
 
@@ -156,7 +156,7 @@ body {
                 align-items: center;
 
                 &.open {
-                    background: $gray;
+                    background: $darkgrey;
                     .mobile-nav__selector {
                         transform: rotate(135deg);
                     }
@@ -184,7 +184,7 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                background: $gray;
+                background: $darkgrey;
                 max-height: 0;
                 overflow: hidden;
 

@@ -6,25 +6,25 @@
 
 @mixin button--primary {
     @include button;
-    background-color: $primary-color;
+    background-color: $darkgrey;
     font-size: 1.5em;
     color: $white;
 
     &:hover {
-        background-color: darken($primary-color, 5%);
+        background-color: darken($darkgrey, 5%);
         color: $white;
     }
 }
 
 @mixin button--secondary {
     @include button;
-    background-color: $secondary-color;
+    background-color: $yellow;
     @include text-link;
     font-size: 1.125em;
     color: $white;
 
     &:hover {
-        background-color: darken($secondary-color, 5%);
+        background-color: darken($yellow, 5%);
         color: $white;
     }
 }

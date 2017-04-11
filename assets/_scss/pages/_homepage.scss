@@ -14,7 +14,7 @@
 
                 .navicon--wrap{
                     .navicon, .navicon::before, .navicon::after {
-                        background: $secondary-color;
+                        background: $yellow;
                     }
 
                     &.open .navicon {
@@ -87,7 +87,7 @@
                     z-index: 4;
 
                     path.logo, tspan {
-                        fill: $secondary-color;
+                        fill: $yellow;
                     }
 
                     tspan {
@@ -164,10 +164,10 @@
                 height: $spacing/2;
                 width: $spacing/2;
                 border-radius: $spacing/4;
-                background-color: $secondary-color;
+                background-color: $yellow;
 
                 &-active {
-                    background-color: $primary-color;
+                    background-color: $darkgrey;
                 }
             }
         }

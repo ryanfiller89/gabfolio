@@ -39,7 +39,6 @@
             & > * {
                 position: relative;
                 z-index: 5;
-                text-shadow: $shadow;
             }
 
             .meta {
@@ -71,7 +70,7 @@
 
             .excerpt__text {
                 margin-bottom: ($spacing/2);
-                color: $primary-color;
+                color: $darkgrey;
 
                 @include tablet-break {
                      padding: 0 $spacing
@@ -98,11 +97,10 @@
 
         &:hover, &:active {
             @include float;
-            box-shadow: $shadow;
 
             .excerpt__header {
                 &::before {
-                    background-color: $secondary-color;
+                    background-color: $yellow;
                 }
 
                 .excerpt__title {
@@ -111,11 +109,11 @@
             }
 
             .excerpt__body .excerpt__text {
-                color: $primary-color;
+                color: $darkgrey;
             }
 
             .excerpt__link {
-                color: $secondary-color;
+                color: $yellow;
             }
         }
     }
@@ -128,20 +126,20 @@
 
         .blog-pagination__current {
             @include header-font;
-            color: $primary-color;
+            color: $darkgrey;
             font-size: 1em;
             line-height: 1.125em;
             line-height: 0;
             padding: 0 $spacing/2;
             margin: 0 $spacing/2;
-            border-left: 2px solid $primary-color;
-            border-right: 2px solid $primary-color;
+            border-left: 2px solid $darkgrey;
+            border-right: 2px solid $darkgrey;
             display: flex;
             align-items: center;
 
             @include tablet-break {
                 border: none;
-                background-color: $primary-color;
+                background-color: $darkgrey;
                 color: $white;
                 font-size: 1.5em;
                 margin: 0;
@@ -187,7 +185,7 @@
         .blog-pagination__prev, .blog-pagination__next {
             width: 50%;
             @include nav-font;
-            color: $primary-color;
+            color: $darkgrey;
             font-size: 1em;
             padding: $spacing/4 0;
 
@@ -199,7 +197,6 @@
                 &::before, &::after {
                     content: '';
                     display: block;
-                    text-shadow: $shadow;
                     width: 0;
                     height: 0;
                     border-top: $spacing/5 solid transparent;

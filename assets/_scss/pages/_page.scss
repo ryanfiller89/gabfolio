@@ -21,23 +21,23 @@
         margin-bottom: $spacing;
 
         a {
-            color: $black;
+            color: $darkgrey;
             text-decoration: none;
-            border-bottom: 2px $secondary-color dotted;
+            border-bottom: 2px $yellow dotted;
 
             &:hover {
-                color: $primary-color;
-                border-bottom: 2px $primary-color dotted;
+                color: $darkgrey;
+                border-bottom: 2px $darkgrey dotted;
             }
 
             @include tablet-break {
                 border-bottom: 0;
-                background: $secondary-color;
+                background: $yellow;
                 padding: 0 .25em;
                 color: $white;
                 &:hover {
                     border-bottom: 0;
-                    background-color: $primary-color;
+                    background-color: $darkgrey;
                     color: $white;
                 }
             }
