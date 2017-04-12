@@ -1,9 +1,11 @@
 ---
 layout: page
-title: About
-permalink: /create/about
+title: Teaching
+permalink: /educate/teaching
 navigation_weight: 2
 ---
+
+about teaching
 
 <p>
 This is the base Jekyll theme.  You can find out more info <a href="#">Really really long link.</a> about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)

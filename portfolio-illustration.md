@@ -6,4 +6,4 @@ category: illustration
 parent: work
 ---
 
-illustratio portfolio page
+illustration portfolio page
