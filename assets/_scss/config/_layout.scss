@@ -40,9 +40,14 @@ $spacing: 2rem;
 
 @mixin grid() {
     display: flex;
-    padding-left: $spacing;
-    padding-right: $spacing;
+    padding-left: $spacing*2;
+    padding-right: $spacing*2;
     max-width: 100%;
+
+    @include tablet-break {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
 }
 
 @mixin grid--container() {
