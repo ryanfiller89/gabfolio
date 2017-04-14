@@ -1,8 +1,9 @@
 ---
 layout: page
 title: About
-permalink: /create/about
+permalink: /about
 navigation_weight: 2
+side: create
 ---
 
 <p>
