@@ -1,6 +1,6 @@
 ---
 layout: portfolio-detail
-title:  Women In The United States
+title:  Women In The U.S.
 #<!-- category: design -->
 tags: graphic-design
 thumbnail: /assets/images/portfolio/us-women.jpg

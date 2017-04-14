@@ -1,10 +1,11 @@
 ---
 layout: portfolio-detail
-title:  HumanKind NonProfit Brochure
+title:  HumanKind
 #<!-- category: design -->
 tags: graphic-design
-thumbnail: /assets/images/portfolio/humankindbrochure.jpg
+thumbnail: /assets/images/portfolio/humankind-mockup.jpg
 images:
+    - /assets/images/portfolio/humankind-mockup.jpg
     - /assets/images/portfolio/humankindbrochure.jpg
     - /assets/images/portfolio/humankindbrochure-inside.jpg
 

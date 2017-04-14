@@ -1,11 +1,16 @@
 ---
 layout: portfolio-detail
-title:  Finding New Words
+title:  ACB Wayfinding
 #<!-- category: design -->
 tags: graphic-design
-thumbnail: /assets/images/portfolio/artedalumniexhibition.png
+thumbnail: /assets/images/portfolio/acb-wayfinding2.jpg
 images:
-    - /assets/images/portfolio/artedalumniexhibition.png
+    - /assets/images/portfolio/acb-wayfinding0.jpg
+    - /assets/images/portfolio/acb-wayfinding1.jpg
+    - /assets/images/portfolio/acb-wayfinding2.jpg
+    - /assets/images/portfolio/acb-wayfinding3.jpg
+    - /assets/images/portfolio/acb-wayfinding4.jpg
+
 
     #<!-- published: false -->
 ---

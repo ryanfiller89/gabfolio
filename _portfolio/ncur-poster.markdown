@@ -1,6 +1,6 @@
 ---
 layout: portfolio-detail
-title:  NCUR Visual Arts Exhibition Poster
+title:  NCUR Visual Arts
 #<!-- category: design -->
 tags: graphic-design
 thumbnail: /assets/images/portfolio/ncur-poster.jpg

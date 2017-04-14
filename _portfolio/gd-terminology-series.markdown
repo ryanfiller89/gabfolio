@@ -1,6 +1,6 @@
 ---
 layout: portfolio-detail
-title:  Graphic Design Terminology Poster Series
+title:  Terminology Series
 #<!-- category: design -->
 tags: graphic-design
 thumbnail: /assets/images/portfolio/gdterminology-context.jpg

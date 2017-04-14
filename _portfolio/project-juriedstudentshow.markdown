@@ -1,6 +1,6 @@
 ---
 layout: portfolio-detail
-title:  Project - An Assemblage of Graphic Design
+title:  Project
 #<!-- category: design -->
 tags: graphic-design
 thumbnail: /assets/images/portfolio/project-poster.jpg

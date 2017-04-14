@@ -1,6 +1,6 @@
 ---
 layout: portfolio-detail
-title:  Transition Design Booklet
+title:  Transition Design
 #<!-- category: design -->
 tags: graphic-design
 thumbnail: /assets/images/portfolio/transitiondesign-cover.jpg
