@@ -49,15 +49,11 @@
 }
 
 .page-content {
-    .subnav {
-        display: none;
-    }
 
     .subnav--mobile {
         position: relative;
 
         @include tablet-break {
-            display: block;
             width: 50%;
             margin: $spacing 25% $spacing/2 25%;
         }

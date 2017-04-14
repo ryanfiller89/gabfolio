@@ -11,6 +11,8 @@
         <main class="page-content {{ page.layout }}">
 			 <h1 class="page-title"> {{ page.title }} </h1>
 
+			 {% include components/subnav.html %}
+
             <div class="portfolio-grid">
                 {% for work in site[page.portfolio] %}
                     {% include components/grid-block.html %}
