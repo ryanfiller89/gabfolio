@@ -12,7 +12,7 @@
 			 <h1 class="page-title"> {{ page.title }} </h1>
 
             <div class="portfolio-grid">
-                {% for work in site.portfolio %}
+                {% for work in site[page.portfolio] %}
                     {% include components/grid-block.html %}
                 {% endfor %}
             </div>
