@@ -13,7 +13,6 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "config/animations";
 @import "config/layout";
 @import "config/typography";
-@import "config/swiper";
 
 /* Components */
 @import "components/socials";
@@ -21,7 +20,6 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "components/header";
 @import "components/subnav";
 @import "components/mobile-nav";
-@import "components/banner";
 @import "components/footer";
 @import "components/recent-posts";
 @import "components/contact-form";

@@ -51,29 +51,23 @@
         }
 
         img.left {
-            float: left;
-            margin: 0 $spacing $spacing -1*$spacing;
             width: 50%;
         }
 
         img.right {
-            float: right;
-            margin: 0 -1*$spacing $spacing $spacing;
             width: 50%;
         }
 
         img.center {
             display: block;
-            width: calc(100% + (2 * #{$spacing}));
+            width: 100%;
             height: auto;
-            margin: 0 -1*$spacing $spacing -1*$spacing;
         }
 
         img.left, img.right, img.center {
             @include phone-break {
-                width: calc(100% + (2 * #{$spacing}));
+                width: 100%; 
                 height: auto;
-                margin: 0 -1*$spacing $spacing -1*$spacing;
             }
         }
     }

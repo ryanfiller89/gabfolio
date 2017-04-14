@@ -1,77 +1,81 @@
 @mixin grid-page-active {
-    @include image-overlay;
 
-    .portfolio-grid-block__info {
-        max-height: 100%;
 
-        .excerpt__title, .meta, .excerpt__link {
-            display: block;
-            color: $white;
-        }
-    }
-}
+  }
+
 
 .page-content.portfolio-list, .page-content.portfolio-list-category {
     width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
+    @include grid;
 
     p {
         width: 100%;
         @include grid--container;
+
     }
 
     .portfolio-grid {
-        @include grid;
-        padding: $spacing/2;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        margin-left: -.5*$spacing;
+        margin-right: -.5*$spacing;
+        width: calc(100% + $spacing);
 
         .project__block-link {
             box-sizing: border-box;
             padding: $spacing/2;
             display: block;
-            width: 33.333%;
-            height: calc(33.33333vw - #{$spacing/3});
+            flex: 1;
+            flex-basis: 25%;
+            //height: calc(33.33333vw - #{$spacing/3});
+
+            .gridblock__image {
+              background-size: cover;
+              background-position: center center;
+
+            &::after {
+              content:'  ';
+              display: block;
+              padding-top:100%;
+              width:100%;
+             }
+           }
 
             @include tablet-break {
-                width: 50%;
-                height: calc(50vw - #{$spacing/2});
+                flex-basis: 50%;
+                //height: calc(50vw - #{$spacing/2});
             }
 
             @include phone-break {
-                width: 100%;
-                height: calc(100vw - #{$spacing});
+                flex-basis: 100%;
+                //height: calc(100vw - #{$spacing});
             }
 
             .portfolio-grid-block {
                 display: block;
-                background-size: cover;
-                background-position: center center;
                 overflow: hidden;
                 position: relative;
                 width: 100%;
-                height: 100%;
 
                 @include tablet-break {
                     @include grid-page-active;
                 }
 
                 .portfolio-grid-block__info {
-                    position: absolute;
+                    background-color:pink;
                     width: 100%;
                     padding: 0 5%;
-                    height: 100%;
-                    max-height: 33%;
-                    bottom: 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     z-index: 100;
-                    color: $white;
+                    color: $darkgrey;
 
                     @include tablet-break {
                         max-height: 100%;
@@ -83,9 +87,12 @@
                 }
 
                 .excerpt__title {
-                    color: $white;
+                    color: $darkgrey;
                     text-align: center;
                     margin-bottom: $spacing;
+                    font-size:1em;
+                    display:block;
+                    width:100%;
                 }
 
                 .meta {
@@ -95,18 +102,18 @@
                     }
 
                     .meta__category {
-                        color: $white;
+                        color: $darkgrey;
                     }
                     margin-bottom: $spacing/2;
                 }
 
                 .excerpt__link {
                     display: none;
-                    color: $white;
+                    color: $darkgrey;
                     font-size: 1.125em;
 
                     &:hover {
-                        color: $white;
+                        color: $darkgrey;
                     }
                 }
             }
