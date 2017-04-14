@@ -5,4 +5,6 @@ permalink: /blog/
 paginate: true
 parent: blog
 navigation_weight: 3
+
+published: false
 ---

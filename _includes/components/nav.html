@@ -1,14 +1,34 @@
 <ul class="nav" role="navigation">
-    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
-    {% for p in navigation_pages %}
-        {% if p.navigation_weight %}
-            {% if p.url contains '/page' %}{% else %}
-                <li class="nav__link {% if p.url == page.url %}active{% endif %}{% if p.url contains page.parent %} active{% endif %}">
-                    <a href="{{ p.url }}">
-                        {{ p.title }}
-                    </a>
-                </li>
+    {% if page.side == "create" %}
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+                {% if p.side == "create" %}
+                    {% if p.url contains '/page' %}{% else %}
+                        <li class="nav__link {% if p.url == page.url %}active{% endif %}{% if p.url contains page.parent %} active{% endif %}">
+                            <a href="{{ p.url }}">
+                                {{ p.title }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endif %}
             {% endif %}
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    {% endif %}
+    {% if page.side == "educate" %}
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+            {% if p.navigation_weight %}
+                {% if p.side == "educate" %}
+                    {% if p.url contains '/page' %}{% else %}
+                        <li class="nav__link {% if p.url == page.url %}active{% endif %}{% if p.url contains page.parent %} active{% endif %}">
+                            <a href="{{ p.url }}">
+                                {{ p.title }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </ul>

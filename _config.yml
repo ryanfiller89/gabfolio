@@ -49,20 +49,22 @@ defaults:
             type: "portfolio"
         values:
             parent: portfolio
+            side: create
     -
         scope:
             type: "student-work"
         values:
             parent: student-work
+            side: educate
 
 collections:
     portfolio:
         output: true
-        permalink: /:categories/:title/
+        permalink: /:collection/:title/
 
     student-work:
         output: true
-        permalink: /:categories/:title/
+        permalink: /:collection/:title/
 
 sass:
     sass_dir: /assets/_scss

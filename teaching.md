@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Teaching
-permalink: /educate/teaching
+permalink: /teaching
 navigation_weight: 2
+side: educate
 ---
 
 about teaching
