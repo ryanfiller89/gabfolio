@@ -14,7 +14,8 @@
 			 {% include components/subnav.html %}
 
             <div class="portfolio-grid">
-                {% for work in site[page.portfolio] %}
+							{% assign sorted = site[page.portfolio] | reverse %}
+                {% for work in sorted %}
                     {% include components/grid-block.html %}
                 {% endfor %}
             </div>
