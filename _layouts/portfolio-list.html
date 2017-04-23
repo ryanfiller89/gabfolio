@@ -11,25 +11,33 @@
         <main class="page-content {{ page.layout }}">
 			 <h1 class="page-title"> {{ page.title }} </h1>
 
-			 {% include components/subnav.html %}
+			 {% for collection in site.collections %}
 
-							{% assign tags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
-							{% assign sorted = site[page.portfolio] | reverse %}
+				 {% assign c = collection.label %}
+					{% if page.portfolio == c %}
+						{% assign tags =  site.[c] | map: 'tags' | join: ','  | split: ',' | uniq %}
+						{% assign sorted = site.[c] | reverse %}
 
-							<div class="order-wrapper">
-								{% for tag in tags %}
-									<div class="{{ tag }}">
-										<h2 class="portfolio-category-header" id="{{ tag }}">{{ tag | replace: '-', ' ' }}</h2>
-										<div class="portfolio-grid">
-										{% for work in sorted %}
-												{% if work.tags contains tag %}
-													{% include components/grid-block.html %}
-												{% endif %}
-										{% endfor %}
-										  </div>
-									</div>
-								{% endfor %}
-							</div>
+						{% include components/subnav.html %}
+
+						<div class="order-wrapper">
+							{% for tag in tags %}
+								<div class="{{ tag }}">
+									<h2 class="portfolio-category-header" id="{{ tag }}">{{ tag | replace: '-', ' ' }}</h2>
+									<div class="portfolio-grid">
+									{% for work in sorted %}
+											{% if work.tags contains tag %}
+												{% include components/grid-block.html %}
+											{% endif %}
+									{% endfor %}
+										</div>
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+			 {% endfor %}
+
+
         </main>
 
         {% include components/footer.html %}

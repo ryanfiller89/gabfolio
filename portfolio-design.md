@@ -1,9 +1,0 @@
----
-layout: portfolio-list-category
-title: Design
-permalink: /design/
-category: design
-parent: work
----
-
-design portfolio page
