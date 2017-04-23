@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+a:hover {
+  cursor:pointer;
+}
+
 main, article, aside, blockquote,	caption, header, footer {
     display: block;
 }
@@ -31,8 +35,6 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "pages/portfolio-list";
 @import "pages/portfolio-detail";
 @import "pages/homepage";
-@import "pages/404";
-
 
 
 @import "styles";

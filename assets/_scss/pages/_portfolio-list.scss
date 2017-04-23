@@ -3,6 +3,26 @@
 
   }
 
+.order-wrapper {
+
+    display: flex;
+    .page-content > & {
+        flex-direction: column;
+    }
+
+    .graphic-design {
+      order: 1;
+    }
+
+    .book-arts {
+      order: 2;
+    }
+
+    .illustration {
+      order: 3;
+    }
+}
+
 
 .page-content.portfolio-list, .page-content.portfolio-list-category {
     width: 100%;
@@ -64,6 +84,13 @@
                 overflow: hidden;
                 position: relative;
                 width: 100%;
+
+                &:hover {
+                  .excerpt__title {
+                    color:$yellow;
+                    transition: .1s;
+                  }
+                }
 
                 @include tablet-break {
                     @include grid-page-active;
