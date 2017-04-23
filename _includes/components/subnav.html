@@ -9,7 +9,7 @@
         {% for tag in tags %}
             <li class="subnav__link {{ tag }} {% if page.filter == tag %}active{% endif %}">
                 <a href="#{{ tag }}">
-                    {{ tag }}
+                    {{ tag | replace: '-', ' ' }}
                 </a>
             </li>
         {% endfor %}
