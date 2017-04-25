@@ -11,14 +11,11 @@
     color: $darkgrey;
 
     @include tablet-break {
-        width: 50%;
-        margin: 0 auto $spacing auto;
-        flex-direction: column;
+        display:none;
     }
 
     @include phone-break {
-        width: calc(100% - (2*#{$spacing}));
-        margin: 0 $spacing $spacing $spacing;
+        display:none;
     }
 
     .subnav__title {

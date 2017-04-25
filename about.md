@@ -1,17 +1,12 @@
 ---
-layout: page
+layout: about-page
 title: About
 permalink: /about
 navigation_weight: 2
 side: create
+headshot: https://scontent-dft4-2.cdninstagram.com/t51.2885-15/e35/17881393_401526173546109_6315421964756320256_n.jpg
 ---
 
 <p>
-This is the base Jekyll theme.  You can find out more info <a href="#">Really really long link.</a> about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-[jekyll](https://github.com/jekyll/jekyll)
+Gabby Windham is a graphic designer currently living in Memphis, TN. She recently completed her MFA in Graphic Design at the University of Memphis in May 2017, where she enjoyed instructing as a graduate teaching assistant. She received her BFA in Graphic Design from Mississippi State University in Starkville, MS in May 2012. Her interests include a range of topics including but not limited to motion graphics and animation, bookmaking, illustration, and an ongoing personal project of hand-lettered typographic explorations. Additionally, Gabby is interested in art history, graphic novels, and  
 </p>
