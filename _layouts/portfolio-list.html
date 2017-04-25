@@ -25,19 +25,17 @@
 								<div class="{{ tag }}">
 									<h2 class="portfolio-category-header" id="{{ tag }}">{{ tag | replace: '-', ' ' }}</h2>
 									<div class="portfolio-grid">
-									{% for work in sorted %}
-											{% if work.tags contains tag %}
-												{% include components/grid-block.html %}
-											{% endif %}
-									{% endfor %}
-										</div>
+										{% for work in sorted %}
+												{% if work.tags contains tag %}
+													{% include components/grid-block.html %}
+												{% endif %}
+										{% endfor %}
+									</div>
 								</div>
 							{% endfor %}
 						</div>
 					{% endif %}
 			 {% endfor %}
-
-
         </main>
 
         {% include components/footer.html %}
