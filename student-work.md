@@ -2,7 +2,7 @@
 layout: portfolio-list
 title: Student Work
 permalink: /student-work/
-navigation_weight: 1
+navigation_weight: 3
 portfolio: student-work
 side: educate
 ---
