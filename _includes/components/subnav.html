@@ -1,49 +1,17 @@
-{% if page.layout == "portfolio-list" %}
-      {% assign subnav = true %}
-{% endif %}
-
-{% if page.layout == "portfolio-list-category" %}
-      {% assign subnav = true %}
-{% endif %}
-
-{% if page.layout == "portfolio-detail" %}
-      {% assign subnav = true %}
-{% endif %}
-
-{% if page.collection-category == page.category %}
-    {% assign active = true %}
-{% endif %}
-
-
-{% if subnav %}
-    <ul class="subnav">
-        {% for item in site.portfolio %}
-            <li class="subnav__link {% if page.category == item.category %}active{% endif %}">
-                <a href="/{{ item.categories }}/">
-                    {{ item.categories }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
-{% if subnav %}
-<div class="subnav--mobile js-subnav-mobile">
-    <div class="subnav--mobile__title js-subnav-mobile-button">
+<nav class="subnav js-subnav-mobile">
+    <div class="subnav__title js-subnav-mobile-button">
         <span>Categories</span>
-       <div class="subnav--mobile__dropdown--wrap">
-           <div class="subnav--mobile__dropdown"></div>
+       <div class="subnav__dropdown--wrap">
+           <div class="subnav__dropdown"></div>
        </div>
     </div>
-    <ul class="subnav--mobile__list">
-        {% for item in site.portfolio %}
-            <li class="subnav--mobile__link {% if page.category == item.category %}active{% endif %}">
-                <a href="/{{ item.categories }}/">
-                    {{ item.categories }}
+    <ul class="subnav__list order-wrapper">
+        {% for tag in tags %}
+            <li class="subnav__link {{ tag }} {% if page.filter == tag %}active{% endif %}">
+                <a href="#{{ tag }}">
+                    {{ tag | replace: '-', ' ' }}
                 </a>
             </li>
         {% endfor %}
     </ul>
-</div>
-
-{% endif %}
+</nav>

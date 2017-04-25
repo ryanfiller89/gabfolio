@@ -1,7 +1,10 @@
 <div class="mobile-nav-overlay"></div>
 <header class="header">
     <div class="header--pre">
-        {% include components/socials.html %}
+        <ul class="utility-nav">
+          <li class="link"><a href="/portfolio" class="{% if page.side == "create" %} active {% endif %}">Create</a></li>
+          <li class="link"><a href="/student-work" class="{% if page.side == "educate" %} active {% endif %}">Educate</a></li>
+        </ul>
     </div>
     <div class="header--main">
         <a href="/" class="header__logo">
@@ -13,6 +16,5 @@
         </div>
     </div>
     <div class="header--post">
-        {% include components/subnav.html %}
     </div>
 </header>

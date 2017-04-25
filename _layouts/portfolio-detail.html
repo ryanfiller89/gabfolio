@@ -8,18 +8,47 @@
 
 		{% include components/header.html %}
 
-		{% include components/swiper.html %}
-
 		<main class="page-content portfolio-detail">
-			<div class="portfolio__header">
-				<h1 class="portfolio__h1">{{ page.title }}</h1>
 
-				{% include components/meta.html %}
-			</div>
+				<div class="work">
+					{% for image in page.images %}
+					<img src="{{ image }}">
+					{% endfor %}
+				</div>
 
-		    {{ content }}
-		    <a class="back__link" href="/{{ page.categories }}"> Back to {{ page.categories }}</a>
+				<div class="description">
+					<h1 class="page-title">{{ page.title }}</h1>
+					{{ content }}
+				</div>
+
 		</main>
+
+		<aside class="related-work">
+			{% for collection in site.collections %}
+
+				{% assign c = collection.label %}
+				   {% if page.parent == c %}
+					   {% assign tags =  site.[c] | map: 'tags' | join: ','  | split: ',' | uniq %}
+					   {% assign sorted = site.[c] | reverse %}
+
+					   <div class="order-wrapper">
+						   {% for tag in tags %}
+							   <div class="{{ tag }}">
+								   <h2 class="portfolio-category-header" id="{{ tag }}">{{ tag | replace: '-', ' ' }}</h2>
+								   <div class="portfolio-grid">
+									   {% for work in sorted %}
+											   {% if work.tags contains tag %}
+												   {% include components/grid-block.html %}
+											   {% endif %}
+									   {% endfor %}
+								   </div>
+							   </div>
+						   {% endfor %}
+					   </div>
+				   {% endif %}
+			{% endfor %}
+
+		</aside>
 
 		{% include components/footer.html %}
 

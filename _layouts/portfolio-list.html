@@ -8,18 +8,34 @@
 
         {% include components/header.html %}
 
-        {% include components/banner.html %}
-
         <main class="page-content {{ page.layout }}">
-			<!-- <p>{{ page.content }}</p> -->
+			 <h1 class="page-title"> {{ page.title }} </h1>
 
-			{% include components/subnav.html %}
+			 {% for collection in site.collections %}
 
-            <div class="portfolio-grid">
-                {% for work in site.portfolio %}
-                    {% include components/grid-block.html %}
-                {% endfor %}
-            </div>
+				 {% assign c = collection.label %}
+					{% if page.portfolio == c %}
+						{% assign tags =  site.[c] | map: 'tags' | join: ','  | split: ',' | uniq %}
+						{% assign sorted = site.[c] | reverse %}
+
+						{% include components/subnav.html %}
+
+						<div class="order-wrapper">
+							{% for tag in tags %}
+								<div class="{{ tag }}">
+									<h2 class="portfolio-category-header" id="{{ tag }}">{{ tag | replace: '-', ' ' }}</h2>
+									<div class="portfolio-grid">
+										{% for work in sorted %}
+												{% if work.tags contains tag %}
+													{% include components/grid-block.html %}
+												{% endif %}
+										{% endfor %}
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+			 {% endfor %}
         </main>
 
         {% include components/footer.html %}

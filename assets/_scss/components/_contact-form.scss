@@ -66,9 +66,9 @@ iframe.contact-container {
             -webkit-appearence: none;
 
                 &:focus {
-                    // background-color: lighten($secondary-color, 20%);
+                    // background-color: lighten($yellow, 20%);
                     outline: none;
-                    border: 2px solid $secondary-color;
+                    border: 2px solid $yellow;
                 }
         }
 
@@ -97,7 +97,7 @@ iframe.contact-container {
         a {
             display: block;
             cursor: pointer;
-            color: $secondary-color;
+            color: $yellow;
             margin-top: $spacing;
 
              &:hover {

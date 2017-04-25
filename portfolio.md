@@ -1,8 +1,12 @@
 ---
 layout: portfolio-list
-title: Work
-permalink: /work/
-navigation_weight: 2
+title: Portfolio
+permalink: /portfolio/
+navigation_weight: 1
+portfolio: portfolio
+side: create
 ---
 
 content from the work page
+
+asdfasdf

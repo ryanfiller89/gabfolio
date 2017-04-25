@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+a:hover {
+  cursor:pointer;
+}
+
 main, article, aside, blockquote,	caption, header, footer {
     display: block;
 }
@@ -13,7 +17,6 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "config/animations";
 @import "config/layout";
 @import "config/typography";
-@import "config/swiper";
 
 /* Components */
 @import "components/socials";
@@ -21,10 +24,10 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "components/header";
 @import "components/subnav";
 @import "components/mobile-nav";
-@import "components/banner";
 @import "components/footer";
 @import "components/recent-posts";
 @import "components/contact-form";
+@import "components/portfolio-grid";
 
 /* Pages */
 @import "pages/page";
@@ -33,4 +36,6 @@ main, article, aside, blockquote,	caption, header, footer {
 @import "pages/portfolio-list";
 @import "pages/portfolio-detail";
 @import "pages/homepage";
-@import "pages/404";
+
+
+@import "styles";

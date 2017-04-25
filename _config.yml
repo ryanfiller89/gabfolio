@@ -13,24 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ryanfiller.com
-email: ryanfiller89@gmail.com
-description: porftfolio and blog for ryan filler
-url: "http://ryanfiller.com" # the base hostname & protocol for your site, e.g. http://example.com
-author: ryanfiller_
-twitter_username: ryanfiller_
-github_username:  ryanfiller89
+title: gabbywindham.com
+email:
+description: porftfolio and blog for gabby windham
+url: "http://gabbywindham.com" # the base hostname & protocol for your site, e.g. http://example.com
+author: gabwindy
 facebook:
   admins: 1289580190
 logo: /assets/images/site-assets/ryanfiller.jpg
 social:
-  name: Ryan Filler
+  name: Gabby Windham
   links:
-    - https://twitter.com/ryanfiller_
-    - https://www.facebook.com/ryan.filler
-    - https://www.linkedin.com/in/ryanfiller
-    - https://plus.google.com/u/0/112417000136872017947
-    - https://github.com/ryanfiller89
+
 
 # Build settings
 markdown: kramdown
@@ -54,12 +48,23 @@ defaults:
         scope:
             type: "portfolio"
         values:
-            parent: work
+            parent: portfolio
+            side: create
+    -
+        scope:
+            type: "student-work"
+        values:
+            parent: student-work
+            side: educate
 
 collections:
     portfolio:
         output: true
-        permalink: /:categories/:title/
+        permalink: /:collection/:title/
+
+    student-work:
+        output: true
+        permalink: /:collection/:title/
 
 sass:
     sass_dir: /assets/_scss

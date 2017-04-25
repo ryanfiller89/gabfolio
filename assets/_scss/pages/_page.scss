@@ -6,7 +6,6 @@
     flex-direction: column;
     position: relative;
     background: $white;
-    padding-top: (2*$spacing);
     padding-bottom: (4*$spacing);
     @include grid--container;
     display: block;
@@ -21,23 +20,23 @@
         margin-bottom: $spacing;
 
         a {
-            color: $black;
+            color: $darkgrey;
             text-decoration: none;
-            border-bottom: 2px $secondary-color dotted;
+            border-bottom: 2px $yellow dotted;
 
             &:hover {
-                color: $primary-color;
-                border-bottom: 2px $primary-color dotted;
+                color: $darkgrey;
+                border-bottom: 2px $darkgrey dotted;
             }
 
             @include tablet-break {
                 border-bottom: 0;
-                background: $secondary-color;
+                background: $yellow;
                 padding: 0 .25em;
                 color: $white;
                 &:hover {
                     border-bottom: 0;
-                    background-color: $primary-color;
+                    background-color: $darkgrey;
                     color: $white;
                 }
             }
@@ -51,30 +50,53 @@
         }
 
         img.left {
-            float: left;
-            margin: 0 $spacing $spacing -1*$spacing;
             width: 50%;
         }
 
         img.right {
-            float: right;
-            margin: 0 -1*$spacing $spacing $spacing;
             width: 50%;
         }
 
         img.center {
             display: block;
-            width: calc(100% + (2 * #{$spacing}));
+            width: 100%;
             height: auto;
-            margin: 0 -1*$spacing $spacing -1*$spacing;
         }
 
         img.left, img.right, img.center {
             @include phone-break {
-                width: calc(100% + (2 * #{$spacing}));
+                width: 100%;
                 height: auto;
-                margin: 0 -1*$spacing $spacing -1*$spacing;
             }
         }
     }
 }
+
+    .columns {
+      display:flex;
+      flex-direction: row;
+
+      @include phone-break {
+        display:block;
+      }
+
+      .column-left {
+        flex:1;
+
+        img {
+          width:100%;
+        }
+      }
+
+      .column-right {
+        flex:2;
+        margin-left:30px;
+
+        @include phone-break {
+          display:block;
+          margin-top:25px;
+        }
+
+      }
+
+    }

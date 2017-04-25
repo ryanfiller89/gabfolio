@@ -1,25 +1,23 @@
-<footer class="footer">
-    {% include js-includes.html %}
-    <aside class="footer--pre">
-        {% include components/nav.html %}
-    </aside>
-    <main class="footer--main">
-        <div class="footer__column footer__branding">
-            <a href="/" class="footer__logo">
-                {% include svgs/logo.svg %}
-            </a>
-            {% include components/socials.html %}
-        </div>
-        <div class="footer__column footer__contact">
-            <header class="contact__header">
-                Get in Touch
-            </header>
-            {% include components/contact-form.html %}
-        </div>
-    </main>
-    <aside class="footer--post">
-        <span class="footer__legal">
-            Copyright 2012 - {{ 'now' | date: "%Y" }}
-        </span>
-    </aside>
-</footer>
+<div class="footer">
+    <div class="footer--pre">
+    </div>
+
+    <div class="footer--main">
+        <ul class="footer__nav">
+            {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+            {% for p in navigation_pages %}
+                {% if p.navigation_weight %}
+                    <li class="footer__nav__link"><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <a class="footer__logo" href="/">
+            {% include svgs/logo.svg %}
+        </a>
+    </div>
+
+    <div class="footer--post">
+        <p class="copyright">All work &copy; Gabby Windham 2010–{{ 'now' | date: "%Y" }}</p>
+    </div>
+</div>

@@ -5,10 +5,35 @@
 		{% include components/mobile-nav.html %}
 	</div>
 	<div class="site {{ page.layout }}">
-		{% include components/header.html %}
 
-		<section class="page-content homepage swiper-container--home">
-			gabfolio!
+		<section class="page-content homepage">
+			<div class="logo-wrapper">
+			   <div class="whitelogo">
+						   {% include svgs/logo-white.svg %}
+
+					   <p class="name">GABBY WINDHAM</p>
+				</div>
+
+			</div>
+
+			<div class="homepage-column">
+				<a class="homepage-column__header" href="/portfolio/">CREATE</a>
+					<div class="homepage-column__links">
+						<a href="/portfolio/" class="homepage-column__link">Portfolio</a>
+						<a href="/about/" class="homepage-column__link">About</a>
+					</div>
+				</div>
+
+
+			 <div class="homepage-column">
+				<a class="homepage-column__header" href="/student-work/">EDUCATE</a>
+				<div class="homepage-column__links">
+				   <a href="/student-work/" class="homepage-column__link">Student Work</a>
+				   <a href="/teaching/" class="homepage-column__link">Teaching</a>
+			   </div>
+			</div>
+
+
 		</section>
 
 		{% include components/footer.html %}
