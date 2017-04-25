@@ -29,4 +29,19 @@
         margin-left:30px;
       }
     }
+
+    .related-work {
+        .order-wrapper {
+            @include grid;
+            flex-wrap: wrap;
+
+            > div {
+                width: 100%;
+            }
+        }
+
+        @include phone-break {
+            display: none;
+        }
+    }
 }
