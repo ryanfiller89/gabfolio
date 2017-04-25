@@ -1,21 +1,23 @@
 <div class="footer">
-
-    <div class="container">
-      <ul class="footermenu">
-          <li><a href="create.html">PORTFOLIO</a></li>
-            <li><a href="educate.html">STUDENT WORK</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-
-        <div class="circle">
-        <a class="footerlogo" href="/">
-            {% include svgs/logo.svg %} </a>
-        </div>
-
+    <div class="footer--pre">
     </div>
 
-    <div class="copyright">All work &copy; Gabby Windham 2010–{{ 'now' | date: "%Y" }}</div>
+    <div class="footer--main">
+        <ul class="footer__nav">
+            {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+            {% for p in navigation_pages %}
+                {% if p.navigation_weight %}
+                    <li class="footer__nav__link"><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
 
+        <a class="footer__logo" href="/">
+            {% include svgs/logo.svg %}
+        </a>
+    </div>
 
+    <div class="footer--post">
+        <p class="copyright">All work &copy; Gabby Windham 2010–{{ 'now' | date: "%Y" }}</p>
+    </div>
 </div>

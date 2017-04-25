@@ -2,7 +2,7 @@
 layout: page
 title: Teaching
 permalink: /teaching
-navigation_weight: 2
+navigation_weight: 4
 side: educate
 ---
 
