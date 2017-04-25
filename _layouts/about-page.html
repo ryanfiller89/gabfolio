@@ -1,0 +1,24 @@
+{% include head.html %}
+
+<div class="site-wrap">
+	<div class="mobile-tray">
+		{% include components/mobile-nav.html %}
+	</div>
+	<div class="site {{ page.layout }}">
+
+        {% include components/header.html %}
+
+        <main class="page-content">
+					<h1 class="page-title"> {{ page.title }} </h1>
+					<div class="column-left">
+					<img src="{{ page.headshot }}">
+					</div>
+					<div class="column-right">
+            {{ page.content }}
+					</div>	
+        </main>
+
+        {% include components/footer.html %}
+
+    </div>
+</div>
