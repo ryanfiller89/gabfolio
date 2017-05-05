@@ -1,4 +1,4 @@
-.site.about {
+.about {
   .columns {
     display:flex;
     flex-direction: row;
@@ -21,18 +21,6 @@
         display:block;
         margin-top:25px;
       }
-    }
-
-      .left-column {
-        background-color:yellow;
-        flex:2;
-
-      }
-
-      .right-column {
-        background-color:pink;
-        flex:1.2;
-
     }
   }
 }

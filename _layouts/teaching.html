@@ -10,12 +10,15 @@
 
         <main class="page-content">
 					<h1 class="page-title"> {{ page.title }} </h1>
-					<div class="column-left">
-					<img src="{{ page.headshot }}">
+					<div class="columns">
+						<div class="column-left">
+							{{ page.content | markdownify }}
+						</div>
+						<div class="column-right">
+							{% capture resume %}{% include_relative resume.md %}{% endcapture %}
+							{{ resume | markdownify }}
+						</div>
 					</div>
-					<div class="column-right">
-            {{ page.content }}
-					</div>	
         </main>
 
         {% include components/footer.html %}

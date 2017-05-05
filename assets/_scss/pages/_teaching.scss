@@ -1,0 +1,53 @@
+.teaching {
+  .columns {
+    display:flex;
+    flex-direction: row;
+
+      @include phone-break {
+        display:block;
+      }
+
+      .column-left {
+        flex:2;
+      }
+
+    .column-right {
+      flex:1.2;
+      padding-left:2em;
+      padding-right:2em;
+    }
+
+    h4 {
+      
+    }
+
+    ul {
+      line-height:2em;
+
+      h5 {
+        text-transform:uppercase;
+        font-size:.9em;
+        margin-bottom:0;
+
+      }
+      ul {
+        margin-bottom:1em;
+        line-height:2em;
+
+        ul {
+          line-height:2em;
+
+          h6 {
+            text-transform:uppercase;
+            font-size:.8em;
+
+          }
+
+          ul {
+            line-height:2em;
+          }
+        }
+      }
+    }
+  }
+}
