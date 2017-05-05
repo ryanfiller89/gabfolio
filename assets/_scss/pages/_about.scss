@@ -1,0 +1,38 @@
+.site.about {
+  .columns {
+    display:flex;
+    flex-direction: row;
+
+      @include phone-break {
+        display:block;
+      }
+
+      .column-left {
+        flex:1;
+        img {
+          width:100%;
+        }
+      }
+
+    .column-right {
+      flex:2;
+      margin-left:30px;
+      @include phone-break {
+        display:block;
+        margin-top:25px;
+      }
+    }
+
+      .left-column {
+        background-color:yellow;
+        flex:2;
+
+      }
+
+      .right-column {
+        background-color:pink;
+        flex:1.2;
+
+    }
+  }
+}

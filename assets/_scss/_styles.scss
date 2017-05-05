@@ -243,30 +243,3 @@
 			display:block;
 
 		}
-
-
-		/*ABOUT PAGE*/
-		.about-content {
-			width:850px;
-			display:flex;
-		}
-
-		.photo {
-			height:300px;
-			width:300px;
-			margin-top:25px;
-			background-image:url("https://i.ytimg.com/vi/wp4VIlVhxxQ/maxresdefault.jpg");
-			background-size:cover;
-			background-position:center center;
-			background-color:#2a2a2a;
-			flex:1;
-		}
-
-		.about {
-			background-color:yellow;
-			display:block;
-			flex:2;
-			margin-top:25px;
-			margin-left:30px;
-			font-size:.8em;
-		}
