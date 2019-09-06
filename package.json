@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ryanfiller89/jekyll-portfolio#readme",
   "devDependencies": {
-    "surge": "^0.18.0"
+    "surge": "^0.21.3"
   }
 }
